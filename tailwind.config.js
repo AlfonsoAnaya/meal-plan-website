@@ -11,9 +11,11 @@ module.exports = {
         btn: "#68d463e8",
         white: "#fffcf8",
         dark: "#100f0f",
+        beige: "#f2f0e5",
       },
       fontFamily: {
-        primary: "Josefin Sans', sans-serif"
+        primary: "'Josefin Sans', sans-serif",
+        secondary: "'Young Serif', serif",
       }
     },
   },

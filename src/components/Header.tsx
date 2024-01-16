@@ -24,9 +24,9 @@ function Header() {
                     Meal Planner
                 </h1>
                 <ul className="flex text-primary gap-[1rem] text-[1.25rem] font-[400]">
-                    <li>Recetas</li>
-                    <li>Planes</li>
-                    <li>Ingredientes</li>
+                    <li className="hover:text-secondary">Recetas</li>
+                    <li className="hover:text-secondary">Planes</li>
+                    <li className="hover:text-secondary">Ingredientes</li>
                 </ul>
             </div>
         </nav>

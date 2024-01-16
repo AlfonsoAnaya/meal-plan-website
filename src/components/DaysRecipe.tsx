@@ -9,7 +9,7 @@ function DaysRecipe() {
         </div>
         <div className="recipe-info flex flex-col justify-center items-left">
           <h2 className="text-[2.5rem] text-primary font-[600]">La receta del día</h2>
-          <h3 className="recipe-title text-[1.75rem] text-secondary font-[600]"> Pasta con Pesto </h3>
+          <h3 className="recipe-title text-[1.75rem] text-secondary font-secondary font-[600]"> Pasta con Pesto </h3>
           <p className="welcome-text">
             Duis ac turpis in ex porta venenatis. Vivamus faucibus nisi in eros
             euismod fringilla. Quisque pretium sapien purus.
