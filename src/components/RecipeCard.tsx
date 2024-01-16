@@ -2,7 +2,7 @@ function RecipeCard() {
     return (
         <div
             className="recipe-card w-[220px] h-[300px] bg-beige rounded-xl 
-            flex flex-col">
+            border-[1px] border-gray-400 flex flex-col ">
 
             <div className="recipe-img w-[100%] h-[60%]">
                 <img className="block object-cover w-[100%] h-[100%] object-center rounded-t-xl"
