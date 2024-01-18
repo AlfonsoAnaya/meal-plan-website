@@ -1,19 +1,18 @@
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
-import DaysRecipe from './components/DaysRecipe';
-import RecipeCollection from './components/RecipeCollection';
+import Home from './components/Home/Home';
+import IndividualRecipe from "./components/IndividualRecipe/IndividualRecipe";
 
 function App() {
   return (
-    <Router>
-      <div className="font-primary">
-        <Header />
-        <DaysRecipe />
-        <RecipeCollection />
-      </div>
-    </Router>
-
+    <div className="font-primary">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipe/:recipeName" element={<IndividualRecipe />} />
+      </Routes>
+    </div>
   );
 }
 export default App;

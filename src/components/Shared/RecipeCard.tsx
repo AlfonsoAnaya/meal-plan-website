@@ -1,4 +1,4 @@
-import Recipe from "../types/types";
+import Recipe from "../../types/types";
 
 function RecipeCard( {recipe} : {recipe: Recipe;}) {
     return (
