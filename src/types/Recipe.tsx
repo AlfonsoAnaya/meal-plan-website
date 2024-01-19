@@ -1,8 +1,4 @@
-interface Ingredient {
-    name: string;
-    quantity: number;
-    unit?: string;
-}
+import Ingredient from "./ingredient"; 
 
 interface Recipe {
     id: number;
