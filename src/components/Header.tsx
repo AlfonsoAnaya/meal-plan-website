@@ -1,22 +1,23 @@
-// import { useEffect } from "react"
+import { useEffect } from "react"
 import { Link } from "react-router-dom";
+import "./Header.css"
 
 function Header() {
 
-    // function handleScroll() {
-    //     const headerTitle:any = document.getElementById("header-title");
-    //     console.log(headerTitle);
-    //     if (window.scrollY > 226 && !headerTitle.classList.contains("visible")) {
-    //         headerTitle.classList.add("visible")
-    //     }
-    //     if (window.scrollY < 226 && headerTitle.classList.contains("visible")) {
-    //         headerTitle.classList.remove("visible")
-    //     }
-    // }
+    function handleScroll() {
+        const headerTitle:any = document.getElementById("header-title");
+        console.log(headerTitle);
+        if (window.scrollY > 226 && !headerTitle.classList.contains("small-text")) {
+            headerTitle.classList.add("small-text")
+        }
+        if (window.scrollY < 226 && headerTitle.classList.contains("small-text")) {
+            headerTitle.classList.remove("small-text")
+        }
+    }
 
-    // useEffect( () => {
-    //     window.addEventListener("scroll", handleScroll)
-    // }, []);
+    useEffect( () => {
+        window.addEventListener("scroll", handleScroll)
+    }, []);
 
     return (
         <nav className="sticky top-0  z-10 bg-white w-100% flex justify-center border-b-primary border-b-[1px]">

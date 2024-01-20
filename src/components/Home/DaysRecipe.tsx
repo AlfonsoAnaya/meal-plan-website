@@ -1,8 +1,10 @@
+// shadow-[12px_18px_#4385be]
+
 function DaysRecipe() {
   return (
     <section className="todays-recipe-section flex flex-col items-center">
       <div className="flex flex-row max-w-[1100px] mx-[2rem] my-16 gap-[1.5rem] ">
-        <div className="recipe-img max-w-[60%] max-h-[650px] shadow-[12px_18px_#4385be]">
+        <div className="recipe-img max-w-[60%] max-h-[650px]">
           <img className="block object-cover w-[100%] h-[100%] object-center"
             src="https://source.unsplash.com/49u4b6h2row"
             alt="a bowl of pasta with pesto on a white marble table"></img>
