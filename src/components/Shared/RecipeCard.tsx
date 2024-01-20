@@ -1,10 +1,10 @@
-import Recipe from "../../types/Recipe";
+import Recipe from "../../types/recipe.d";
 
 function RecipeCard( {recipe} : {recipe: Recipe;}) {
     return (
         <div
             className="recipe-card w-[200px] h-[310px]  rounded-lg border-[1px] border-gray-300
-             flex flex-col ">
+             flex flex-col hover:shadow-[4px_2px_10px_#ddd]">
 
             <div className="recipe-img w-[100%] h-[65%]">
                 <img className="block object-cover w-[100%] h-[100%] object-center rounded-t-lg"

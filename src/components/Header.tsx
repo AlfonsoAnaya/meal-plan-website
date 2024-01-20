@@ -1,4 +1,5 @@
 // import { useEffect } from "react"
+import { Link } from "react-router-dom";
 
 function Header() {
 
@@ -18,15 +19,18 @@ function Header() {
     // }, []);
 
     return (
-        <nav className="sticky top-0  z-10 bg-white w-100% flex justify-center">
-            <div className="flex flex-1 flex-row max-w-[1100px] items-center justify-between mx-[2rem]">
-                <h1 id="header-title" className="text-[2.75rem] padding-[.4rem] text-left text-primary">
-                    Meal Planner
-                </h1>
+        <nav className="sticky top-0  z-10 bg-white w-100% flex justify-center border-b-primary border-b-[1px]">
+            <div className="flex flex-1 flex-row max-w-[1100px] items-center justify-between mx-[2rem] ">
+
+                <Link to={`/`}>
+                    <h1 id="header-title" className="text-[2.75rem] padding-[.4rem] text-left text-primary">
+                        Meal Planner
+                    </h1>
+                </Link>
                 <ul className="flex text-primary gap-[1rem] text-[1.25rem] font-[400]">
-                    <li className="hover:text-secondary">Recetas</li>
-                    <li className="hover:text-secondary">Planes</li>
-                    <li className="hover:text-secondary">Ingredientes</li>
+                    <li className="hover:text-secondary cursor-pointer">Recetas</li>
+                    <li className="hover:text-secondary cursor-pointer">Planes</li>
+                    <li className="hover:text-secondary cursor-pointer">Ingredientes</li>
                 </ul>
             </div>
         </nav>
