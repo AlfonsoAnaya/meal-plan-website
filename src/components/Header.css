@@ -6,3 +6,7 @@
 .large-text {
     transition: font-size 0.3s ease;
 }
+
+.align-self-bottom {
+    align-self: end;
+}

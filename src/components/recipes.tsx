@@ -1,297 +1,7 @@
 import Recipe from "../types/recipe.d";
 
 let recipes: Recipe[] = [
-    {
-        id: 1,
-        name: 'tikka masala vegetariano',
-        tagline: 'curry estilo indio de papas y garbanzos',
-        ingredients: [
-            {
-                name: 'garbanzos',
-                quantity: 1,
-                unit: 'lata'
-            },
-            {
-                name: 'papas',
-                quantity: 2,
-                unit: undefined,
-            },
-            {
-                name: 'coliflor',
-                quantity: 1,
-                unit: undefined,
-            },
-            {
-                name: 'cebolla',
-                quantity: 1,
-                unit: undefined,
-            },
-            {
-                name: 'jengibre',
-                quantity: 10,
-                unit: 'cm'
-            },
-            {
-                name: 'cilantro',
-                quantity: 1,
-                unit: 'manojo'
-            },
-            {
-                name: 'tomate',
-                quantity: 1,
-                unit: 'lata'
-            },
-            {
-                name: 'leche de coco',
-                quantity: 200,
-                unit: 'ml'
-            },
-            {
-                name: 'almendras',
-                quantity: 50,
-                unit: 'gr.'
-            },
-            {
-                name: 'limón',
-                quantity: 1,
-                unit: undefined,
-            },
-            {
-                name: 'chile',
-                quantity: 1,
-                unit: undefined,
-            },
-            {
-                name: 'ajo',
-                quantity: 2,
-                unit: 'dientes'
-            },
 
-            {
-                name: 'pimienta de cayena',
-                quantity: 1,
-                unit: 'cdita.'
-            },
-            {
-                name: 'paprika',
-                quantity: 1,
-                unit: 'cda.'
-            },
-            {
-                name: 'garam masala',
-                quantity: 2,
-                unit: 'cdita.'
-            }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
-
-
-        ],
-        portions: 4, // esta receta hay que testearla para ver las porciones, le dejo 4 por ahora
-        difficulty: 'Muy fácil',
-        prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
-        totalTime: 20,
-        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
-        type: 'guiso',
-        cuisine: 'india',
-        method: [
-            'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
-            'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
-            'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
-        ],
-        //dietary requirement tags
-        isVegan: true,
-        isDairyFree: true,
-        isVegetarian: true,
-        isGlutenFree: true,
-        isSpicy: true,
-
-        //time management tags
-        isQuickAndEasy: true,
-        isBudgetFriendly: true,
-        isBatchCooking: false,
-
-        //health tags
-        isLowCarb: false,
-        isHighProtein: false,
-        isLowCalorie: true,
-        isHeartHealthy: true,
-    },
-
-    {
-        id: 2,
-        name: 'guiso de garbanzos y acelgas',
-        tagline: 'curry indio de garbanzos',
-        ingredients: [
-            {
-                name: 'garbanzos',
-                quantity: 1,
-                unit: 'lata'
-            },
-            {
-                name: 'leche de coco',
-                quantity: 1,
-                unit: 'lata'
-            },
-            {
-                name: 'caldo de verduras',
-                quantity: 500,
-                unit: 'ml'
-            },
-            {
-                name: 'cebolla',
-                quantity: 1,
-                unit: undefined,
-            },
-            {
-                name: 'ajo',
-                quantity: 2,
-                unit: 'dientes'
-            },
-            {
-                name: 'jengibre',
-                quantity: 3,
-                unit: 'cm'
-            },
-            {
-                name: 'chile',
-                quantity: 1,
-                unit: undefined,
-            },
-            {
-                name: 'cúrcuma',
-                quantity: 1,
-                unit: 'cda.'
-            },
-            {
-                name: 'comino',
-                quantity: 1,
-                unit: 'cdita.'
-            },
-            {
-                name: 'acelgas',
-                quantity: 200,
-                unit: 'gr.'
-            },
-
-
-        ],
-        portions: 4, // para más adelante. Podríamos preguntarle al usuario cuántas personas son y ajustar los ingredientes
-        difficulty: 'Muy fácil',
-        prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora...
-        totalTime: 60,
-        img: 'https://source.unsplash.com/ReySmTMcKEQ', // busca imágenes en unsplash.com identifica el id en la url de la imágen y pégalo 
-        type: 'guiso',
-        cuisine: 'india',
-        method: [
-            'Picar la cebolla y el chile, y rallar el ajo y el jengibre (ver tip). En una cacerola a fuego medio calentar unas cucharadas de aceite y agregar la cebolla, el ajo, el chile y el jengibre. Salpimentar y saltear por unos minutos y luego agregar las especias, saltear por un minuto más.',
-            'Agregar los garbanzos escurridos y cocinar por 5-7 minutos hasta que se tuesten un poco. Agregar el caldo, la leche de coco y las pencas de las acelgas cortadas.Dejar a fuego medio-bajo por 30 minutos y revolver de vez en cuando. Si requiere más agua, agregar.',
-            'Agregar las hojas de acelgas cortadas y dejar a fuego medio por unos minutos más para que se ablanden un poquito. Servir con yogurt, cilantro y/o menta (obviar el yogurt para un plato vegano).',
-        ],
-        //dietary requirement tags
-        isVegan: true,
-        isDairyFree: true,
-        isVegetarian: true,
-        isGlutenFree: true,
-        isSpicy: true,
-
-        //time management tags
-        isQuickAndEasy: true,
-        isBudgetFriendly: true,
-        isBatchCooking: false,
-
-        //health tags
-        isLowCarb: true,
-        isHighProtein: false,
-        isLowCalorie: true,
-        isHeartHealthy: true,
-    },
-
-    {
-        id: 3,
-        name: 'Berenjenas con cous cous',
-        tagline: 'Una receta rápida y deliciosa',
-        ingredients: [
-            {
-                name: 'berenjenas',
-                quantity: 2,
-                unit: undefined,
-            },
-            {
-                name: 'cebolla morada',
-                quantity: 1,
-                unit: undefined,
-            },
-            {
-                name: 'ajo',
-                quantity: 1,
-                unit: 'diente'
-            },
-            {
-                name: 'tomates',
-                quantity: 2,
-                unit: undefined,
-            },
-            {
-                name: 'alcaparras',
-                quantity: 1,
-                unit: 'cda.'
-            },
-            {
-                name: 'aceitunas verdes',
-                quantity: 8,
-                unit: undefined,
-            },
-            {
-                name: 'cous cous',
-                quantity: 120,
-                unit: 'gr.'
-            },
-            {
-                name: 'tomillo seco',
-                quantity: 1,
-                unit: 'cda.'
-            },
-            {
-                name: 'perejil',
-                quantity: 1,
-                unit: 'puñado'
-            },
-            {
-                name: 'almendras',
-                quantity: 30,
-                unit: 'gr.'
-            },
-
-        ],
-        portions: 2, // yo calculé que era para 2
-        difficulty: 'Muy fácil',
-        prepTime: 20,
-        totalTime: 60,//Sof: esto también hay que probar
-        img: 'https://source.unsplash.com/k2ZCm7LCj8E',
-        type: 'guiso',
-        cuisine: 'árabe',
-        method: [
-            'Tostar las almendras en una placa a horno a 150 grados o en un sartén a fuego bajo hasta que empiecen a desprender su aroma. Una vez tostadas, dejas enfriar y picar. Reservar para decorar. Mientras las almendras se tuestan, cortar la berenjena en pedazos de 3 cm y dorar en una sartén a fuego fuerte con aceite de oliva con el tomillo por 5 minutos. Salpimentar.',
-            'Picar finamente la cebolla y el ajo y cortar los tomates en trozos. Una vez que la berenjena está dorada, agregar la cebolla y el ajo. Continuar cocinando por 2 minutos. Si es necesario, agregar un poco más de aceite de oliva. Agregar las alcaparras y las aceitunas y una chorrito de vinagre de vino. Continuar cocinando hasta que se evapore el vinagre y luego agregar los tomates y bajar el fuego. Cocinar por 15 minutos o hasta que la berenjena y el tomate estés bien cremosos.',
-            'Mientras, poner el cuscus en un bowl, agregar un poco de sal y echar 180 ml de agua hirviendo. Dejar tapado por 5 minutos hasta que el cuscus haya absorbido el agua. Luego revolverlo con un tenedor para separar los granos y agregar perejil y un chorrito de aceite de oliva. Salpimentar la mezcla de la sartén. Servir el cuscus en un plato hondo y servir arriba las berenjenas. Agregar perejil fresco y las almendras.',
-        ],
-        //dietary requirement tags
-        isVegan: true,
-        isDairyFree: true,
-        isVegetarian: true,
-        isGlutenFree: false,
-        isSpicy: false,
-
-        //time management tags
-        isQuickAndEasy: true,
-        isBudgetFriendly: true,
-        isBatchCooking: false,
-
-        //health tags
-        isLowCarb: false,
-        isHighProtein: false,
-        isLowCalorie: true,
-        isHeartHealthy: true,
-    },
     {
         id: 4,
         name: 'Ensalada Caprese',
@@ -705,7 +415,298 @@ let recipes: Recipe[] = [
         isHighProtein: false,
         isLowCalorie: false,
         isHeartHealthy: false
-    }
+    },
+    {
+        id: 1,
+        name: 'tikka masala vegetariano',
+        tagline: 'curry estilo indio de papas y garbanzos',
+        ingredients: [
+            {
+                name: 'garbanzos',
+                quantity: 1,
+                unit: 'lata'
+            },
+            {
+                name: 'papas',
+                quantity: 2,
+                unit: undefined,
+            },
+            {
+                name: 'coliflor',
+                quantity: 1,
+                unit: undefined,
+            },
+            {
+                name: 'cebolla',
+                quantity: 1,
+                unit: undefined,
+            },
+            {
+                name: 'jengibre',
+                quantity: 10,
+                unit: 'cm'
+            },
+            {
+                name: 'cilantro',
+                quantity: 1,
+                unit: 'manojo'
+            },
+            {
+                name: 'tomate',
+                quantity: 1,
+                unit: 'lata'
+            },
+            {
+                name: 'leche de coco',
+                quantity: 200,
+                unit: 'ml'
+            },
+            {
+                name: 'almendras',
+                quantity: 50,
+                unit: 'gr.'
+            },
+            {
+                name: 'limón',
+                quantity: 1,
+                unit: undefined,
+            },
+            {
+                name: 'chile',
+                quantity: 1,
+                unit: undefined,
+            },
+            {
+                name: 'ajo',
+                quantity: 2,
+                unit: 'dientes'
+            },
+
+            {
+                name: 'pimienta de cayena',
+                quantity: 1,
+                unit: 'cdita.'
+            },
+            {
+                name: 'paprika',
+                quantity: 1,
+                unit: 'cda.'
+            },
+            {
+                name: 'garam masala',
+                quantity: 2,
+                unit: 'cdita.'
+            }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
+
+
+        ],
+        portions: 4, // esta receta hay que testearla para ver las porciones, le dejo 4 por ahora
+        difficulty: 'Muy fácil',
+        prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
+        totalTime: 20,
+        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
+        type: 'guiso',
+        cuisine: 'india',
+        method: [
+            'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
+            'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
+            'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
+        ],
+        //dietary requirement tags
+        isVegan: true,
+        isDairyFree: true,
+        isVegetarian: true,
+        isGlutenFree: true,
+        isSpicy: true,
+
+        //time management tags
+        isQuickAndEasy: true,
+        isBudgetFriendly: true,
+        isBatchCooking: false,
+
+        //health tags
+        isLowCarb: false,
+        isHighProtein: false,
+        isLowCalorie: true,
+        isHeartHealthy: true,
+    },
+
+    {
+        id: 2,
+        name: 'guiso de garbanzos y acelgas',
+        tagline: 'curry indio de garbanzos',
+        ingredients: [
+            {
+                name: 'garbanzos',
+                quantity: 1,
+                unit: 'lata'
+            },
+            {
+                name: 'leche de coco',
+                quantity: 1,
+                unit: 'lata'
+            },
+            {
+                name: 'caldo de verduras',
+                quantity: 500,
+                unit: 'ml'
+            },
+            {
+                name: 'cebolla',
+                quantity: 1,
+                unit: undefined,
+            },
+            {
+                name: 'ajo',
+                quantity: 2,
+                unit: 'dientes'
+            },
+            {
+                name: 'jengibre',
+                quantity: 3,
+                unit: 'cm'
+            },
+            {
+                name: 'chile',
+                quantity: 1,
+                unit: undefined,
+            },
+            {
+                name: 'cúrcuma',
+                quantity: 1,
+                unit: 'cda.'
+            },
+            {
+                name: 'comino',
+                quantity: 1,
+                unit: 'cdita.'
+            },
+            {
+                name: 'acelgas',
+                quantity: 200,
+                unit: 'gr.'
+            },
+
+
+        ],
+        portions: 4, // para más adelante. Podríamos preguntarle al usuario cuántas personas son y ajustar los ingredientes
+        difficulty: 'Muy fácil',
+        prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora...
+        totalTime: 60,
+        img: 'https://source.unsplash.com/ReySmTMcKEQ', // busca imágenes en unsplash.com identifica el id en la url de la imágen y pégalo 
+        type: 'guiso',
+        cuisine: 'india',
+        method: [
+            'Picar la cebolla y el chile, y rallar el ajo y el jengibre (ver tip). En una cacerola a fuego medio calentar unas cucharadas de aceite y agregar la cebolla, el ajo, el chile y el jengibre. Salpimentar y saltear por unos minutos y luego agregar las especias, saltear por un minuto más.',
+            'Agregar los garbanzos escurridos y cocinar por 5-7 minutos hasta que se tuesten un poco. Agregar el caldo, la leche de coco y las pencas de las acelgas cortadas.Dejar a fuego medio-bajo por 30 minutos y revolver de vez en cuando. Si requiere más agua, agregar.',
+            'Agregar las hojas de acelgas cortadas y dejar a fuego medio por unos minutos más para que se ablanden un poquito. Servir con yogurt, cilantro y/o menta (obviar el yogurt para un plato vegano).',
+        ],
+        //dietary requirement tags
+        isVegan: true,
+        isDairyFree: true,
+        isVegetarian: true,
+        isGlutenFree: true,
+        isSpicy: true,
+
+        //time management tags
+        isQuickAndEasy: true,
+        isBudgetFriendly: true,
+        isBatchCooking: false,
+
+        //health tags
+        isLowCarb: true,
+        isHighProtein: false,
+        isLowCalorie: true,
+        isHeartHealthy: true,
+    },
+
+    {
+        id: 3,
+        name: 'Berenjenas con cous cous',
+        tagline: 'Una receta rápida y deliciosa',
+        ingredients: [
+            {
+                name: 'berenjenas',
+                quantity: 2,
+                unit: undefined,
+            },
+            {
+                name: 'cebolla morada',
+                quantity: 1,
+                unit: undefined,
+            },
+            {
+                name: 'ajo',
+                quantity: 1,
+                unit: 'diente'
+            },
+            {
+                name: 'tomates',
+                quantity: 2,
+                unit: undefined,
+            },
+            {
+                name: 'alcaparras',
+                quantity: 1,
+                unit: 'cda.'
+            },
+            {
+                name: 'aceitunas verdes',
+                quantity: 8,
+                unit: undefined,
+            },
+            {
+                name: 'cous cous',
+                quantity: 120,
+                unit: 'gr.'
+            },
+            {
+                name: 'tomillo seco',
+                quantity: 1,
+                unit: 'cda.'
+            },
+            {
+                name: 'perejil',
+                quantity: 1,
+                unit: 'puñado'
+            },
+            {
+                name: 'almendras',
+                quantity: 30,
+                unit: 'gr.'
+            },
+
+        ],
+        portions: 2, // yo calculé que era para 2
+        difficulty: 'Muy fácil',
+        prepTime: 20,
+        totalTime: 60,//Sof: esto también hay que probar
+        img: 'https://source.unsplash.com/k2ZCm7LCj8E',
+        type: 'guiso',
+        cuisine: 'árabe',
+        method: [
+            'Tostar las almendras en una placa a horno a 150 grados o en un sartén a fuego bajo hasta que empiecen a desprender su aroma. Una vez tostadas, dejas enfriar y picar. Reservar para decorar. Mientras las almendras se tuestan, cortar la berenjena en pedazos de 3 cm y dorar en una sartén a fuego fuerte con aceite de oliva con el tomillo por 5 minutos. Salpimentar.',
+            'Picar finamente la cebolla y el ajo y cortar los tomates en trozos. Una vez que la berenjena está dorada, agregar la cebolla y el ajo. Continuar cocinando por 2 minutos. Si es necesario, agregar un poco más de aceite de oliva. Agregar las alcaparras y las aceitunas y una chorrito de vinagre de vino. Continuar cocinando hasta que se evapore el vinagre y luego agregar los tomates y bajar el fuego. Cocinar por 15 minutos o hasta que la berenjena y el tomate estés bien cremosos.',
+            'Mientras, poner el cuscus en un bowl, agregar un poco de sal y echar 180 ml de agua hirviendo. Dejar tapado por 5 minutos hasta que el cuscus haya absorbido el agua. Luego revolverlo con un tenedor para separar los granos y agregar perejil y un chorrito de aceite de oliva. Salpimentar la mezcla de la sartén. Servir el cuscus en un plato hondo y servir arriba las berenjenas. Agregar perejil fresco y las almendras.',
+        ],
+        //dietary requirement tags
+        isVegan: true,
+        isDairyFree: true,
+        isVegetarian: true,
+        isGlutenFree: false,
+        isSpicy: false,
+
+        //time management tags
+        isQuickAndEasy: true,
+        isBudgetFriendly: true,
+        isBatchCooking: false,
+
+        //health tags
+        isLowCarb: false,
+        isHighProtein: false,
+        isLowCalorie: true,
+        isHeartHealthy: true,
+    },
 ];
 
 export default recipes 

@@ -23,12 +23,14 @@ function SearchBar({ onSearch }: SearchBarProps): JSX.Element {
         <form onSubmit={handleSubmit} className="search-component relative">
             <input
                 type="text"
-                placeholder="Search..."
+                placeholder="¿Qué te gustaría comer hoy?"
                 value={searchTerm}
                 onChange={handleChange}
-                className="w-[100%] outline-none border-b-[1px] focus:border-b-[#4385be] bg-white"
+                className="w-[100%] px-[.5rem] pt-[4px] pb-[2px] bg-beige bg-opacity-70 outline-none
+                border-b-[transparent] border-b-[2px] focus:border-b-[#4385be] focus:border-b-[2px]
+                duration-300"
             />
-            <button type="submit" className="absolute right-0">
+            <button type="submit" className="absolute right-[8px] top-1/2 transform -translate-y-1/2">
                 <img 
                     src="/img/icons/search-icon.svg" 
                     alt="Search Icon" 
