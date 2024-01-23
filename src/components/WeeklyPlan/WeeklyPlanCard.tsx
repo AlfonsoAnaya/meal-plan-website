@@ -19,14 +19,14 @@ function WeeklyPlanCard({ recipe }: { recipe: Recipe; }) {
                 leading-[22px]">
                     {recipe.name}
                 </h3>
-                <div className="small-info flex flex-row gap-3 text-primary text-[.8rem] font-[500]">
+                {/* <div className="small-info flex flex-row gap-3 text-primary text-[.8rem] font-[500]">
                     <span className="bg-[#4385be26] py-[.3rem] px-[.9rem] rounded-[13px] leading-4">
                         {recipe.prepTime} min
                     </span>
                     <span className="bg-[#4385be26] py-[.3rem] px-[.9rem] rounded-[13px] leading-4">
                         {recipe.difficulty}
                     </span>
-                </div>
+                </div> */}
             </div>
 
         </div>
