@@ -20,11 +20,15 @@ function WeeklyPlan() {
     ];
 
     const [currentRecipe, setCurrentRecipe] = useState(weeksRecipes[0]);
-    function handleNavClick(recipe: Recipe) {
+    const [currentDay, setCurrentDay] = useState("LUNES")
+
+    function handleNavClick(recipe: Recipe, day: string) {
         setCurrentRecipe(recipe);
+        setCurrentDay(day);
     };
 
-    
+
+
     return (
         <section className="weekly-plan-section flex flex-col items-center">
             <div>
@@ -36,7 +40,10 @@ function WeeklyPlan() {
                 <nav className="w-[30%]">
                     {weeksRecipes.map((recipe, i) => {
                         return (
-                            <div key={`${weekDays[i]}`} className="flex flex-col">
+                            <div
+                                key={`${weekDays[i]}`}
+                                className={`flex flex-col ${(weekDays[i] === currentDay)? 'current-day' : ''}`}
+                            >
                                 <div className="flex justify-center align-center w-[100%] bg-beige">
                                     <h3 className="text-primary text-[1.15rem] self-center tracking-[.5rem]">
                                         {weekDays[i]}
@@ -45,7 +52,7 @@ function WeeklyPlan() {
                                 </div>
                                 <div
                                     className="hover:cursor-pointer"
-                                    onClick={() => handleNavClick(recipe)}
+                                    onClick={() => handleNavClick(recipe, weekDays[i])}
                                 >
                                     <WeeklyPlanCard
                                         recipe={recipe}
