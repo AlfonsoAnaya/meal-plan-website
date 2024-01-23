@@ -9,7 +9,7 @@ module.exports = {
         primary: "#4385be",
         secondary: "#879a39",
         btn: "#68d463e8",
-        white: "#fffcf8",
+        white: "#fffcfb;",
         beige: "#f2f0e5",
         dark: "#100f0f",
         beige: "#f2f0e5",
