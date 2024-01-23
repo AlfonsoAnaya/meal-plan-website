@@ -1,6 +1,6 @@
 import DaysRecipe from "./DaysRecipe";
-import RecipeCollection from "./RecipeCollection";
-import RecipeCarousel from "./RecipeCarousel";
+import RecipeCollection from "../Shared/RecipeCollection";
+import RecipeCarousel from "../Shared/RecipeCarousel";
 
 function Home() {
     return (

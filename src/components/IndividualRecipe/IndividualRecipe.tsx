@@ -8,9 +8,9 @@ function IndividualRecipe() {
 
   return (
     <section className="individual-recipe-section flex flex-col items-center">
-
+            
       {/* GRID */}
-      <div className="individual-recipe-grid w-[1000px] h-[1000px] mx-[4rem] mt-16" >
+      <div className="individual-recipe-grid w-[1000px] mx-[4rem] mt-16" >
 
         {/* Recipe Title */}
         <div className="recipe-title flex flex-col justify-center items-left border-b-[1px] border-b-gray-500">

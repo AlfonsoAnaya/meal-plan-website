@@ -9,6 +9,14 @@
     "recipe-ingredients     recipe-method";
 }
 
+.weekdays-grid {
+
+}
+
+.recipes-grid {
+    
+}
+
 .recipe-title {
     grid-area: recipe-title;
 }

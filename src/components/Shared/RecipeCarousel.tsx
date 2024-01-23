@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import RecipeCard from "../Shared/RecipeCard";
+import RecipeCard from "./RecipeCard";
 import recipes from "../recipes";
 
 
