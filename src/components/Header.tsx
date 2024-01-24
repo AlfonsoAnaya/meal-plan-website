@@ -9,11 +9,11 @@ function Header() {
         const headerTitle: HTMLElement | null = document.getElementById("header-title");
         const navUtilities: HTMLElement | null = document.getElementById("nav-utilities");
         console.log(window.scrollY)
-        if (window.scrollY > 226) {
+        if (window.scrollY > 1) {
             headerTitle?.classList.add("small-text");
             navUtilities?.classList.add("align-self-bottom");
         }
-        if (window.scrollY < 226) {
+        if (window.scrollY < 1) {
             headerTitle?.classList.remove("small-text");
             navUtilities?.classList.remove("align-self-bottom");
         }

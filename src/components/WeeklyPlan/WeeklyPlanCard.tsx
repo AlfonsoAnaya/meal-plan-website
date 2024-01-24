@@ -5,7 +5,7 @@ function WeeklyPlanCard(
 ) {
     return (
         <div
-            className="recipe-card-weekly flex flex-row h-[75px] bg-beige">
+            className="recipe-card-weekly flex flex-row h-[75px]">
 
             {/* RECIPE IMAGE */}
             {/* <div className="recipe-img w-[20%]">
@@ -15,23 +15,20 @@ function WeeklyPlanCard(
             </div> */}
 
             {/* DAY */}
-            <div className="w-[15%] flex justify-center items-center">
-                <span className="text-[2.5rem] text-secondary font-tertiary font-[700] leading-4">{weekDay}</span>
+            <div className="w-[10%] pl-[.5em] flex justify-center items-center">
+                <span className="text-[2rem] text-secondary font-tertiary font-[700] leading-4">{weekDay}</span>
             </div>
 
             {/* RECIPE INFO */}
-            <div className="flex flex-col w-[85%] justify-center items-start gap-[.25rem] font-primary font-[400] py-2">
+            <div className="flex flex-col w-[90%] justify-center items-center gap-[.25rem] font-primary font-[400] py-2">
                 <h3
                     className="recipe-title capitalize text-[.95rem] text-primary font-secondary font-[400]
                 leading-[22px]">
                     {recipe.name}
                 </h3>
-                <div className="small-info flex flex-row gap-3 text-primary text-[.8rem] font-[500]">
-                    <span className="bg-[#4385be26] py-[.3rem] px-[.9rem] rounded-[13px] leading-4">
-                        {recipe.prepTime} min
-                    </span>
-                    <span className="bg-[#4385be26] py-[.3rem] px-[.9rem] rounded-[13px] leading-4">
-                        {recipe.difficulty}
+                <div className=" small-info flex flex-row gap-3 text-secondary font-secondary text-[.85rem] font-[500]">
+                    <span className="leading-4">
+                        {recipe.difficulty} 
                     </span>
                 </div>
             </div>
