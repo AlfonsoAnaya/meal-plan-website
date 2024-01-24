@@ -2,11 +2,11 @@
     display: grid;
     column-gap: 1rem;
     row-gap: 2rem;
-    grid-template-columns: calc(40% - 1rem) calc(60% - 1rem);
+    grid-template-columns: calc(45% - 1rem) calc(55% - 1rem);
     grid-template-rows: auto auto auto;
     grid-template-areas: 
     "recipe-title           recipe-title"
-    "recipe-img             recipe-img"
+    "recipe-img             recipe-info"
     "recipe-ingredients     recipe-method";
 }
 
@@ -16,6 +16,10 @@
 
 .recipe-img {
     grid-area: recipe-img;
+}
+
+.recipe-info {
+    grid-area: recipe-info;
 }
 
 .recipe-ingredients {

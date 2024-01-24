@@ -10,52 +10,51 @@ import FullRecipe from "./FullRecipe";
 function WeeklyPlan() {
     const weeksRecipes = recipes.slice(0, 7);
     const weekDays = [
-        "LUNES",
-        "MARTES",
-        "MIÉRCOLES",
-        "JUEVES",
-        "VIERNES",
-        "SÁBADO",
-        "DOMINGO"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
     ];
 
     const [currentRecipe, setCurrentRecipe] = useState(weeksRecipes[0]);
     const [currentDay, setCurrentDay] = useState("")
 
     function handleNavClick(recipe: Recipe, day: string) {
-        let recipeGrid = document.getElementById("full-recipe-grid");
-        recipeGrid?.classList.remove("invisible");
         setCurrentRecipe(recipe);
         setCurrentDay(day);
     };
 
     return (
         <section className="weekly-plan-section flex flex-col items-center">
-            <div className="max-w-[1150px] w-[100%]">
+            <div className="max-w-[1150px] w-[90%]">
                 <h2 className="text-secondary text-left font-secondary text-[3.5rem] py-[2rem]">Plan Semanal</h2>
             </div>
 
             {/* Week and Recipe Flex Container */}
-            <div className="flex flex-row w-[90%] gap-[2em]  min-h-[500px]">
+            <div className="flex flex-row w-[90%] gap-[2em]  min-h-[500px] max-w-[1150px]">
                 <nav className="w-[30%]">
                     {weeksRecipes.map((recipe, i) => {
                         return (
                             <div
-                                key={`${weekDays[i]}`}
+                                key={`Day ${i}`}
                                 className={` border-2 border-transparent flex flex-col ${(weekDays[i] === currentDay)? 'current-day' : ''}`}
                             >
-                                <div className="flex justify-center w-[100%] bg-beige">
+                                {/* <div className="flex justify-center w-[100%] bg-beige">
                                     <h3 className="text-secondary pl-[.7rem] font-tertiary text-[1.25rem] font-[600] tracking-[.7rem]">
                                         {weekDays[i]}
                                     </h3>
 
-                                </div>
+                                </div> */}
                                 <div
                                     className="hover:cursor-pointer"
                                     onClick={() => handleNavClick(recipe, weekDays[i])}
                                 >
                                     <WeeklyPlanCard
                                         recipe={recipe}
+                                        weekDay={weekDays[i]}
                                     />
                                 </div>
                             </div>

@@ -11,7 +11,7 @@ module.exports = {
         btn: "#68d463e8",
         white: "#fffcfb;",
         dark: "#100f0f",
-        beige: "rgb(230, 228, 217)",
+        beige: "rgb(242, 240, 229)",
       },
       fontFamily: {
         primary: "'Josefin Sans', sans-serif",

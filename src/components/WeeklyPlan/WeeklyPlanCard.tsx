@@ -1,10 +1,12 @@
 import Recipe from "../../types/recipe.d";
 
-function WeeklyPlanCard({ recipe }: { recipe: Recipe; }) {
+function WeeklyPlanCard(
+    { recipe, weekDay }: { recipe: Recipe; weekDay: string }
+) {
     return (
         <div
-        className="recipe-card-weekly flex flex-row h-[90px] bg-beige bg-opacity-30">
-            
+            className="recipe-card-weekly flex flex-row h-[75px] bg-beige">
+
             {/* RECIPE IMAGE */}
             {/* <div className="recipe-img w-[20%]">
                 <img className="block w-[100%] h-[100%] object-cover object-center"
@@ -12,10 +14,15 @@ function WeeklyPlanCard({ recipe }: { recipe: Recipe; }) {
                     alt="a bowl of pasta with pesto on a white marble table"></img>
             </div> */}
 
+            {/* DAY */}
+            <div className="w-[15%] flex justify-center items-center">
+                <span className="text-[2.5rem] text-secondary font-tertiary font-[700] leading-4">{weekDay}</span>
+            </div>
+
             {/* RECIPE INFO */}
-            <div className="flex flex-col w-[100%] justify-center items-center gap-[.5rem] font-primary font-[400] p-1">
-                <h3 
-                className="recipe-title capitalize text-[1.25rem] text-primary font-primary font-[600]
+            <div className="flex flex-col w-[85%] justify-center items-start gap-[.25rem] font-primary font-[400] py-2">
+                <h3
+                    className="recipe-title capitalize text-[.95rem] text-primary font-secondary font-[400]
                 leading-[22px]">
                     {recipe.name}
                 </h3>
@@ -28,7 +35,6 @@ function WeeklyPlanCard({ recipe }: { recipe: Recipe; }) {
                     </span>
                 </div>
             </div>
-
         </div>
     );
 }
