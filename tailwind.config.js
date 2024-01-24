@@ -10,13 +10,13 @@ module.exports = {
         secondary: "#879a39",
         btn: "#68d463e8",
         white: "#fffcfb;",
-        beige: "#f2f0e5",
         dark: "#100f0f",
-        beige: "#f2f0e5",
+        beige: "rgb(230, 228, 217)",
       },
       fontFamily: {
         primary: "'Josefin Sans', sans-serif",
         secondary: "'Young Serif', serif",
+        tertiary: "'Dosis', sans-serif"
       }
     },
   },

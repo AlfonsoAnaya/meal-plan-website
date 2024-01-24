@@ -1,5 +1,5 @@
 import Ingredient from '../../types/ingredientd.d';
-import "../IndividualRecipe/IndividualRecipe.css"
+import "./FullRecipe.css"
 import Recipe from '../../types/recipe.d';
 
 function FullRecipe( {recipe} : {recipe: Recipe}) {
@@ -9,10 +9,10 @@ function FullRecipe( {recipe} : {recipe: Recipe}) {
     <>
             
       {/* GRID */}
-      <div className="full-recipe-grid" >
+      <div id="full-recipe-grid" className="full-recipe-grid invisible" >
 
         {/* Recipe Title */}
-        <div className="recipe-title flex flex-col justify-center items-left border-b-[1px] border-b-gray-500">
+        <div className="recipe-title flex flex-col justify-center items-left">
           <h2 className="text-[2.5rem] capitalize text-primary font-[600]">
             {recipe.name}
           </h2>
@@ -30,7 +30,7 @@ function FullRecipe( {recipe} : {recipe: Recipe}) {
         </div>
 
         {/* Recipe Img */}
-        <div className="recipe-img max-h-[450px]">
+        <div className="recipe-img max-h-[350px]">
           <img className="block object-cover w-[100%] h-[100%] object-center"
             src={recipe.img}
             alt="a bowl of pasta with pesto on a white marble table"></img>
@@ -38,9 +38,9 @@ function FullRecipe( {recipe} : {recipe: Recipe}) {
 
         {/* Ingredients */}
         <div className="recipe-ingredients flex flex-col justify-start items-left">
-          {recipe.ingredients.map((ingredient: Ingredient) => {
+          {recipe.ingredients.map((ingredient: Ingredient, i:number) => {
             return (
-              <ul className="method-text font-[400] mb-[1rem]">
+              <ul key={ingredient.name + i} className="font-[400] mb-[1rem]">
                 <li>
                   <span>{ingredient.quantity} </span>
                   <span>{ingredient.unit} de </span>
@@ -53,9 +53,9 @@ function FullRecipe( {recipe} : {recipe: Recipe}) {
 
         {/* Method */}
         <div className="recipe-method flex flex-col justify-start items-left text-[18px]">
-          {recipe.method.map((text: string) => {
+          {recipe.method.map((text: string, i:number) => {
             return (
-              <p className="method-text font-[300] mb-[1rem]">
+              <p key={"paragraph" + i} className="method-text font-[300] mb-[1rem]">
                 {text}
               </p>
             )
