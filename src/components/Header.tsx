@@ -1,46 +1,58 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom";
 import SearchBar from "./Shared/SearchBar";
+import MobileNavMenu from "./MobileNavMenu";
 import "./Header.css"
 
 function Header() {
 
-    function handleScroll() {
-        const headerTitle: HTMLElement | null = document.getElementById("header-title");
-        const navUtilities: HTMLElement | null = document.getElementById("nav-utilities");
-        console.log(window.scrollY)
-        if (window.scrollY > 1) {
-            headerTitle?.classList.add("small-text");
-            navUtilities?.classList.add("align-self-bottom");
-        }
-        if (window.scrollY < 1) {
-            headerTitle?.classList.remove("small-text");
-            navUtilities?.classList.remove("align-self-bottom");
-        }
-    }
+    // function handleScroll() {
+    //     const headerTitle: HTMLElement | null = document.getElementById("header-title");
+    //     const navUtilities: HTMLElement | null = document.getElementById("nav-utilities");
+    //     console.log(window.scrollY)
+    //     if (window.scrollY > 1) {
+    //         headerTitle?.classList.add("small-text");
+    //         navUtilities?.classList.add("align-self-bottom");
+    //     }
+    //     if (window.scrollY < 1) {
+    //         headerTitle?.classList.remove("small-text");
+    //         navUtilities?.classList.remove("align-self-bottom");
+    //     }
+    // }
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll)
+    // }, []);
 
     const handleSearch = (searchTerm: string) => {
         // Perform the search or update state based on the search term
         console.log('Search term:', searchTerm);
     }
 
+    const toggleMobileNav = () =>  {
+        const navToggle = document.querySelector('.header-nav');
+        navToggle?.classList.toggle("nav-open");
+    }
+
     return (
-        <header className="sticky top-0  z-10 bg-white w-100% flex justify-center align-center px-2 nav: border-b-primary border-b-[1px]">
+        <header className="sticky header-nav top-0 z-10  w-100% flex justify-center align-center px-2 nav: border-b-primary border-b-[1px]
+            bg-primary md:bg-white">
             <div className="flex flex-col justify-center align-center w-[100%] max-w-[1100px]">
                 <div className="flex flex-1 flex-row  items-center justify-between">
 
                     {/* Website Name */}
                     <Link to={`/`}>
-                        <h1 id="header-title" className="large-text text-[2.75rem] text-left text-primary">
+                        <h1 id="header-title" 
+                            className="large-text text-left  
+                            text-white md:text-primary
+                            text-[2em] md:text-[2.75em]"
+                            onClick={toggleMobileNav}>
                             Meal Planner
                         </h1>
                     </Link>
 
-                    <div id="nav-utilities" className="flex gap-[1rem] justify-center items-center">
+                    <div id="nav-utilities" className="gap-[1rem] justify-center items-center
+                        hidden md:flex">
                         {/* Search bar */}
                         <div className="w-[400px]">
                             <SearchBar onSearch={handleSearch} />
@@ -73,33 +85,17 @@ function Header() {
                             </svg>
                         </div>
                     </div>
+                    <div className="pr-2
+                        block md:hidden"
+                        onClick={toggleMobileNav}>
+                            <span className="hamburger bg-[#616161]">
+                            </span>
+                        </div>
+                </div>
 
-                </div>
-                <div className="">
-                    <ul className="flex text-primary gap-[2rem] text-[1.05rem] font-[600] uppercase">
-                        <Link to={`/`}>
-                            <li
-                                className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
-                                hover:border-b-secondary hover:border-b-[3px] transition-fill duration-300">
-                                Recetas
-                            </li>
-                        </Link>
-                        <Link to={`/plan-semanal`}>
-                            <li
-                                className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
-                                hover:border-b-secondary hover:border-b-[3px] transition-fill duration-300">
-                                Plan Semanal
-                            </li>
-                        </Link>
-                        <Link to={`/`}>
-                            <li
-                                className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
-                                hover:border-b-secondary hover:border-b-[3px] duration-300">
-                                Ingredientes
-                            </li>
-                        </Link>
-                    </ul>
-                </div>
+                <MobileNavMenu 
+                    toggleMobileNav={toggleMobileNav}
+                />
             </div>
 
         </header>

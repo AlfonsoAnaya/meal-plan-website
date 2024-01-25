@@ -1,6 +1,8 @@
 :root {
   --color-primary: #4385be;
+  --color-white: #fffcfb;
 }
+
 
 * {
   box-sizing: border-box;

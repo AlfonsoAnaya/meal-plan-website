@@ -7,7 +7,7 @@ import WeeklyPlan from "./components/WeeklyPlan/WeeklyPlan";
 
 function App() {
   return (
-    <div className="font-primary">
+    <div className="font-primary w-[100%]">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -9,7 +9,9 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
     <>
 
       {/* GRID */}
-      <div id="full-recipe-grid" className="full-recipe-grid" >
+      <div id="full-recipe-grid" 
+        className="
+          md:full-recipe-grid flex flex-col" >
 
         {/* Recipe Title */}
         <div className="recipe-title flex flex-col justify-center items-left">

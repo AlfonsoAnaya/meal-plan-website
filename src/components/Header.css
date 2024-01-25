@@ -10,3 +10,37 @@
 .align-self-bottom {
     align-self: end;
 }
+
+.nav-open .nav-toggle {
+    transform: translateX(0);
+}
+
+.nav-toggle {
+    transition: transform 200ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--color-white);
+    width: 1.5em;
+    height: 3px;
+    border-radius: 1em;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 8px; }
+.hamburger::after { bottom: 8px; }

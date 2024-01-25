@@ -28,9 +28,16 @@ function WeeklyPlan() {
     };
 
     return (
-        <section className="weekly-plan-section w-[100%] flex flex-col items-center">
-            <div className="max-w-[1150px] w-[90%]">
-                <h2 className="text-secondary text-left font-secondary text-[3.5rem] py-[2rem]">Plan Semanal</h2>
+        <section className="weekly-plan-section w-[100%] flex flex-col items-center 
+            mt-0 md:mt-16">
+
+            {/* Section Title */}
+            <div className="max-w-[1150px] w-[100%] border-b-[1px] border-b-secondary
+                block md:hidden"
+                >
+                <h2 className="text-secondary text-left font-secondary text-[1.5rem] pl-8 py-4">
+                    Plan Semanal
+                </h2>
             </div>
 
             {/* Week and Recipe Flex Container */}
@@ -62,7 +69,8 @@ function WeeklyPlan() {
                     })}
                 </nav>
                 {/* RECIPE WITH DETAILS */}
-                <article className="w-[70%] pl-2">
+                <article className="
+                    w-[100%] md:w-[70%] md:pl-2">
                     <FullRecipe
                         recipe={currentRecipe}
                     />
