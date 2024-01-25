@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+// import { useEffect } from "react"
 import { Link } from "react-router-dom";
 import SearchBar from "./Shared/SearchBar";
 import MobileNavMenu from "./MobileNavMenu";
@@ -96,7 +96,7 @@ function Header() {
                 <MobileNavMenu 
                     toggleMobileNav={toggleMobileNav}
                 />
-                
+
             </div>
 
         </header>
