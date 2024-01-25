@@ -41,7 +41,7 @@ function WeeklyPlan() {
             </div>
 
             {/* Week and Recipe Flex Container */}
-            <div className="flex flex-col items-center md:items-start md:flex-row w-[95%] gap-[2em] max-w-[1150px]">
+            <div className="flex flex-col items-center md:items-start md:flex-row w-[90%] gap-[2em] max-w-[1150px]">
                 <nav className="w-[100%] md:w-[30%] flex flex-col gap-[.5em]">
                     {weeksRecipes.map((recipe, i) => {
                         return (
