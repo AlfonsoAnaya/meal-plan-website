@@ -10,7 +10,7 @@ module.exports = {
         secondary: "#879a39",
         tertiary: "#fcba03",
         btn: "#68d463e8",
-        white: "#fffcfb;",
+        white: "rgb(255, 253, 252)",
         dark: "#100f0f",
         beige: "rgb(242, 240, 229)",
       },
