@@ -34,6 +34,13 @@ function Header() {
         navToggle?.classList.toggle("nav-open");
     }
 
+    const closeMobileNav = () => {
+        {
+            const navToggle = document.querySelector('.header-nav');
+            navToggle?.classList.remove("nav-open");
+        }
+    }
+
     return (
         <header className="sticky header-nav top-0 z-10  w-100% flex justify-center align-center px-2 nav: border-b-primary border-b-[1px]
             bg-primary md:bg-white">
@@ -46,7 +53,7 @@ function Header() {
                             className="large-text text-left  
                             text-white md:text-primary
                             text-[2em] md:text-[2.75em]"
-                            onClick={toggleMobileNav}>
+                            onClick={closeMobileNav}>
                             Meal Planner
                         </h1>
                     </Link>

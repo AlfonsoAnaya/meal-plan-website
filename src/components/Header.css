@@ -15,6 +15,18 @@
     transform: translateX(0);
 }
 
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-8px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
 .nav-toggle {
     transition: transform 200ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -31,6 +43,7 @@
     width: 1.5em;
     height: 3px;
     border-radius: 1em;
+    transition: transform 200ms ease-in-out;
 }
 
 
