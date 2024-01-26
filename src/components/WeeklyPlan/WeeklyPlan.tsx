@@ -22,7 +22,7 @@ function WeeklyPlan() {
     ];
 
     const [currentRecipe, setCurrentRecipe] = useState(weeksRecipes[0]);
-    const [currentDay, setCurrentDay] = useState("")
+    const [currentDay, setCurrentDay] = useState("1")
 
 
     function handleNavClick(recipe: Recipe, day: string) {
@@ -40,8 +40,7 @@ function WeeklyPlan() {
     }
 
 
-
-
+    // boolean state to store whether the viewport is mobile
     const [isViewportMobile, setIsViewportMobile] = useState(false);
 
     useEffect(() => {
