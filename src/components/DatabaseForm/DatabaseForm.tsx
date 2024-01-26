@@ -1,40 +1,40 @@
-import { useState } from 'react';
-// import Ingredient from '../../types/ingredientd.d';
-import Recipe from '../../types/recipe.d';
+// import { useState } from 'react';
+// // import Ingredient from '../../types/ingredientd.d';
+// import Recipe from '../../types/recipe.d';
 
 function DatabaseForm() {
 
-  const [formData, setFormData] = useState<Recipe>({
-    id: 0,
-    name: 'name',
-    tagline: 'tagline',
-    ingredients: [],
-    portions: 0,
-    difficulty: '',
-    prepTime: 0,
-    totalTime: 0,
-    img: '',
-    // imgThumb: '',
-    type: '',
-    cuisine: '',
-    method: [],
-    // tips: '',
-    isVegan: false,
-    isDairyFree: false,
-    isVegetarian: false,
-    isGlutenFree: false,
-    isSpicy: false,
-    isQuickAndEasy: false,
-    isBudgetFriendly: false,
-    isBatchCooking: false,
-    isLowCarb: false,
-    isHighProtein: false,
-    isLowCalorie: false,
-    isHeartHealthy: false
-    // isMainDish: false,
-    // isDessert: false,
-    // isSideDish: false,
-  });
+  // const [formData, setFormData] = useState<Recipe>({
+  //   id: 0,
+  //   name: 'name',
+  //   tagline: 'tagline',
+  //   ingredients: [],
+  //   portions: 0,
+  //   difficulty: '',
+  //   prepTime: 0,
+  //   totalTime: 0,
+  //   img: '',
+  //   // imgThumb: '',
+  //   type: '',
+  //   cuisine: '',
+  //   method: [],
+  //   // tips: '',
+  //   isVegan: false,
+  //   isDairyFree: false,
+  //   isVegetarian: false,
+  //   isGlutenFree: false,
+  //   isSpicy: false,
+  //   isQuickAndEasy: false,
+  //   isBudgetFriendly: false,
+  //   isBatchCooking: false,
+  //   isLowCarb: false,
+  //   isHighProtein: false,
+  //   isLowCalorie: false,
+  //   isHeartHealthy: false
+  //   // isMainDish: false,
+  //   // isDessert: false,
+  //   // isSideDish: false,
+  // });
 
   
 
@@ -51,7 +51,7 @@ function DatabaseForm() {
           <div>
             <label>
               Name:
-              <input type="text" name="name" defaultValue={formData.name}
+              <input type="text" name="name" defaultValue={"name"}
               // onChange={handleChange} 
               />
             </label>
@@ -60,7 +60,7 @@ function DatabaseForm() {
           <div>
             <label>
               Tagline:
-              <input type="text-area" name="tagline" defaultValue={formData.tagline}
+              <input type="text-area" name="tagline" defaultValue={"tagline"}
               // onChange={handleChange} 
               />
             </label>
@@ -69,7 +69,7 @@ function DatabaseForm() {
 
 
           {/* Ingredients */}
-          <div><div>
+          {/* <div><div>
             <label>Ingredients:</label>
             {formData.ingredients.map((ingredient, index) => (
               <div key={index}>
@@ -98,14 +98,14 @@ function DatabaseForm() {
               Add Ingredient
             </button>
           </div>
-          </div>
+          </div> */}
 
 
           {/* Other Details */}
           <div>
             <label>
               Portions:
-              <input type="number" name="portions" value={formData.portions}
+              <input type="number" name="portions" value={4}
               // onChange={handleChange} 
               />
             </label>
@@ -114,7 +114,7 @@ function DatabaseForm() {
           <div>
             <label>
               Prep Time:
-              <input type="number" name="prepTime" value={formData.portions}
+              <input type="number" name="prepTime" value={20}
               // onChange={handleChange} 
               />
             </label>
@@ -123,7 +123,7 @@ function DatabaseForm() {
           <div>
             <label>
               Total Time:
-              <input type="number" name="totalTime" value={formData.portions}
+              <input type="number" name="totalTime" value={20}
               // onChange={handleChange} 
               />
             </label>
@@ -132,7 +132,7 @@ function DatabaseForm() {
           <div>
             <label>
               Difficulty:
-              <input type="text" name="difficulty" value={formData.name}
+              <input type="text" name="difficulty" value={"facil"}
               // onChange={handleChange} 
               />
             </label>

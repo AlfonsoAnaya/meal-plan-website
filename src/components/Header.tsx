@@ -29,16 +29,14 @@ function Header() {
         console.log('Search term:', searchTerm);
     }
 
-    const toggleMobileNav = () =>  {
+    const toggleMobileNav = () => {
         const navToggle = document.querySelector('.header-nav');
         navToggle?.classList.toggle("nav-open");
     }
 
     const closeMobileNav = () => {
-        {
-            const navToggle = document.querySelector('.header-nav');
-            navToggle?.classList.remove("nav-open");
-        }
+        const navToggle = document.querySelector('.header-nav');
+        navToggle?.classList.remove("nav-open");
     }
 
     return (
@@ -49,7 +47,7 @@ function Header() {
 
                     {/* Website Name */}
                     <Link to={`/`}>
-                        <h1 id="header-title" 
+                        <h1 id="header-title"
                             className="large-text text-left  
                             text-white md:text-primary
                             text-[2em] md:text-[2.75em]"
@@ -95,12 +93,12 @@ function Header() {
                     <div className="pr-2
                         block md:hidden"
                         onClick={toggleMobileNav}>
-                            <span className="hamburger bg-[#616161]">
-                            </span>
-                        </div>
+                        <span className="hamburger bg-[#616161]">
+                        </span>
+                    </div>
                 </div>
 
-                <MobileNavMenu 
+                <MobileNavMenu
                     toggleMobileNav={toggleMobileNav}
                 />
 
