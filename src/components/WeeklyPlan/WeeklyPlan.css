@@ -2,21 +2,32 @@
     border-bottom: 2px solid #879a39;
 }
 
+.sidenav-open .recipe-sidenav {
+    transform: translateX(60px);
+    box-shadow: -10px 0px 20px 0px #aaa;
+}
+
+.recipe-sidenav {
+    transition: transform 200ms cubic-bezier(.5, 0, .5, 1);
+}
+
 .article-recipe {
-    visibility: hidden;
+    display: none;
     opacity: 0;
-    transition: all ease 200ms;
-    height: 0;
-    transform: translateY(-50vh);
+    transition: height 200ms ease;
 }
 
 .active-day .article-recipe {
-    visibility: visible;
+    display: block;
     opacity: 1;
-    transition: all ease-in-out 200ms;
-    height: auto;
+    transition: all ease-in-out 600ms;
     transform: translateY(0);
+    transition: height 200ms ease;
 }
 
-
-
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height 200ms ease;
+}

@@ -11,6 +11,10 @@
     align-self: end;
 }
 
+.nav-toggle {
+    transition: transform 200ms cubic-bezier(.5, 0, .5, 1);
+}
+
 .nav-open .nav-toggle {
     transform: translateX(0);
 }
@@ -25,10 +29,6 @@
 
 .nav-open .hamburger::after {
     opacity: 0;
-}
-
-.nav-toggle {
-    transition: transform 200ms cubic-bezier(.5, 0, .5, 1);
 }
 
 .hamburger {

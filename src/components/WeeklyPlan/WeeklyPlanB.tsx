@@ -7,7 +7,7 @@ import Recipe from "../../types/recipe.d";
 import WeeklyPlanCard from "./WeeklyPlanCard";
 import FullRecipe from "./FullRecipe";
 
-function WeeklyPlan() {
+function WeeklyPlanB() {
 
     const weeksRecipes = recipes.slice(0, 7);
 
@@ -27,21 +27,22 @@ function WeeklyPlan() {
 
     function handleNavClick(recipe: Recipe, day: string) {
         setCurrentDay(day);
-        setCurrentRecipe(recipe);
-        if (isViewportMobile) {
-            console.log('clidkes')
-            openRecipeSidenav();
+        if (!isViewportMobile) {
+            setCurrentRecipe(recipe);
+            return;
         };
-    };
-
-    const openRecipeSidenav = () => {
-        const WeeklySection = document.querySelector('.weekly-plan-section');
-        WeeklySection?.classList.add("sidenav-open");
-    };
-
-    const closeRecipeSidenav = () => {
-        const WeeklySection = document.querySelector('.weekly-plan-section');
-        WeeklySection?.classList.remove("sidenav-open");
+        if (document.getElementById("Day " + day)?.classList.contains("active-day")) {
+            document.getElementById("Day " + day)?.classList.remove("active-day");
+        } else {
+            document.querySelector(".active-day")?.classList.remove("active-day");
+            document.getElementById("Day " + day)?.classList.add("active-day");
+        };
+        const currentRecipe = document.getElementById(recipe.name + recipe.id)
+        currentRecipe?.classList.add("collapsing");
+        setTimeout(() => {
+            console.log('timeout code')
+            document.getElementById(recipe.name + recipe.id)?.classList.remove("collapsing")
+        }, 200)
     }
 
 
@@ -85,7 +86,9 @@ function WeeklyPlan() {
                 <nav className="w-[100%] md:w-[30%] flex flex-col gap-[.5em]">
                     {weeksRecipes.map((recipe, i) => {
                         return (
-                            <div key={`Day ${i}`} id={`Day ${i + 1}`}>
+                            <div key={`Day ${i}`} id={`Day ${i + 1}`}
+                                className="relative"
+                            >
                                 <div
                                     className={`border-b-[1px] border-b-gray-500 flex flex-col ${(weekDays[i] === currentDay) ? 'current-day' : ''}`}
                                 >
@@ -94,7 +97,7 @@ function WeeklyPlan() {
                                         {weekDays[i]}
                                     </h3>
 
-                                </div> */}
+                                    </div> */}
                                     <div
                                         className="hover:cursor-pointer"
                                         onClick={() => handleNavClick(recipe, weekDays[i])}
@@ -105,35 +108,34 @@ function WeeklyPlan() {
                                         />
                                     </div>
                                 </div>
+                                {isViewportMobile ?
+                                    <article id={recipe.name + recipe.id} className="article-recipe">
+                                        <FullRecipe
+                                            recipe={recipe}
+                                        />
+                                    </article>
+                                    :
+                                    <></>
+                                }
+
+
                             </div>
+
                         )
                     })}
                 </nav>
 
                 {/* RECIPE WITH DETAILS CONDITIONAL ON  IS VIEWPORT MOBILE */}
-                <article className="h-auto 
-                    recipe-sidenav
-                    p-4 md:pl-2
-                    w-[100%] md:w-[70%] 
-                    fixed top-[48px] left-0 right-0 bottom-0 md:static
-                    translate-x-full md:translate-x-0
-                    bg-white md:bg-transparent
-                    md:shadow-none
-                    overflow-y-scroll"
-                >
-                    <div className="hover:cursor-pointer"
-                    onClick={closeRecipeSidenav}>
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" width="30" height="30" viewBox="0 0 330 330" 
-                        className="-rotate-90 fill-[#616161] hover:fill-primary">
-                        <path d="M100.606 100.606 150 51.212V315c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15V51.212l49.394 49.394A14.95 14.95 0 0 0 240 105a14.95 14.95 0 0 0 10.606-4.394c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.858-15.355-5.858-21.213 0l-75 75c-5.858 5.857-5.858 15.355 0 21.213 5.858 5.857 15.356 5.857 21.213 0z"/>
-                    </svg>
-                    </div>
-
-                    <FullRecipe
-                        recipe={currentRecipe}
-                    />
-                </article>
-
+                {isViewportMobile ?
+                    <></>
+                    :
+                    <article className="
+                     w-[70%] pl-2">
+                        <FullRecipe
+                            recipe={currentRecipe}
+                        />
+                    </article>
+                }
 
             </div>
 
@@ -143,4 +145,4 @@ function WeeklyPlan() {
     )
 };
 
-export default WeeklyPlan
+export default WeeklyPlanB
