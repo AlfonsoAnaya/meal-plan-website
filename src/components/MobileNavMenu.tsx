@@ -34,12 +34,12 @@ function MobileNavMenu(
                         Plan Semanal
                     </li>
                 </Link>
-                <Link to={`/`}>
+                <Link to={`/database-form`}>
                     <li
                         onClick={props.toggleMobileNav}
                         className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
                                 hover:border-b-secondary hover:border-b-[3px] duration-300">
-                        Ingredientes
+                        Database Form
                     </li>
                 </Link>
             </ul>
