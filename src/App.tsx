@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Home from './components/Home/Home';
 import IndividualRecipe from "./components/IndividualRecipe/IndividualRecipePage";
 import WeeklyPlan from "./components/WeeklyPlan/WeeklyPlan";
-import WeeklyPlanB from "./components/WeeklyPlan/WeeklyPlanB";
 import DatabaseForm from "./components/DatabaseForm/DatabaseForm";
 
 function App() {
