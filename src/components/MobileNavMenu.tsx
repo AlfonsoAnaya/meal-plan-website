@@ -31,15 +31,7 @@ function MobileNavMenu(
                         onClick={props.toggleMobileNav}
                         className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
                                 hover:border-b-secondary hover:border-b-[3px] transition-fill duration-300">
-                        Plan Semanal A
-                    </li>
-                </Link>
-                <Link to={`/plan-semanalB`}>
-                    <li
-                        onClick={props.toggleMobileNav}
-                        className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
-                                hover:border-b-secondary hover:border-b-[3px] transition-fill duration-300">
-                        Plan Semanal B
+                        Plan Semanal
                     </li>
                 </Link>
                 <Link to={`/`}>

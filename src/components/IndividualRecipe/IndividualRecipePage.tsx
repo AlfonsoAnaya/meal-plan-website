@@ -45,7 +45,7 @@ function IndividualRecipe() {
                 <li>
                   <span>{ingredient.quantity} </span>
                   <span>{ingredient.unit} de </span>
-                  <span>{ingredient.name} </span>
+                  <span>{ingredient.name.singular} </span>
                 </li>
               </ul>
             )

@@ -1,7 +1,16 @@
 interface Ingredient {
-    name: string;
+    name: { singular: string,
+            plural: string 
+    };
     quantity: number;
-    unit?: string;
+    unit: string;
+    substitution?: {
+        name: {
+            singular: string,
+            plural: string,
+        },
+        quantity: number,
+        unit: string,
+    }
 }
-
 export default Ingredient

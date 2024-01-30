@@ -61,11 +61,11 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
           <h3 className="font-[600] mb-[.5rem] text-[1.5rem]">Ingredientes</h3>
           {recipe.ingredients.map((ingredient: Ingredient, i: number) => {
             return (
-              <ul key={ingredient.name + i} className="font-[600] mb-[1em]">
+              <ul key={ingredient.name.singular + i} className="font-[600] mb-[1em]">
                 <li>
                   <span>{ingredient.quantity} </span>
                   <span>{ingredient.unit} de </span>
-                  <span>{ingredient.name} </span>
+                  <span>{ingredient.name.singular} </span>
                 </li>
               </ul>
             )

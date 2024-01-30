@@ -145,4 +145,4 @@ function WeeklyPlanB() {
     )
 };
 
-export default WeeklyPlanB
+export default {}

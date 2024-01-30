@@ -5,14 +5,18 @@ interface Recipe {
     name: string;
     tagline: string;
     ingredients: Ingredient[];
+    primaryIngredient: string;
+    secondaryIngredient?: string;
     portions: number;
     difficulty: string;
     prepTime: number;
     totalTime: number;
     img: string;
+    imgThumb: string;
     type: string;
     cuisine: string;
     method: string[];
+    tips?: string[];
     isVegan: boolean;
     isDairyFree: boolean;
     isVegetarian: boolean;
@@ -25,6 +29,9 @@ interface Recipe {
     isHighProtein: boolean;
     isLowCalorie: boolean;
     isHeartHealthy: boolean;
+    isMainDish: boolean;
+    isDessert: boolean;
+    isSideDish: boolean;
 }
 
 export default Recipe 

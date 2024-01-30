@@ -1,46 +1,56 @@
-// import { useState } from 'react';
-// // import Ingredient from '../../types/ingredientd.d';
-// import Recipe from '../../types/recipe.d';
+import { useState } from 'react';
+// import Ingredient from '../../types/ingredientd.d';
+import Recipe from '../../types/recipe.d';
 
 function DatabaseForm() {
 
-  // const [formData, setFormData] = useState<Recipe>({
-  //   id: 0,
-  //   name: 'name',
-  //   tagline: 'tagline',
-  //   ingredients: [],
-  //   portions: 0,
-  //   difficulty: '',
-  //   prepTime: 0,
-  //   totalTime: 0,
-  //   img: '',
-  //   // imgThumb: '',
-  //   type: '',
-  //   cuisine: '',
-  //   method: [],
-  //   // tips: '',
-  //   isVegan: false,
-  //   isDairyFree: false,
-  //   isVegetarian: false,
-  //   isGlutenFree: false,
-  //   isSpicy: false,
-  //   isQuickAndEasy: false,
-  //   isBudgetFriendly: false,
-  //   isBatchCooking: false,
-  //   isLowCarb: false,
-  //   isHighProtein: false,
-  //   isLowCalorie: false,
-  //   isHeartHealthy: false
-  //   // isMainDish: false,
-  //   // isDessert: false,
-  //   // isSideDish: false,
-  // });
+  const [formData, setFormData] = useState<Recipe>({
+    id: 0,
+    name: '',
+    tagline: '',
+    ingredients: [],
+    primaryIngredient: '',
+    secondaryIngredient: '',
+    portions: 0,
+    difficulty: '',
+    prepTime: 0,
+    totalTime: 0,
+    img: '',
+    imgThumb: '',
+    type: '',
+    cuisine: '',
+    method: [],
+    tips: [],
+    isVegan: false,
+    isDairyFree: false,
+    isVegetarian: false,
+    isGlutenFree: false,
+    isSpicy: false,
+    isQuickAndEasy: false,
+    isBudgetFriendly: false,
+    isBatchCooking: false,
+    isLowCarb: false,
+    isHighProtein: false,
+    isLowCalorie: false,
+    isHeartHealthy: false,
+    isMainDish: false,
+    isDessert: false,
+    isSideDish: false,
+  });
 
-  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+
 
 
   return (
-    <div className="w-[70%] border-2 border-red-200 mx-auto">
+    <div className="w-[70%] mx-auto">
       <div className="flex flex-col justify-center items-center">
         <h2>Forma Para Base de Datos</h2>
         <form
@@ -50,9 +60,18 @@ function DatabaseForm() {
           {/* Basic Information */}
           <div>
             <label>
+              ID *required:
+              <input type="number" name="id" required
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+          <div>
+            <label>
               Name:
-              <input type="text" name="name" defaultValue={"name"}
-              // onChange={handleChange} 
+              <input type="text" name="name" required
+                onChange={handleChange}
               />
             </label>
           </div>
@@ -60,8 +79,8 @@ function DatabaseForm() {
           <div>
             <label>
               Tagline:
-              <input type="text-area" name="tagline" defaultValue={"tagline"}
-              // onChange={handleChange} 
+              <input type="text-area" name="tagline" required
+                onChange={handleChange}
               />
             </label>
           </div>
@@ -141,7 +160,20 @@ function DatabaseForm() {
           <button type="submit">Submit</button>
         </form>
       </div>
+      <div className="mt-6">
+        <h3>Current Value:</h3>
+        <p>
+          {"{"}
+          id: {formData.id},
+          name: '{formData.name}',
+          tagline: '{formData.tagline}',</p>
+          {"}"}
+      </div>
+
     </div>
+
+
+
 
   )
 }

@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plan-semanal"  element={<WeeklyPlan />}/>
-        <Route path="/plan-semanalB"  element={<WeeklyPlanB />}/>
         <Route path="/recipe/:recipeName" element={<IndividualRecipe />} />
         <Route path="/database-form"  element={<DatabaseForm />}/>
       </Routes>
