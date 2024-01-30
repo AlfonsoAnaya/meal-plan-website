@@ -40,9 +40,13 @@ function DatabaseForm() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+    
+    // If the input type is radio, convert the value to a boolean
+    const updatedValue = e.target.type === 'radio' ? value === 'true' : value;
+  
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: updatedValue,
     }));
   };
 
@@ -60,7 +64,7 @@ function DatabaseForm() {
           {/* Basic Information */}
           <div>
             <label>
-              ID *required:
+              ID (*required):
               <input type="number" name="id" required
                 onChange={handleChange}
               />
@@ -69,7 +73,7 @@ function DatabaseForm() {
 
           <div>
             <label>
-              Name:
+              Name (*required):
               <input type="text" name="name" required
                 onChange={handleChange}
               />
@@ -78,8 +82,26 @@ function DatabaseForm() {
 
           <div>
             <label>
-              Tagline:
+              Tagline (*required):
               <input type="text-area" name="tagline" required
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Primary Ingredient (*required):
+              <input type="text" name="primaryIngredient" required
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Secondary Ingredient (optional):
+              <input type="text" name="secondaryIngredient"
                 onChange={handleChange}
               />
             </label>
@@ -120,12 +142,20 @@ function DatabaseForm() {
           </div> */}
 
 
-          {/* Other Details */}
           <div>
             <label>
               Portions:
-              <input type="number" name="portions" value={4}
-              // onChange={handleChange} 
+              <input type="number" name="portions" required
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Difficulty (*required):
+              <input type="text" name="secondaryIngredient" required
+                onChange={handleChange}
               />
             </label>
           </div>
@@ -133,8 +163,8 @@ function DatabaseForm() {
           <div>
             <label>
               Prep Time:
-              <input type="number" name="prepTime" value={20}
-              // onChange={handleChange} 
+              <input type="number" name="prepTime" required
+                onChange={handleChange}
               />
             </label>
           </div>
@@ -142,32 +172,115 @@ function DatabaseForm() {
           <div>
             <label>
               Total Time:
-              <input type="number" name="totalTime" value={20}
-              // onChange={handleChange} 
+              <input type="number" name="totalTime" required
+                onChange={handleChange}
               />
+            </label>
+          </div>
+
+          {/* BOOLEANS */}
+
+          <div>
+            <label>
+              Vegan 🥦:
+              <input
+                type="radio"
+                name="isVegan"
+                value="true"
+                checked={formData.isVegan}
+                onChange={handleChange}
+              />
+              True
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="isVegan"
+                value="false"
+                checked={!formData.isVegan}
+                onChange={handleChange}
+              />
+              False
             </label>
           </div>
 
           <div>
             <label>
-              Difficulty:
-              <input type="text" name="difficulty" value={"facil"}
-              // onChange={handleChange} 
+              Dairy Free 🥛⛔:
+              <input
+                type="radio"
+                name="isDairyFree"
+                value="true"
+                checked={formData.isDairyFree}
+                onChange={handleChange}
               />
+              True
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="isDairyFree"
+                value="false"
+                checked={!formData.isDairyFree}
+                onChange={handleChange}
+              />
+              False
             </label>
           </div>
 
+          <div>
+            <label>
+              Vegetarian 🌿:
+              <input
+                type="radio"
+                name="isVegetarian"
+                value="true"
+                checked={formData.isVegetarian}
+                onChange={handleChange}
+              />
+              True
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="isVegetarian"
+                value="false"
+                checked={!formData.isVegetarian}
+                onChange={handleChange}
+              />
+              False
+            </label>
+          </div>
+
+
+
           <button type="submit">Submit</button>
+
         </form>
+
+
       </div>
       <div className="mt-6">
         <h3>Current Value:</h3>
         <p>
           {"{"}
-          id: {formData.id},
-          name: '{formData.name}',
-          tagline: '{formData.tagline}',</p>
-          {"}"}
+          id: {formData.id},<br></br>
+          name: '{formData.name}',<br></br>
+          tagline: '{formData.tagline}',<br></br>
+          primaryIngredient: '{formData.primaryIngredient}',<br></br>
+          secondaryIngredient '{formData.secondaryIngredient}',<br></br>
+          portions: {formData.portions},<br></br>
+          difficulty: '{formData.difficulty}',<br></br>
+          prepTime: {formData.prepTime},<br></br>
+          totalTime: {formData.totalTime},<br></br>
+          isVegan: {formData.isVegan.toString()},<br></br>
+          isDairyFree: {formData.isDairyFree.toString()},<br></br>
+          isVegetarian: {formData.isVegetarian.toString()},<br></br>
+        </p>
+        {"}"}
       </div>
 
     </div>
