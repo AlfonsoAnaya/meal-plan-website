@@ -144,6 +144,7 @@ let recipes: Recipe[] = [
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
             'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
         ],
+        tips: [''],
         //dietary requirement tags
         isVegan: true,
         isDairyFree: true,
@@ -307,6 +308,7 @@ let recipes: Recipe[] = [
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
             'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
         ],
+        tips: [''],
         //dietary requirement tags
         isVegan: true,
         isDairyFree: true,
@@ -470,6 +472,7 @@ let recipes: Recipe[] = [
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
             'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
         ],
+        tips: [''],
         //dietary requirement tags
         isVegan: true,
         isDairyFree: true,
@@ -633,6 +636,7 @@ let recipes: Recipe[] = [
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
             'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
         ],
+        tips: [''],
         //dietary requirement tags
         isVegan: true,
         isDairyFree: true,
@@ -796,6 +800,7 @@ let recipes: Recipe[] = [
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
             'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
         ],
+        tips: [''],
         //dietary requirement tags
         isVegan: true,
         isDairyFree: true,
@@ -959,6 +964,7 @@ let recipes: Recipe[] = [
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
             'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
         ],
+        tips: [''],
         //dietary requirement tags
         isVegan: true,
         isDairyFree: true,
@@ -1122,6 +1128,7 @@ let recipes: Recipe[] = [
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
             'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
         ],
+        tips: [''],
         //dietary requirement tags
         isVegan: true,
         isDairyFree: true,

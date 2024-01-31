@@ -1,12 +1,12 @@
 import Ingredient from "./ingredientd.d"; 
 
 interface Recipe {
-    id: number;
+    id: number; 
     name: string;
     tagline: string;
     ingredients: Ingredient[];
     primaryIngredient: string;
-    secondaryIngredient?: string;
+    secondaryIngredient: string;
     portions: number;
     difficulty: string;
     prepTime: number;
@@ -16,7 +16,7 @@ interface Recipe {
     type: string;
     cuisine: string;
     method: string[];
-    tips?: string[];
+    tips: string[];
     isVegan: boolean;
     isDairyFree: boolean;
     isVegetarian: boolean;
