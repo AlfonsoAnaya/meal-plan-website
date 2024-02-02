@@ -4,6 +4,7 @@ interface Ingredient {
     };
     quantity: number;
     unit: string;
+    category: string;
     substitution?: {
         name: {
             singular: string,
@@ -11,6 +12,7 @@ interface Ingredient {
         },
         quantity: number,
         unit: string,
+        category: string;
     }
 }
 export default Ingredient

@@ -14,6 +14,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -22,6 +23,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -30,6 +32,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -38,6 +41,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -45,7 +49,8 @@ let recipes: Recipe[] = [
                     plural: 'gengibres'
                 },
                 quantity: 10,
-                unit: 'cm'
+                unit: 'cm',
+                category: ''
             },
             {
                 name: {
@@ -53,7 +58,8 @@ let recipes: Recipe[] = [
                     plural: 'cilantros'
                 },
                 quantity: 1,
-                unit: 'manojo'
+                unit: 'manojo',
+                category: ''
             },
             {
                 name: {
@@ -61,7 +67,8 @@ let recipes: Recipe[] = [
                     plural: 'lata de tomates'
                 },
                 quantity: 1,
-                unit: 'lata'
+                unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -69,7 +76,8 @@ let recipes: Recipe[] = [
                     plural: 'leches de coco'
                 },
                 quantity: 200,
-                unit: 'ml'
+                unit: 'ml',
+                category: ''
             },
             {
                 name: {
@@ -77,7 +85,8 @@ let recipes: Recipe[] = [
                     plural: 'almendras'
                 },
                 quantity: 50,
-                unit: 'gr.'
+                unit: 'gr.',
+                category: ''
             },
             {
                 name: {
@@ -86,6 +95,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -94,6 +104,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -101,7 +112,8 @@ let recipes: Recipe[] = [
                     plural: 'ajos'
                 },
                 quantity: 2,
-                unit: 'dientes'
+                unit: 'dientes',
+                category: ''
             },
 
             {
@@ -110,7 +122,8 @@ let recipes: Recipe[] = [
                     plural: 'pimineta de cayena'
                 },
                 quantity: 1,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             },
             {
                 name: {
@@ -118,7 +131,8 @@ let recipes: Recipe[] = [
                     plural: 'paprika'
                 },
                 quantity: 1,
-                unit: 'cda.'
+                unit: 'cda.',
+                category: ''
             },
             {
                 name: {
@@ -126,7 +140,8 @@ let recipes: Recipe[] = [
                     plural: 'garam masala'
                 },
                 quantity: 2,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -178,6 +193,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -186,6 +202,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -194,6 +211,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -202,6 +220,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -209,7 +228,8 @@ let recipes: Recipe[] = [
                     plural: 'gengibres'
                 },
                 quantity: 10,
-                unit: 'cm'
+                unit: 'cm',
+                category: ''
             },
             {
                 name: {
@@ -217,7 +237,8 @@ let recipes: Recipe[] = [
                     plural: 'cilantros'
                 },
                 quantity: 1,
-                unit: 'manojo'
+                unit: 'manojo',
+                category: ''
             },
             {
                 name: {
@@ -225,7 +246,8 @@ let recipes: Recipe[] = [
                     plural: 'lata de tomates'
                 },
                 quantity: 1,
-                unit: 'lata'
+                unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -233,7 +255,8 @@ let recipes: Recipe[] = [
                     plural: 'leches de coco'
                 },
                 quantity: 200,
-                unit: 'ml'
+                unit: 'ml',
+                category: ''
             },
             {
                 name: {
@@ -241,7 +264,8 @@ let recipes: Recipe[] = [
                     plural: 'almendras'
                 },
                 quantity: 50,
-                unit: 'gr.'
+                unit: 'gr.',
+                category: ''
             },
             {
                 name: {
@@ -250,6 +274,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -258,6 +283,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -265,7 +291,8 @@ let recipes: Recipe[] = [
                     plural: 'ajos'
                 },
                 quantity: 2,
-                unit: 'dientes'
+                unit: 'dientes',
+                category: ''
             },
 
             {
@@ -274,7 +301,8 @@ let recipes: Recipe[] = [
                     plural: 'pimineta de cayena'
                 },
                 quantity: 1,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             },
             {
                 name: {
@@ -282,7 +310,8 @@ let recipes: Recipe[] = [
                     plural: 'paprika'
                 },
                 quantity: 1,
-                unit: 'cda.'
+                unit: 'cda.',
+                category: ''
             },
             {
                 name: {
@@ -290,7 +319,8 @@ let recipes: Recipe[] = [
                     plural: 'garam masala'
                 },
                 quantity: 2,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -342,6 +372,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -350,6 +381,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -358,6 +390,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -366,6 +399,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -373,7 +407,8 @@ let recipes: Recipe[] = [
                     plural: 'gengibres'
                 },
                 quantity: 10,
-                unit: 'cm'
+                unit: 'cm',
+                category: ''
             },
             {
                 name: {
@@ -381,7 +416,8 @@ let recipes: Recipe[] = [
                     plural: 'cilantros'
                 },
                 quantity: 1,
-                unit: 'manojo'
+                unit: 'manojo',
+                category: ''
             },
             {
                 name: {
@@ -389,7 +425,8 @@ let recipes: Recipe[] = [
                     plural: 'lata de tomates'
                 },
                 quantity: 1,
-                unit: 'lata'
+                unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -397,7 +434,8 @@ let recipes: Recipe[] = [
                     plural: 'leches de coco'
                 },
                 quantity: 200,
-                unit: 'ml'
+                unit: 'ml',
+                category: ''
             },
             {
                 name: {
@@ -405,7 +443,8 @@ let recipes: Recipe[] = [
                     plural: 'almendras'
                 },
                 quantity: 50,
-                unit: 'gr.'
+                unit: 'gr.',
+                category: ''
             },
             {
                 name: {
@@ -414,6 +453,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -422,6 +462,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -429,7 +470,8 @@ let recipes: Recipe[] = [
                     plural: 'ajos'
                 },
                 quantity: 2,
-                unit: 'dientes'
+                unit: 'dientes',
+                category: ''
             },
 
             {
@@ -438,7 +480,8 @@ let recipes: Recipe[] = [
                     plural: 'pimineta de cayena'
                 },
                 quantity: 1,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             },
             {
                 name: {
@@ -446,7 +489,8 @@ let recipes: Recipe[] = [
                     plural: 'paprika'
                 },
                 quantity: 1,
-                unit: 'cda.'
+                unit: 'cda.',
+                category: ''
             },
             {
                 name: {
@@ -454,7 +498,8 @@ let recipes: Recipe[] = [
                     plural: 'garam masala'
                 },
                 quantity: 2,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -506,6 +551,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -514,6 +560,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -522,6 +569,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -530,6 +578,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -537,7 +586,8 @@ let recipes: Recipe[] = [
                     plural: 'gengibres'
                 },
                 quantity: 10,
-                unit: 'cm'
+                unit: 'cm',
+                category: ''
             },
             {
                 name: {
@@ -545,7 +595,8 @@ let recipes: Recipe[] = [
                     plural: 'cilantros'
                 },
                 quantity: 1,
-                unit: 'manojo'
+                unit: 'manojo',
+                category: ''
             },
             {
                 name: {
@@ -553,7 +604,8 @@ let recipes: Recipe[] = [
                     plural: 'lata de tomates'
                 },
                 quantity: 1,
-                unit: 'lata'
+                unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -561,7 +613,8 @@ let recipes: Recipe[] = [
                     plural: 'leches de coco'
                 },
                 quantity: 200,
-                unit: 'ml'
+                unit: 'ml',
+                category: ''
             },
             {
                 name: {
@@ -569,7 +622,8 @@ let recipes: Recipe[] = [
                     plural: 'almendras'
                 },
                 quantity: 50,
-                unit: 'gr.'
+                unit: 'gr.',
+                category: ''
             },
             {
                 name: {
@@ -578,6 +632,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -586,6 +641,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -593,7 +649,8 @@ let recipes: Recipe[] = [
                     plural: 'ajos'
                 },
                 quantity: 2,
-                unit: 'dientes'
+                unit: 'dientes',
+                category: ''
             },
 
             {
@@ -602,7 +659,8 @@ let recipes: Recipe[] = [
                     plural: 'pimineta de cayena'
                 },
                 quantity: 1,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             },
             {
                 name: {
@@ -610,7 +668,8 @@ let recipes: Recipe[] = [
                     plural: 'paprika'
                 },
                 quantity: 1,
-                unit: 'cda.'
+                unit: 'cda.',
+                category: ''
             },
             {
                 name: {
@@ -618,7 +677,8 @@ let recipes: Recipe[] = [
                     plural: 'garam masala'
                 },
                 quantity: 2,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -670,6 +730,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -678,6 +739,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -686,6 +748,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -694,6 +757,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -701,7 +765,8 @@ let recipes: Recipe[] = [
                     plural: 'gengibres'
                 },
                 quantity: 10,
-                unit: 'cm'
+                unit: 'cm',
+                category: ''
             },
             {
                 name: {
@@ -709,7 +774,8 @@ let recipes: Recipe[] = [
                     plural: 'cilantros'
                 },
                 quantity: 1,
-                unit: 'manojo'
+                unit: 'manojo',
+                category: ''
             },
             {
                 name: {
@@ -717,7 +783,8 @@ let recipes: Recipe[] = [
                     plural: 'lata de tomates'
                 },
                 quantity: 1,
-                unit: 'lata'
+                unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -725,7 +792,8 @@ let recipes: Recipe[] = [
                     plural: 'leches de coco'
                 },
                 quantity: 200,
-                unit: 'ml'
+                unit: 'ml',
+                category: ''
             },
             {
                 name: {
@@ -733,7 +801,8 @@ let recipes: Recipe[] = [
                     plural: 'almendras'
                 },
                 quantity: 50,
-                unit: 'gr.'
+                unit: 'gr.',
+                category: ''
             },
             {
                 name: {
@@ -742,6 +811,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -750,6 +820,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -757,7 +828,8 @@ let recipes: Recipe[] = [
                     plural: 'ajos'
                 },
                 quantity: 2,
-                unit: 'dientes'
+                unit: 'dientes',
+                category: ''
             },
 
             {
@@ -766,7 +838,8 @@ let recipes: Recipe[] = [
                     plural: 'pimineta de cayena'
                 },
                 quantity: 1,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             },
             {
                 name: {
@@ -774,7 +847,8 @@ let recipes: Recipe[] = [
                     plural: 'paprika'
                 },
                 quantity: 1,
-                unit: 'cda.'
+                unit: 'cda.',
+                category: ''
             },
             {
                 name: {
@@ -782,7 +856,8 @@ let recipes: Recipe[] = [
                     plural: 'garam masala'
                 },
                 quantity: 2,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -834,6 +909,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -842,6 +918,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -850,6 +927,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -858,6 +936,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -865,7 +944,8 @@ let recipes: Recipe[] = [
                     plural: 'gengibres'
                 },
                 quantity: 10,
-                unit: 'cm'
+                unit: 'cm',
+                category: ''
             },
             {
                 name: {
@@ -873,7 +953,8 @@ let recipes: Recipe[] = [
                     plural: 'cilantros'
                 },
                 quantity: 1,
-                unit: 'manojo'
+                unit: 'manojo',
+                category: ''
             },
             {
                 name: {
@@ -881,7 +962,8 @@ let recipes: Recipe[] = [
                     plural: 'lata de tomates'
                 },
                 quantity: 1,
-                unit: 'lata'
+                unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -889,7 +971,8 @@ let recipes: Recipe[] = [
                     plural: 'leches de coco'
                 },
                 quantity: 200,
-                unit: 'ml'
+                unit: 'ml',
+                category: ''
             },
             {
                 name: {
@@ -897,7 +980,8 @@ let recipes: Recipe[] = [
                     plural: 'almendras'
                 },
                 quantity: 50,
-                unit: 'gr.'
+                unit: 'gr.',
+                category: ''
             },
             {
                 name: {
@@ -906,6 +990,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -914,6 +999,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -921,7 +1007,8 @@ let recipes: Recipe[] = [
                     plural: 'ajos'
                 },
                 quantity: 2,
-                unit: 'dientes'
+                unit: 'dientes',
+                category: ''
             },
 
             {
@@ -930,7 +1017,8 @@ let recipes: Recipe[] = [
                     plural: 'pimineta de cayena'
                 },
                 quantity: 1,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             },
             {
                 name: {
@@ -938,7 +1026,8 @@ let recipes: Recipe[] = [
                     plural: 'paprika'
                 },
                 quantity: 1,
-                unit: 'cda.'
+                unit: 'cda.',
+                category: ''
             },
             {
                 name: {
@@ -946,7 +1035,8 @@ let recipes: Recipe[] = [
                     plural: 'garam masala'
                 },
                 quantity: 2,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -998,6 +1088,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -1006,6 +1097,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -1014,6 +1106,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -1022,6 +1115,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -1029,7 +1123,8 @@ let recipes: Recipe[] = [
                     plural: 'gengibres'
                 },
                 quantity: 10,
-                unit: 'cm'
+                unit: 'cm',
+                category: ''
             },
             {
                 name: {
@@ -1037,7 +1132,8 @@ let recipes: Recipe[] = [
                     plural: 'cilantros'
                 },
                 quantity: 1,
-                unit: 'manojo'
+                unit: 'manojo',
+                category: ''
             },
             {
                 name: {
@@ -1045,7 +1141,8 @@ let recipes: Recipe[] = [
                     plural: 'lata de tomates'
                 },
                 quantity: 1,
-                unit: 'lata'
+                unit: 'lata',
+                category: ''
             },
             {
                 name: {
@@ -1053,7 +1150,8 @@ let recipes: Recipe[] = [
                     plural: 'leches de coco'
                 },
                 quantity: 200,
-                unit: 'ml'
+                unit: 'ml',
+                category: ''
             },
             {
                 name: {
@@ -1061,7 +1159,8 @@ let recipes: Recipe[] = [
                     plural: 'almendras'
                 },
                 quantity: 50,
-                unit: 'gr.'
+                unit: 'gr.',
+                category: ''
             },
             {
                 name: {
@@ -1070,6 +1169,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -1078,6 +1178,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
+                category: ''
             },
             {
                 name: {
@@ -1085,7 +1186,8 @@ let recipes: Recipe[] = [
                     plural: 'ajos'
                 },
                 quantity: 2,
-                unit: 'dientes'
+                unit: 'dientes',
+                category: ''
             },
 
             {
@@ -1094,7 +1196,8 @@ let recipes: Recipe[] = [
                     plural: 'pimineta de cayena'
                 },
                 quantity: 1,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
             },
             {
                 name: {
@@ -1102,7 +1205,8 @@ let recipes: Recipe[] = [
                     plural: 'paprika'
                 },
                 quantity: 1,
-                unit: 'cda.'
+                unit: 'cda.',
+                category: ''
             },
             {
                 name: {
@@ -1110,7 +1214,187 @@ let recipes: Recipe[] = [
                     plural: 'garam masala'
                 },
                 quantity: 2,
-                unit: 'cdita.'
+                unit: 'cdita.',
+                category: ''
+            }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
+        ],
+        primaryIngredient: 'vegetales',
+        secondaryIngredient: 'tomates',
+        portions: 4, // esta receta hay que testearla para ver las porciones, le dejo 4 por ahora
+        difficulty: 'Muy fácil',
+        prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
+        totalTime: 20,
+        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
+        imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
+        type: 'guiso',
+        cuisine: 'india',
+        method: [
+            'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
+            'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
+            'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
+        ],
+        tips: [''],
+        //dietary requirement tags
+        isVegan: true,
+        isDairyFree: true,
+        isVegetarian: true,
+        isGlutenFree: true,
+        isSpicy: true,
+
+        //time management tags
+        isQuickAndEasy: true,
+        isBudgetFriendly: true,
+        isBatchCooking: false,
+
+        //health tags
+        isLowCarb: false,
+        isHighProtein: false,
+        isLowCalorie: true,
+        isHeartHealthy: true,
+        isMainDish: true,
+        isDessert: false,
+        isSideDish: true,
+    },
+    {
+        id: 1,
+        name: 'tikka masala vegetariano',
+        tagline: 'curry estilo indio de papas y garbanzos',
+        ingredients: [
+            {
+                name: {
+                    singular: 'garbanzo',
+                    plural: 'garbanzos'
+                },
+                quantity: 1,
+                unit: 'lata',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'papa',
+                    plural: 'papas'
+                },
+                quantity: 2,
+                unit: 'unidad',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'coliflor',
+                    plural: 'coliflores'
+                },
+                quantity: 1,
+                unit: 'unidad',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'cebolla',
+                    plural: 'cebollas'
+                },
+                quantity: 1,
+                unit: 'unidad',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'gengibre',
+                    plural: 'gengibres'
+                },
+                quantity: 10,
+                unit: 'cm',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'cilantro',
+                    plural: 'cilantros'
+                },
+                quantity: 1,
+                unit: 'manojo',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'lata de tomate',
+                    plural: 'lata de tomates'
+                },
+                quantity: 1,
+                unit: 'lata',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'leche de coco',
+                    plural: 'leches de coco'
+                },
+                quantity: 200,
+                unit: 'ml',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'almendra',
+                    plural: 'almendras'
+                },
+                quantity: 50,
+                unit: 'gr.',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'limón',
+                    plural: 'limones'
+                },
+                quantity: 1,
+                unit: 'unidad',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'chile',
+                    plural: 'chiles'
+                },
+                quantity: 1,
+                unit: 'unidad',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'ajo',
+                    plural: 'ajos'
+                },
+                quantity: 2,
+                unit: 'dientes',
+                category: ''
+            },
+
+            {
+                name: {
+                    singular: 'pimineta de cayena',
+                    plural: 'pimineta de cayena'
+                },
+                quantity: 1,
+                unit: 'cdita.',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'paprika',
+                    plural: 'paprika'
+                },
+                quantity: 1,
+                unit: 'cda.',
+                category: ''
+            },
+            {
+                name: {
+                    singular: 'garam masala',
+                    plural: 'garam masala'
+                },
+                quantity: 2,
+                unit: 'cdita.',
+                category: ''
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
