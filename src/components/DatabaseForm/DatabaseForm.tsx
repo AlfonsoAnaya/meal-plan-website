@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import RecipeCategories from '../../utils/RecipeCategories'
+const { Cuisine, Difficulty, IngredientCategory, DishType } = RecipeCategories;
 
 function DatabaseForm() {
 
@@ -76,7 +78,7 @@ function DatabaseForm() {
 
 
 
-  const handleIngredientsChange = (index: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleIngredientsChange = (index: number) => (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
 
     setIngredients((prevData) => {
@@ -95,10 +97,10 @@ function DatabaseForm() {
 
 
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
     // If the input type is radio, convert the value to a boolean
-    const updatedValue = e.target.type === 'radio' ? value === 'true' : value;
+    const updatedValue = type === 'radio' ? value === 'true' : value as string | boolean;
 
     setFormData((prevData) => ({
       ...prevData,
@@ -127,7 +129,8 @@ function DatabaseForm() {
           className="w-[100%]"
         // onSubmit={handleSubmit}
         >
-          {/* Basic Information */}
+
+          {/* ID */}
           <div className="py-2 flex flex-row">
             <input type="number" name="id" required
               className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
@@ -137,6 +140,7 @@ function DatabaseForm() {
             />
           </div>
 
+          {/* NAME */}
           <div className="py-2">
             <input type="text" name="name" required
               className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
@@ -146,6 +150,7 @@ function DatabaseForm() {
             />
           </div>
 
+          {/* TAGLINE */}
           <div className="py-2">
 
             <input type="text-area" name="tagline" required
@@ -158,7 +163,7 @@ function DatabaseForm() {
           </div>
 
 
-
+          {/* PRIMARY INGREDIENT */}
           <div className="py-2">
 
             <input type="text" name="primaryIngredient" required
@@ -170,6 +175,8 @@ function DatabaseForm() {
 
           </div>
 
+
+          {/* SECONDARY INGREDIENT */}
           <div className="py-2">
 
             <input type="text" name="secondaryIngredient"
@@ -181,6 +188,7 @@ function DatabaseForm() {
 
           </div>
 
+          {/* PORTIONS */}
           <div className="py-2">
 
             <input type="number" name="portions" required
@@ -192,16 +200,29 @@ function DatabaseForm() {
 
           </div>
 
+          {/* DIFFICULTY */}
           <div className="py-2">
-            <input type="text" name="secondaryIngredient" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+            <select name="difficulty" required
+              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
-              placeholder='Difficulty'
-            />
 
+            >
+              <option value="" disabled selected hidden>
+                Difficulty
+              </option>
+              {Difficulty.map((element: string, index) => {
+                return (
+                  <option key={element + index} value={element}>
+                    {element}
+                  </option>
+                )
+              })}
+
+            </select>
           </div>
 
+          {/* PREP TIME */}
           <div className="py-2">
             <input type="number" name="prepTime" required
               className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
@@ -212,6 +233,7 @@ function DatabaseForm() {
 
           </div>
 
+          {/* TOTAL TIME */}
           <div className="py-2">
 
             <input type="number" name="totalTime" required
@@ -223,7 +245,74 @@ function DatabaseForm() {
 
           </div>
 
-          {/* ARRAYS METHODS AND TIPS */}
+          {/* IMAGE */}
+          <div className="py-2">
+
+            <input type="text" name="img"
+              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+              onChange={handleChange}
+              placeholder='Image URL'
+            />
+
+          </div>
+
+          {/* IMAGE Thumb */}
+          <div className="py-2">
+
+            <input type="text" name="imgThumb"
+              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+              onChange={handleChange}
+              placeholder='Image Thumb URL'
+            />
+
+          </div>
+
+          {/* TYPE */}
+          <div className="py-2">
+            <select name="type" required
+              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+              onChange={handleChange}
+
+            >
+              <option value="" disabled selected hidden>
+                Dish Type
+              </option>
+              {DishType.map((element: string, index) => {
+                return (
+                  <option key={element + index} value={element}>
+                    {element}
+                  </option>
+                )
+              })}
+            </select>
+          </div>
+
+          {/* CUISINE */}
+          <div className="py-2">
+            <select name="cuisine" required
+              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+              onChange={handleChange}
+            >
+              <option value="" disabled selected hidden>
+                Cuisine
+              </option>
+              {Cuisine.map((element: string, index) => {
+                return (
+                  <option key={element + index} value={element}>
+                    {element}
+                  </option>
+                )
+              })}
+            </select>
+          </div>
+
+          {/* A R R A Y S */}
+
+          {/* METHOD */}
           <div className="py-2">
             <textarea
               className="ml-2 px-[2px] py-[7px] pl-[12px] w-[70%] rounded-xl 
@@ -237,6 +326,8 @@ function DatabaseForm() {
 
           </div>
 
+
+          {/* TIPS */}
           <div className="py-2">
 
             <textarea
@@ -252,7 +343,7 @@ function DatabaseForm() {
 
 
           {/* BOOLEANS */}
-          <div className="w-[70%] hidden" >
+          <div className="w-[70%]" >
             <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
 
               <span className="w-[30%] min-w-[155px] block">Vegan 🥦:</span>
@@ -702,19 +793,31 @@ function DatabaseForm() {
 
                     {/* CATEGORY */}
                     <div className="py-2">
-                      <input type="text" name="ingredientCategory" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+                      <select name="ingredientCategory" required
+                        className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                        //onChange={handleChange}
                         onChange={handleIngredientsChange(index)}
-                        placeholder='Category'
-                      />
+                      >
+                        <option value="" disabled selected hidden>
+                          Ingredient Category
+                        </option>
+                        {IngredientCategory.map((element: string, index) => {
+                          return (
+                            <option key={element + index} value={element}>
+                              {element}
+                            </option>
+                          )
+                        })}
+                      </select>
                     </div>
+
+
                   </div>
 
                   {/* ==== SUBSTITUTION ==== */}
-                  <div className="substitution ml-10">
-                    Substitution
+                  <details className="substitution ml-10">
+                    <summary>Substitution</summary>
+                    
                     {/* NAME */}
                     <div className="py-2">
                       <input type="text" name="subsIngredientNameSingular" required
@@ -756,14 +859,26 @@ function DatabaseForm() {
 
                     {/* CATEGORY */}
                     <div className="py-2">
-                      <input type="text" name="subsIngredientCategory" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+                      <select name="subsIngredientCategory" required
+                        className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                        onChange={handleIngredientsChange(index)}
-                        placeholder='Category'
-                      />
+                  onChange={handleIngredientsChange(index)}
+                      >
+                        <option value="" disabled selected hidden>
+                          Ingredient Category
+                        </option>
+                        {IngredientCategory.map((element: string, index) => {
+                          return (
+                            <option key={"sub" + element + index} value={element}>
+                              {element}
+                            </option>
+                          )
+                        })}
+                      </select>
                     </div>
-                  </div>
+                  </details>
+
+
                   <button
                     className="color-white bg-red-400 py-[1em] px-[2.5em] rounded-full my-4"
                     onClick={() => deleteIngredient(index)}>
@@ -799,6 +914,10 @@ function DatabaseForm() {
           difficulty: '{formData.difficulty}',<br />
           prepTime: {formData.prepTime},<br />
           totalTime: {formData.totalTime},<br />
+          img: '{formData.img}',<br />
+          imgThumb: '{formData.imgThumb}',<br />
+          type: '{formData.type}',<br />
+          cuisine: '{formData.cuisine}',<br />
           method: {`['${formData.method.join("','")}']`},<br />
           tips: {`['${formData.tips?.join("','")}']`},<br />
           isVegan: {formData.isVegan.toString()},<br />
@@ -817,13 +936,29 @@ function DatabaseForm() {
           isDessert: {formData.isDessert.toString()},<br />
           isSideDish: {formData.isSideDish.toString()},<br />
         </p>
-        {ingredients.map((element, i) => {
-          return (
-            <p
-              key={`list-ingredient${i}`}
-            >ingredients: {ingredients[i].ingredientNameSingular} {ingredients[i].subsIngredientCategory}</p>
-          )
-        })}
+        <p>
+          ingredients:
+          {ingredients.map((element, i) => {
+            return (
+              <span
+                key={`list-ingredient${i}`}
+              >
+                {"["}
+                  {"{"}
+                    name: {"{"}
+                      singular: '{ingredients[i].ingredientNameSingular}',
+                      plural: '{ingredients[i].ingredientNamePlural}'
+                    {"}"},
+                    quantity: {ingredients[i].ingredientQuantity},
+                    unit: '{ingredients[i].ingredientUnit}',
+                    category: '{ingredients[i].ingredientCategory}',
+                  {"}"},
+                {"]"}
+              </span>
+            )
+          })}
+        </p>
+
         {"}"}
       </div>
 
