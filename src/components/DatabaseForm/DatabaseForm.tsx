@@ -35,6 +35,10 @@ function DatabaseForm() {
     isMainDish: false,
     isDessert: false,
     isSideDish: false,
+    isSpringDish: false,
+    isSummerDish: false,
+    isAutumnDish: false,
+    isWinterDish: false,
   });
 
   const [ingredients, setIngredients] = useState([
@@ -203,12 +207,13 @@ function DatabaseForm() {
           {/* DIFFICULTY */}
           <div className="py-2">
             <select name="difficulty" required
-              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
+              defaultValue=''
+              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
 
             >
-              <option value="" disabled selected hidden>
+              <option value="" disabled >
                 Difficulty
               </option>
               {Difficulty.map((element: string, index) => {
@@ -272,13 +277,14 @@ function DatabaseForm() {
           {/* TYPE */}
           <div className="py-2">
             <select name="type" required
+              defaultValue=''
               className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
 
             >
-              <option value="" disabled selected hidden>
-                Dish Type
+              <option value="" disabled>
+                Dish type
               </option>
               {DishType.map((element: string, index) => {
                 return (
@@ -293,11 +299,12 @@ function DatabaseForm() {
           {/* CUISINE */}
           <div className="py-2">
             <select name="cuisine" required
+              defaultValue=''
               className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
             >
-              <option value="" disabled selected hidden>
+              <option value="" disabled>
                 Cuisine
               </option>
               {Cuisine.map((element: string, index) => {
@@ -734,6 +741,111 @@ function DatabaseForm() {
                 False
               </label>
             </div>
+
+            <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
+              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <label className="true-label">
+
+                <input
+                  type="radio"
+                  name="isSpringDish"
+                  value="true"
+                  checked={formData.isSpringDish}
+                  onChange={handleChange}
+                />
+                True
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="isSpringDish"
+                  value="false"
+                  checked={!formData.isSpringDish}
+                  onChange={handleChange}
+                />
+                False
+              </label>
+            </div>
+
+            <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
+              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <label className="true-label">
+
+                <input
+                  type="radio"
+                  name="isSummerDish"
+                  value="true"
+                  checked={formData.isSummerDish}
+                  onChange={handleChange}
+                />
+                True
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="isSummerDish"
+                  value="false"
+                  checked={!formData.isSummerDish}
+                  onChange={handleChange}
+                />
+                False
+              </label>
+            </div>
+
+            <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
+              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <label className="true-label">
+
+                <input
+                  type="radio"
+                  name="isAutumnDish"
+                  value="true"
+                  checked={formData.isAutumnDish}
+                  onChange={handleChange}
+                />
+                True
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="isAutumnDish"
+                  value="false"
+                  checked={!formData.isAutumnDish}
+                  onChange={handleChange}
+                />
+                False
+              </label>
+            </div>
+
+            <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
+              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <label className="true-label">
+
+                <input
+                  type="radio"
+                  name="isWinterDish"
+                  value="true"
+                  checked={formData.isWinterDish}
+                  onChange={handleChange}
+                />
+                True
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="isWinterDish"
+                  value="false"
+                  checked={!formData.isWinterDish}
+                  onChange={handleChange}
+                />
+                False
+              </label>
+            </div>
+
           </div>
 
           {/* Ingredients */}
@@ -794,11 +906,12 @@ function DatabaseForm() {
                     {/* CATEGORY */}
                     <div className="py-2">
                       <select name="ingredientCategory" required
+                        defaultValue=''
                         className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         onChange={handleIngredientsChange(index)}
                       >
-                        <option value="" disabled selected hidden>
+                        <option value="" disabled>
                           Ingredient Category
                         </option>
                         {IngredientCategory.map((element: string, index) => {
@@ -860,11 +973,12 @@ function DatabaseForm() {
                     {/* CATEGORY */}
                     <div className="py-2">
                       <select name="subsIngredientCategory" required
+                      defaultValue=''
                         className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                   onChange={handleIngredientsChange(index)}
                       >
-                        <option value="" disabled selected hidden>
+                        <option value="" disabled>
                           Ingredient Category
                         </option>
                         {IngredientCategory.map((element: string, index) => {
@@ -919,7 +1033,10 @@ function DatabaseForm() {
           type: '{formData.type}',<br />
           cuisine: '{formData.cuisine}',<br />
           method: {`['${formData.method.join("','")}']`},<br />
-          tips: {`['${formData.tips?.join("','")}']`},<br />
+          { formData.tips.length > 0 ?
+            `tips: ['${formData.tips?.join("','")}'],` :
+            '' }
+          {formData.tips.length > 0 && <br />}
           isVegan: {formData.isVegan.toString()},<br />
           isDairyFree: {formData.isDairyFree.toString()},<br />
           isVegetarian: {formData.isVegetarian.toString()},<br />
@@ -935,28 +1052,45 @@ function DatabaseForm() {
           isMainDish: {formData.isMainDish.toString()},<br />
           isDessert: {formData.isDessert.toString()},<br />
           isSideDish: {formData.isSideDish.toString()},<br />
+          isSpringDish: {formData.isSpringDish.toString()},<br />
+          isSummerDish: {formData.isSummerDish.toString()},<br />
+          isAutumnDish: {formData.isAutumnDish.toString()},<br />
+          isWinterDish: {formData.isWinterDish.toString()},<br />
         </p>
         <p>
           ingredients:
+          {"["}
           {ingredients.map((element, i) => {
             return (
               <span
                 key={`list-ingredient${i}`}
-              >
-                {"["}
-                  {"{"}
-                    name: {"{"}
-                      singular: '{ingredients[i].ingredientNameSingular}',
-                      plural: '{ingredients[i].ingredientNamePlural}'
-                    {"}"},
-                    quantity: {ingredients[i].ingredientQuantity},
-                    unit: '{ingredients[i].ingredientUnit}',
-                    category: '{ingredients[i].ingredientCategory}',
+              >       
+                {"{"}
+                  name: {"{"}
+                    singular: '{ingredients[i].ingredientNameSingular}',
+                    plural: '{ingredients[i].ingredientNamePlural}'
                   {"}"},
-                {"]"}
+                  quantity: {ingredients[i].ingredientQuantity},
+                  unit: '{ingredients[i].ingredientUnit}',
+                  category: '{ingredients[i].ingredientCategory}',
+                { 
+                  element.subsIngredientNameSingular.length > 0 ?
+                  `substitution: {
+                    name: {
+                    singular: '${ingredients[i].subsIngredientNameSingular}',
+                    plural: '${ingredients[i].subsIngredientNamePlural}'
+                    },
+                    quantity: ${ingredients[i].subsIngredientQuantity},
+                    unit: '${ingredients[i].subsIngredientUnit}',
+                    category: '${ingredients[i].subsIngredientCategory}',
+                    }` :
+                  ''
+                }
+                {"}"},
               </span>
             )
           })}
+          {"]"}
         </p>
 
         {"}"}

@@ -43,7 +43,20 @@ let RecipeCategories = {
     DishType: [
         "Guiso",
         "Pasta",
-        "Ensalada"
+        "Ensalada",
+        "Tarta",
+        "Carne",
+        "Pollo",
+        "Pescado",
+        "Cerdo",
+        "Cordero",
+        "Legumbres",
+        "Arroz",
+        "Sopa",
+        "Pizza",
+        "Vegetales",
+        "Pan",
+        "Pastel",
     ]
 }
 

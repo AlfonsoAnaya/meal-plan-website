@@ -16,7 +16,7 @@ interface Recipe {
     type: string;
     cuisine: string;
     method: string[];
-    tips: string[];
+    tips?: string[];
     isVegan: boolean;
     isDairyFree: boolean;
     isVegetarian: boolean;
@@ -32,6 +32,10 @@ interface Recipe {
     isMainDish: boolean;
     isDessert: boolean;
     isSideDish: boolean;
+    isSpringDish: boolean;
+    isSummerDish: boolean;
+    isAutumnDish: boolean;
+    isWinterDish: boolean;
 }
 
 export default Recipe 

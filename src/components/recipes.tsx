@@ -180,6 +180,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
     {
         id: 1,
@@ -359,6 +363,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
     {
         id: 1,
@@ -538,6 +546,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
     {
         id: 1,
@@ -717,6 +729,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
     {
         id: 1,
@@ -896,6 +912,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
     {
         id: 1,
@@ -1075,6 +1095,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
     {
         id: 1,
@@ -1254,6 +1278,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
     {
         id: 1,
@@ -1433,6 +1461,10 @@ let recipes: Recipe[] = [
         isMainDish: true,
         isDessert: false,
         isSideDish: true,
+        isSpringDish: false,
+        isSummerDish: false,
+        isAutumnDish: false,
+        isWinterDish: false,
     },
 
 
