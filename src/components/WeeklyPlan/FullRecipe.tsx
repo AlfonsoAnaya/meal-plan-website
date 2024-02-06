@@ -14,7 +14,8 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
 
         {/* Recipe Title */}
         <div className="recipe-title flex flex-col justify-center items-left">
-          <h2 className="text-[2.5rem] capitalize text-primary font-[600]">
+          <h2 className="capitalize text-primary font-[600]
+            text-[1.75em] md:text-[2.5em]">
             {recipe.name}
           </h2>
           {/* <div className="small-info flex flex-row gap-4 text-primary text-[.75rem] font-[500] my-4">
@@ -29,7 +30,8 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
 
         {/* Recipe Info */}
         <div className="recipe-info flex flex-col justify-start items-left border-b-[1px] border-b-gray-500">
-          <h3 className="recipe-title  text-[1.75rem] text-secondary font-secondary font-[600]">
+          <h3 className="recipe-title   text-secondary font-secondary font-[600]
+            text-[1-15rem] md:text-[1.75rem]">
             {recipe.tagline}
           </h3>
           <div className="small-info flex flex-row gap-4 text-dark text-[.85rem] font-[500] my-4">

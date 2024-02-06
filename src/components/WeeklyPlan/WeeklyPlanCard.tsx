@@ -15,7 +15,8 @@ function WeeklyPlanCard(
             </div> */}
 
             {/* DAY */}
-            <div className="w-[10%] pl-[.5em] flex justify-center items-center">
+            <div className="w-[10%] flex justify-center items-center
+                pl-0 md:pl-[.5em]">
                 <span className="text-[2rem] text-secondary font-tertiary font-[700] leading-4">{weekDay}</span>
             </div>
 

@@ -29,7 +29,6 @@ function WeeklyPlan() {
         setCurrentDay(day);
         setCurrentRecipe(recipe);
         if (isViewportMobile) {
-            console.log('clidkes')
             openRecipeSidenav();
         };
     };
@@ -39,9 +38,14 @@ function WeeklyPlan() {
         WeeklySection?.classList.add("sidenav-open");
     };
 
-    const closeRecipeSidenav = () => {
-        const WeeklySection = document.querySelector('.weekly-plan-section');
-        WeeklySection?.classList.remove("sidenav-open");
+    const closeRecipeSidenav = (e:any) => {
+        console.log("closing sidenav...")
+        console.log(e.target, e.currentTarget)
+        if (e.target === e.currentTarget) {
+            const WeeklySection = document.querySelector('.weekly-plan-section');
+            WeeklySection?.classList.remove("sidenav-open");
+        }
+        
     }
 
 
@@ -81,7 +85,7 @@ function WeeklyPlan() {
             </div>
 
             {/* Week and Recipe Flex Container */}
-            <div className="flex flex-col items-center md:items-start md:flex-row w-[90%] gap-[2em] max-w-[1150px]">
+            <div className="flex flex-col items-center md:items-start md:flex-row w-[95%] gap-[2em] max-w-[1150px]">
                 <nav className="w-[100%] md:w-[30%] flex flex-col gap-[.5em]">
                     {weeksRecipes.map((recipe, i) => {
                         return (
@@ -111,28 +115,42 @@ function WeeklyPlan() {
                 </nav>
 
                 {/* RECIPE WITH DETAILS CONDITIONAL ON  IS VIEWPORT MOBILE */}
-                <article className="h-auto 
-                    recipe-sidenav
-                    p-4 md:pl-2
-                    w-[100%] md:w-[70%] 
-                    fixed top-[48px] left-0 right-0 bottom-0 md:static
-                    translate-x-full md:translate-x-0
-                    bg-white md:bg-transparent
-                    md:shadow-none
-                    overflow-y-scroll"
-                >
-                    <div className="hover:cursor-pointer"
-                    onClick={closeRecipeSidenav}>
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" width="30" height="30" viewBox="0 0 330 330" 
-                        className="-rotate-90 fill-[#616161] hover:fill-primary">
-                        <path d="M100.606 100.606 150 51.212V315c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15V51.212l49.394 49.394A14.95 14.95 0 0 0 240 105a14.95 14.95 0 0 0 10.606-4.394c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.858-15.355-5.858-21.213 0l-75 75c-5.858 5.857-5.858 15.355 0 21.213 5.858 5.857 15.356 5.857 21.213 0z"/>
-                    </svg>
-                    </div>
+                {isViewportMobile ?
+                    <div className="recipe-sidenav w-[100%] 
+                    fixed top-[49px] left-0 right-0 bottom-0 
+                    translate-x-[calc(100%)] 
+                    backdrop-blur-[2px] bg-[#31313138] z-[99]"
+                    onClick={(e) => closeRecipeSidenav(e)}>
+                        <article className="h-auto p-[10px] md:pl-2 w-[calc(100%-40px)]  
+                            fixed top-[0] left-[40px] right-0 bottom-0 bg-white overflow-y-scroll z-[999]"
+                        >
+                            <div className="hover:cursor-pointer
+                                block md:hidden"
+                                onClick={(e) => closeRecipeSidenav(e)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" data-name="Layer 1" viewBox="0 0 52 52"
+                                    className="fill-[#616161]"
+                                    onClick={(e) => closeRecipeSidenav(e)}
+                                >
+                                    <path onClick={(e) => closeRecipeSidenav(e)} d="M50 24H6.83L27.41 3.41a2 2 0 0 0 0-2.82 2 2 0 0 0-2.82 0l-24 24a1.79 1.79 0 0 0-.25.31 1.19 1.19 0 0 0-.09.1c0 .07-.07.13-.1.2l-.06.2a.84.84 0 0 0 0 .17 2 2 0 0 0 0 .78.84.84 0 0 0 0 .17l.06.2c0 .07.07.13.1.2a1.19 1.19 0 0 0 .09.15 1.79 1.79 0 0 0 .25.31l24 24a2 2 0 1 0 2.82-2.82L6.83 28H50a2 2 0 0 0 0-4Z" />
+                                </svg>
+                            </div>
 
-                    <FullRecipe
-                        recipe={currentRecipe}
-                    />
-                </article>
+                            <FullRecipe
+                                recipe={currentRecipe}
+                            />
+                        </article> 
+                    </div>
+                    
+                    :
+                    <article className="h-auto recipe-sidenav pl-2 w-[70%] static
+                        translate-x-0 bg-transparent overflow-y-scroll md:overflow-auto"
+                    >
+                        <FullRecipe
+                            recipe={currentRecipe}
+                        />
+                    </article>
+                }
+
 
 
             </div>
