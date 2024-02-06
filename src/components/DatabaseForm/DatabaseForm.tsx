@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import RecipeCategories from '../../utils/RecipeCategories'
-const { Cuisine, Difficulty, IngredientCategory, DishType } = RecipeCategories;
+const { Cuisine, Difficulty, IngredientCategory, DishType, Units } = RecipeCategories;
 
 function DatabaseForm() {
 
@@ -48,11 +48,7 @@ function DatabaseForm() {
       ingredientQuantity: 0,
       ingredientUnit: '',
       ingredientCategory: '',
-      subsIngredientNameSingular: '',
-      subsIngredientNamePlural: '',
-      subsIngredientQuantity: 0,
-      subsIngredientUnit: '',
-      subsIngredientCategory: '',
+      clarification: '',
     },
   ]);
 
@@ -65,11 +61,7 @@ function DatabaseForm() {
         ingredientQuantity: 0,
         ingredientUnit: '',
         ingredientCategory: '',
-        subsIngredientNameSingular: '',
-        subsIngredientNamePlural: '',
-        subsIngredientQuantity: 0,
-        subsIngredientUnit: '',
-        subsIngredientCategory: '',
+        clarification: '',
       }
     ])
   }
@@ -126,9 +118,9 @@ function DatabaseForm() {
 
 
   return (
-    <div className="w-[80%] mx-auto flex gap-4 justify-center">
+    <div className="w-[90%] mx-auto flex gap-4 justify-center py-12 font-sans">
       <div className="flex flex-col justify-center items-center w-[55%]">
-        <h2>Forma Para Base de Datos</h2>
+        <h2 className="text-[1.25em] self-start">Introduce la información de la receta</h2>
         <form
           className="w-[100%]"
         // onSubmit={handleSubmit}
@@ -137,7 +129,7 @@ function DatabaseForm() {
           {/* ID */}
           <div className="py-2 flex flex-row">
             <input type="number" name="id" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='ID'
@@ -147,7 +139,7 @@ function DatabaseForm() {
           {/* NAME */}
           <div className="py-2">
             <input type="text" name="name" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Name'
@@ -158,7 +150,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <input type="text-area" name="tagline" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Tagline - Short Description'
@@ -171,7 +163,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <input type="text" name="primaryIngredient" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Primary Ingredient'
@@ -184,7 +176,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <input type="text" name="secondaryIngredient"
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
               border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Secondary Ingredient'
@@ -196,7 +188,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <input type="number" name="portions" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Portions'
@@ -208,7 +200,7 @@ function DatabaseForm() {
           <div className="py-2">
             <select name="difficulty" required
               defaultValue=''
-              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl
+              className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[70%] rounded-xl
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
 
@@ -230,7 +222,7 @@ function DatabaseForm() {
           {/* PREP TIME */}
           <div className="py-2">
             <input type="number" name="prepTime" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Prep Time'
@@ -242,7 +234,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <input type="number" name="totalTime" required
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Total Time'
@@ -254,7 +246,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <input type="text" name="img"
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Image URL'
@@ -266,7 +258,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <input type="text" name="imgThumb"
-              className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
               border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
               placeholder='Image Thumb URL'
@@ -278,7 +270,7 @@ function DatabaseForm() {
           <div className="py-2">
             <select name="type" required
               defaultValue=''
-              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
+              className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[70%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
 
@@ -297,24 +289,33 @@ function DatabaseForm() {
           </div>
 
           {/* CUISINE */}
-          <div className="py-2">
-            <select name="cuisine" required
-              defaultValue=''
-              className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
-                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-              onChange={handleChange}
-            >
-              <option value="" disabled>
-                Cuisine
-              </option>
+          
+          <div className="py-2 flex flex-col border-b-[1px] border-b-gray-500 
+          gap-2 justify-center border-t-[1px] border-t-gray-500">
+
+            <span className="w-[30%] min-w-[155px] block">Cuisine:</span>
+              <div className="flex flex-wrap">
               {Cuisine.map((element: string, index) => {
-                return (
-                  <option key={element + index} value={element}>
+              return (
+                <div className="w-[33%] py-2">
+                  <label key={element + index}>
+                    <input
+                      type="checkbox"
+                      name="cuisine"
+                      value={element}
+                      onChange={handleChange}
+                    >
+                    </input>
                     {element}
-                  </option>
-                )
-              })}
-            </select>
+                  </label>
+                </div>
+              )
+            })}
+              </div>
+
+
+
+
           </div>
 
           {/* A R R A Y S */}
@@ -322,7 +323,7 @@ function DatabaseForm() {
           {/* METHOD */}
           <div className="py-2">
             <textarea
-              className="ml-2 px-[2px] py-[7px] pl-[12px] w-[70%] rounded-xl 
+              className="px-[2px] py-[7px] pl-[12px] w-[90%] rounded-xl 
               border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               value={formData.method.join('\n')}  // Join array of strings with newline characters
               required
@@ -338,7 +339,7 @@ function DatabaseForm() {
           <div className="py-2">
 
             <textarea
-              className="ml-2 px-[2px] py-[7px] pl-[12px] w-[70%] rounded-xl 
+              className="px-[2px] py-[7px] pl-[12px] w-[90%] rounded-xl 
             border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               value={formData.tips.join('\n')}  // Join array of strings with newline characters
               name="tips"
@@ -743,7 +744,7 @@ function DatabaseForm() {
             </div>
 
             <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
-              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <span className="w-[30%] min-w-[155px] block">Spring Dish:</span>
               <label className="true-label">
 
                 <input
@@ -769,7 +770,7 @@ function DatabaseForm() {
             </div>
 
             <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
-              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <span className="w-[30%] min-w-[155px] block">Summer Dish:</span>
               <label className="true-label">
 
                 <input
@@ -795,7 +796,7 @@ function DatabaseForm() {
             </div>
 
             <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
-              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <span className="w-[30%] min-w-[155px] block">Autumn Dish:</span>
               <label className="true-label">
 
                 <input
@@ -821,7 +822,7 @@ function DatabaseForm() {
             </div>
 
             <div className="py-2 flex border-b-[1px] border-b-gray-500 gap-4 justify-center">
-              <span className="w-[30%] min-w-[155px] block">Side Dish:</span>
+              <span className="w-[30%] min-w-[155px] block">Winter Dish:</span>
               <label className="true-label">
 
                 <input
@@ -850,23 +851,26 @@ function DatabaseForm() {
 
           {/* Ingredients */}
           <div>
-            Ingredients:
+
             {ingredients.map((element, index) => {
               return (
                 <div
                   key={`ingredient ${index}`}
-                  className="ingredient-container border-[1px] border-gray-600">
+                  className={index % 2 === 0 ?
+                    "ingredient-container p-6 w-[70%]" :
+                    "ingredient-container p-6 w-[70%] bg-gray-200"
+                  }>
                   {/* ==== MAIN INGREDIENT ==== */}
 
                   <div className="ingredient">
 
-                    Ingredient {index + 1}:
+                    <h3>Ingredient {index + 1}:</h3>
 
                     {/* NAME */}
                     <div className="py-2">
                       <input
                         type="text" name="ingredientNameSingular" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+                        className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         //value={ingredient.name.singular}
                         onChange={handleIngredientsChange(index)}
@@ -876,7 +880,7 @@ function DatabaseForm() {
 
                     <div className="py-2">
                       <input type="text" name="ingredientNamePlural" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+                        className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         onChange={handleIngredientsChange(index)}
                         placeholder='Name - plural'
@@ -886,7 +890,7 @@ function DatabaseForm() {
                     {/* QUANTITY */}
                     <div className="py-2 flex flex-row">
                       <input type="number" name="ingredientQuantity" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+                        className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         onChange={handleIngredientsChange(index)}
                         placeholder='Quantity'
@@ -895,19 +899,30 @@ function DatabaseForm() {
 
                     {/* UNIT */}
                     <div className="py-2">
-                      <input type="text" name="ingredientUnit" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
+                      <select name="ingredientUnit" required
+                        defaultValue=''
+                        className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[90%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         onChange={handleIngredientsChange(index)}
-                        placeholder='Unit'
-                      />
+                      >
+                        <option value="" disabled>
+                          Unit
+                        </option>
+                        {Units.map((element: string, index) => {
+                          return (
+                            <option key={element + index} value={element}>
+                              {element}
+                            </option>
+                          )
+                        })}
+                      </select>
                     </div>
 
                     {/* CATEGORY */}
                     <div className="py-2">
                       <select name="ingredientCategory" required
                         defaultValue=''
-                        className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
+                        className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[90%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         onChange={handleIngredientsChange(index)}
                       >
@@ -924,73 +939,18 @@ function DatabaseForm() {
                       </select>
                     </div>
 
+                    {/* CLARIFICATION */}
+                    <div className="py-2">
+                      <input type="text" name="clarification"
+                        className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                        onChange={handleIngredientsChange(index)}
+                        placeholder='Clarification OPTIONAL'
+                      />
+                    </div>
+
 
                   </div>
-
-                  {/* ==== SUBSTITUTION ==== */}
-                  <details className="substitution ml-10">
-                    <summary>Substitution</summary>
-                    
-                    {/* NAME */}
-                    <div className="py-2">
-                      <input type="text" name="subsIngredientNameSingular" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
-                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                        onChange={handleIngredientsChange(index)}
-                        placeholder='Name - singular'
-                      />
-                    </div>
-
-                    <div className="py-2">
-                      <input type="text" name="subsIngredientNamePlural" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
-                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                        onChange={handleIngredientsChange(index)}
-                        placeholder='Name - plural'
-                      />
-                    </div>
-
-                    {/* QUANTITY */}
-                    <div className="py-2 flex flex-row">
-                      <input type="number" name="subsIngredientQuantity" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
-                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                        onChange={handleIngredientsChange(index)}
-                        placeholder='Quantity'
-                      />
-                    </div>
-
-                    {/* UNIT */}
-                    <div className="py-2">
-                      <input type="text" name="subsIngredientUnit" required
-                        className="ml-2 p-[2px] pl-[12px] w-[70%] rounded-xl 
-                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                        onChange={handleIngredientsChange(index)}
-                        placeholder='Unit'
-                      />
-                    </div>
-
-                    {/* CATEGORY */}
-                    <div className="py-2">
-                      <select name="subsIngredientCategory" required
-                      defaultValue=''
-                        className="ml-2 p-[6px] pl-[12px] w-[70%] rounded-xl 
-                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                  onChange={handleIngredientsChange(index)}
-                      >
-                        <option value="" disabled>
-                          Ingredient Category
-                        </option>
-                        {IngredientCategory.map((element: string, index) => {
-                          return (
-                            <option key={"sub" + element + index} value={element}>
-                              {element}
-                            </option>
-                          )
-                        })}
-                      </select>
-                    </div>
-                  </details>
 
 
                   <button
@@ -1009,16 +969,18 @@ function DatabaseForm() {
             </button>
           </div>
 
-          <button type="submit">Submit</button>
+          {/* <button type="submit">Submit</button> */}
 
         </form>
 
 
       </div>
-      <div className="mt-6 w-[40%]">
-        <h3>Current Value:</h3>
+
+      {/* JAVASCRIPT OUTPUT */}
+      <div className="w-[40%] flex flex-col justify-start align-center">
+        <h3 className="self-start text-[1.25em]">Output</h3>
         <p>
-          {"{"}
+          {"{"}<br />
           id: {formData.id},<br />
           name: '{formData.name}',<br />
           tagline: '{formData.tagline}',<br />
@@ -1033,9 +995,9 @@ function DatabaseForm() {
           type: '{formData.type}',<br />
           cuisine: '{formData.cuisine}',<br />
           method: {`['${formData.method.join("','")}']`},<br />
-          { formData.tips.length > 0 ?
+          {formData.tips.length > 0 ?
             `tips: ['${formData.tips?.join("','")}'],` :
-            '' }
+            ''}
           {formData.tips.length > 0 && <br />}
           isVegan: {formData.isVegan.toString()},<br />
           isDairyFree: {formData.isDairyFree.toString()},<br />
@@ -1064,27 +1026,19 @@ function DatabaseForm() {
             return (
               <span
                 key={`list-ingredient${i}`}
-              >       
+              >
                 {"{"}
-                  name: {"{"}
-                    singular: '{ingredients[i].ingredientNameSingular}',
-                    plural: '{ingredients[i].ingredientNamePlural}'
-                  {"}"},
-                  quantity: {ingredients[i].ingredientQuantity},
-                  unit: '{ingredients[i].ingredientUnit}',
-                  category: '{ingredients[i].ingredientCategory}',
-                { 
-                  element.subsIngredientNameSingular.length > 0 ?
-                  `substitution: {
-                    name: {
-                    singular: '${ingredients[i].subsIngredientNameSingular}',
-                    plural: '${ingredients[i].subsIngredientNamePlural}'
-                    },
-                    quantity: ${ingredients[i].subsIngredientQuantity},
-                    unit: '${ingredients[i].subsIngredientUnit}',
-                    category: '${ingredients[i].subsIngredientCategory}',
-                    }` :
-                  ''
+                name: {"{"}
+                singular: '{ingredients[i].ingredientNameSingular}',
+                plural: '{ingredients[i].ingredientNamePlural}'
+                {"}"},
+                quantity: {ingredients[i].ingredientQuantity},
+                unit: '{ingredients[i].ingredientUnit}',
+                category: '{ingredients[i].ingredientCategory}',
+                {
+                  element.clarification.length > 0 ?
+                    `clarification: '${ingredients[i].ingredientCategory}',` :
+                    ''
                 }
                 {"}"},
               </span>

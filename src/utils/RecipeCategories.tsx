@@ -57,6 +57,17 @@ let RecipeCategories = {
         "Vegetales",
         "Pan",
         "Pastel",
+    ],
+    Units: [
+        "unidad",
+        "gr.",
+        "ml.",
+        "kg.",
+        "litro(s)",
+        "cda(s)",
+        "cdita(s)",
+        "puñado",
+        "rama(s)",
     ]
 }
 
