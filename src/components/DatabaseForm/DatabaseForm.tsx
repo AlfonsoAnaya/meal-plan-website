@@ -17,7 +17,7 @@ function DatabaseForm() {
     img: '',
     imgThumb: '',
     type: '',
-    cuisine: '',
+    cuisine: [],
     method: [],
     tips: [],
     isVegan: false,
@@ -76,7 +76,6 @@ function DatabaseForm() {
 
   const handleIngredientsChange = (index: number) => (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
-
     setIngredients((prevData) => {
       return prevData.map((ingredient, i) => {
         // Update the specified object at the given index
@@ -91,8 +90,6 @@ function DatabaseForm() {
     });
   };
 
-
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value, type } = e.target;
     // If the input type is radio, convert the value to a boolean
@@ -101,6 +98,20 @@ function DatabaseForm() {
     setFormData((prevData) => ({
       ...prevData,
       [name]: updatedValue,
+    }));
+  };
+
+  const handleCuisineChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const array = [
+      ...formData.cuisine,
+      value
+    ]
+    // If the input type is radio, convert the value to a boolean
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: array,
     }));
   };
 
@@ -114,13 +125,20 @@ function DatabaseForm() {
     }));
   };
 
+  const copyText = () => {
+    const textContainer = document.getElementById("jsonText");
+    if (textContainer) { // Check if textContainer is not null/undefined
+      navigator.clipboard.writeText(textContainer.textContent || ''); // Use default empty string if textContent is undefined
+    }
+  }
+
 
 
 
   return (
-    <div className="w-[90%] mx-auto flex gap-4 justify-center py-12 font-sans">
+    <div className="w-[90%] mx-auto flex gap-8 justify-center py-12 font-sans">
       <div className="flex flex-col justify-center items-center w-[55%]">
-        <h2 className="text-[1.25em] self-start">Introduce la información de la receta</h2>
+        <h2 className="text-[1.25em] self-start font-bold">Introduce la información de la receta</h2>
         <form
           className="w-[100%]"
         // onSubmit={handleSubmit}
@@ -289,29 +307,30 @@ function DatabaseForm() {
           </div>
 
           {/* CUISINE */}
-          
+
           <div className="py-2 flex flex-col border-b-[1px] border-b-gray-500 
           gap-2 justify-center border-t-[1px] border-t-gray-500">
 
             <span className="w-[30%] min-w-[155px] block">Cuisine:</span>
-              <div className="flex flex-wrap">
+            <div className="flex flex-wrap">
               {Cuisine.map((element: string, index) => {
-              return (
-                <div className="w-[33%] py-2">
-                  <label key={element + index}>
-                    <input
-                      type="checkbox"
-                      name="cuisine"
-                      value={element}
-                      onChange={handleChange}
-                    >
-                    </input>
-                    {element}
-                  </label>
-                </div>
-              )
-            })}
-              </div>
+                return (
+                  <div key={element + index} className="w-[33%] py-2">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="cuisine"
+                        value={element}
+                        onChange={handleCuisineChange}
+                        className="mx-[6px] w-[15px] h-[15px]"
+                      >
+                      </input>
+                      {element}
+                    </label>
+                  </div>
+                )
+              })}
+            </div>
 
 
 
@@ -954,7 +973,8 @@ function DatabaseForm() {
 
 
                   <button
-                    className="color-white bg-red-400 py-[1em] px-[2.5em] rounded-full my-4"
+                    className="text-white font-bold bg-red-400 py-[.6em] px-[1.75em] rounded-full my-4
+                    hover:text-red-400 hover:bg-white border-[2px] border-red-400"
                     onClick={() => deleteIngredient(index)}>
                     Delete Ingredient
                   </button>
@@ -963,7 +983,8 @@ function DatabaseForm() {
               )
             })}
             <button
-              className="color-white bg-primary py-[1em] px-[2.5em] rounded-full my-4"
+              className="text-white font-bold bg-primary py-[.6em] px-[1.75em] rounded-full my-4
+              hover:text-primary hover:bg-white border-[2px] border-primary"
               onClick={addIngredient}>
               Add Ingredient
             </button>
@@ -978,7 +999,14 @@ function DatabaseForm() {
 
       {/* JAVASCRIPT OUTPUT */}
       <div className="w-[40%] flex flex-col justify-start align-center">
-        <h3 className="self-start text-[1.25em]">Output</h3>
+        <button
+          className="w-[200px] self-center text-white font-bold bg-secondary py-[.6em] px-[1.75em] rounded-full my-4
+              hover:text-secondary hover:bg-white border-[2px] border-secondary"
+          onClick={copyText}
+          >
+          Copy Text
+        </button>
+        <div id="jsonText">
         <p>
           {"{"}<br />
           id: {formData.id},<br />
@@ -993,7 +1021,7 @@ function DatabaseForm() {
           img: '{formData.img}',<br />
           imgThumb: '{formData.imgThumb}',<br />
           type: '{formData.type}',<br />
-          cuisine: '{formData.cuisine}',<br />
+          method: {`['${formData.cuisine.join("','")}']`},<br />
           method: {`['${formData.method.join("','")}']`},<br />
           {formData.tips.length > 0 ?
             `tips: ['${formData.tips?.join("','")}'],` :
@@ -1048,6 +1076,8 @@ function DatabaseForm() {
         </p>
 
         {"}"}
+        </div>
+        
       </div>
 
     </div>

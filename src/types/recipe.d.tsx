@@ -14,7 +14,7 @@ interface Recipe {
     img: string;
     imgThumb: string;
     type: string;
-    cuisine: string;
+    cuisine: string[];
     method: string[];
     tips?: string[];
     isVegan: boolean;

@@ -153,7 +153,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -336,7 +336,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -519,7 +519,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -702,7 +702,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -885,7 +885,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -1068,7 +1068,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -1251,7 +1251,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -1434,7 +1434,7 @@ let recipes: Recipe[] = [
         img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
-        cuisine: 'india',
+        cuisine: ['india'],
         method: [
             'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
             'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
@@ -1532,7 +1532,7 @@ let recipes: Recipe[] = [
     //     totalTime: 60,
     //     img: 'https://source.unsplash.com/ReySmTMcKEQ', // busca imágenes en unsplash.com identifica el id en la url de la imágen y pégalo 
     //     type: 'guiso',
-    //     cuisine: 'india',
+    //     cuisine: ['india'],
     //     method: [
     //         'Picar la cebolla y el chile, y rallar el ajo y el jengibre (ver tip). En una cacerola a fuego medio calentar unas cucharadas de aceite y agregar la cebolla, el ajo, el chile y el jengibre. Salpimentar y saltear por unos minutos y luego agregar las especias, saltear por un minuto más.',
     //         'Agregar los garbanzos escurridos y cocinar por 5-7 minutos hasta que se tuesten un poco. Agregar el caldo, la leche de coco y las pencas de las acelgas cortadas.Dejar a fuego medio-bajo por 30 minutos y revolver de vez en cuando. Si requiere más agua, agregar.',
