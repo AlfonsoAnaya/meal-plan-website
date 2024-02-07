@@ -56,7 +56,7 @@ function DatabaseForm() {
 
   const [extraIngredients, setExtraIngredients] = useState([
     {
-      ingredientNameSingular: 'masa',
+      ingredientNameSingular: '',
       ingredientNamePlural: '',
       ingredientQuantity: 0,
       ingredientUnit: '',
@@ -1068,7 +1068,7 @@ function DatabaseForm() {
                       {/* NAME */}
                       <div className="py-2">
                         <input
-                          type="text" name="extraIngredientNameSingular" required
+                          type="text" name="ingredientNameSingular" required
                           className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                           //value={ingredient.name.singular}
@@ -1078,7 +1078,7 @@ function DatabaseForm() {
                       </div>
 
                       <div className="py-2">
-                        <input type="text" name="extraIngredientNamePlural" required
+                        <input type="text" name="ingredientNamePlural" required
                           className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                           onChange={handleExtraIngredientsChange(index)}
@@ -1088,7 +1088,7 @@ function DatabaseForm() {
 
                       {/* QUANTITY */}
                       <div className="py-2 flex flex-row">
-                        <input type="number" name="extraIngredientQuantity" required
+                        <input type="number" name="ingredientQuantity" required
                           className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                           onChange={handleExtraIngredientsChange(index)}
@@ -1098,7 +1098,7 @@ function DatabaseForm() {
 
                       {/* UNIT */}
                       <div className="py-2">
-                        <select name="extraIngredientUnit" required
+                        <select name="ingredientUnit" required
                           defaultValue=''
                           className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[90%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
@@ -1119,11 +1119,11 @@ function DatabaseForm() {
 
                       {/* CATEGORY */}
                       <div className="py-2">
-                        <select name="extraIngredientCategory" required
+                        <select name="ingredientCategory" required
                           defaultValue=''
                           className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[90%] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
-                          onChange={handleIngredientsChange(index)}
+                          onChange={handleExtraIngredientsChange(index)}
                         >
                           <option value="" disabled>
                             Ingredient Category
@@ -1260,32 +1260,32 @@ function DatabaseForm() {
           }
           {(extraIngredients[0].ingredientNameSingular.length > 0) ?
             (<p>
-            extraIngredients:
-            {"["}
-            {extraIngredients.map((element, i) => {
-              return (
-                <span
-                  key={`list-ingredient${i}`}
-                >
-                  {"{"}
-                  name: {"{"}
-                  singular: '{extraIngredients[i].ingredientNameSingular}',
-                  plural: '{extraIngredients[i].ingredientNamePlural}'
-                  {"}"},
-                  quantity: {extraIngredients[i].ingredientQuantity},
-                  unit: '{extraIngredients[i].ingredientUnit}',
-                  category: '{extraIngredients[i].ingredientCategory}',
-                  {
-                    element.ingredientClarification.length > 0 ?
-                      `ingredientClarification: '${extraIngredients[i].ingredientClarification}',` :
-                      ''
-                  }
-                  {"}"},
-                </span>
-              )
-            })}
-            {"],"}
-          </p>)
+              extraIngredients:
+              {"["}
+              {extraIngredients.map((element, i) => {
+                return (
+                  <span
+                    key={`list-ingredient${i}`}
+                  >
+                    {"{"}
+                    name: {"{"}
+                    singular: '{extraIngredients[i].ingredientNameSingular}',
+                    plural: '{extraIngredients[i].ingredientNamePlural}'
+                    {"}"},
+                    quantity: {extraIngredients[i].ingredientQuantity},
+                    unit: '{extraIngredients[i].ingredientUnit}',
+                    category: '{extraIngredients[i].ingredientCategory}',
+                    {
+                      element.ingredientClarification.length > 0 ?
+                        `ingredientClarification: '${extraIngredients[i].ingredientClarification}',` :
+                        ''
+                    }
+                    {"}"},
+                  </span>
+                )
+              })}
+              {"],"}
+            </p>)
             :
             ''}
 

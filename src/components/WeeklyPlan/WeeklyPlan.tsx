@@ -39,8 +39,6 @@ function WeeklyPlan() {
     };
 
     const closeRecipeSidenav = (e:any) => {
-        console.log("closing sidenav...")
-        console.log(e.target, e.currentTarget)
         if (e.target === e.currentTarget) {
             const WeeklySection = document.querySelector('.weekly-plan-section');
             WeeklySection?.classList.remove("sidenav-open");
