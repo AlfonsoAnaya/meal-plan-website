@@ -186,190 +186,57 @@ let recipes: Recipe[] = [
         isWinterDish: false,
         saves: 0,
     },
-    {
-        id: 1,
-        name: 'tikka masala vegetariano',
-        tagline: 'curry estilo indio de papas y garbanzos',
+    {   id: 2, 
+        name: 'Tarta de zucchini', 
+        tagline: 'Un toque de romero y limón le dan un sabor único a esta receta clásica de tarta', 
+        primaryIngredient: 'Zucchini', 
+        secondaryIngredient: 'Queso', 
+        portions: 4, 
+        difficulty: 'Fácil', 
+        prepTime: 20, 
+        totalTime: 50, 
+        img: 'img/recipes/000002.jpg', 
+        imgThumb: 'img/recipes/000002thumb.jpg', 
+        type: 'Tarta', 
+        cuisine: ['Mediterránea', 'Internacional', 'Argentina'], 
+        method: ['Precalentar el horno a 180℃. Mientras tanto, cortar las cebollas en juliana y los zucchini a la mitad transversalmente y luego en láminas finas de ½ cm o menos. Picar las hojas de romero. ', 'En una sartén grande a fuego medio, calentar 2 cdas de aceite de oliva y agregar el romero, saltear por un minuto y luego agregar las cebollas. Saltear las cebollas unos 5 minutos hasta que comiencen a estar blandas (si es necesario, agregar un poco de agua hasta que se evapore, esto hará que las cebollas se ablanden más rápido). Luego agregar los zucchini, salpimentar y saltear a fuego medio unos 15 minutos, hasta que comiencen a estar traslúcidos. Apagar el fuego, agregar la ralladura de limón y dejar que se enfríen un poco.', 'Aparte, batir en bowl grande los huevos y agregar el queso cremoso picado. Luego agregar el salteado de zucchini y cebolla y mezclar bien. Volcar la mezcla en un molde con la masa de tarta (ver más abajo) y luego espolvorear por arriba con el queso rallado. Llevar a horno por 30 minutos hasta que la tarta esté doradita. Dejar enfriar unos minutos antes de servir con una ensaladita fresca.', 'Para hacer la masa, calentar la leche hasta que esté tibia (este paso es muy importante para luego trabajar la masa). En un bowl, colocar la harina, hacer un pequeño hueco en el medio y agregar la leche, el aceite y la cdita de sal. Mezclar con un tenedor hasta que se forme una masa homogénea y luego volcar en una superficie y amasar por 1 o 2 minutos. Luego partir en dos y estirar cada tapa de masa con un palo de amasar. ', ''], tips: ['Si quieres que la masa de tarta sea vegana, puedes sustituir la leche de vaca por leche vegetal. ', ''], 
+        isVegan: false, 
+        isDairyFree: false, 
+        isVegetarian: true, 
+        isGlutenFree: false, 
+        isSpicy: false, 
+        isQuickAndEasy: false, 
+        isBudgetFriendly: true, 
+        isBatchCooking: false, 
+        isLowCarb: false, 
+        isHighProtein: false, 
+        isLowCalorie: false, 
+        isHeartHealthy: true, 
+        isMainDish: true, 
+        isDessert: false, 
+        isSideDish: false, 
+        isSpringDish: true, 
+        isSummerDish: true, 
+        isAutumnDish: true, 
+        isWinterDish: true, 
+        saves: 0, 
         ingredients: [
-            {
-                name: {
-                    singular: 'garbanzo',
-                    plural: 'garbanzos'
-                },
-                quantity: 1,
-                unit: 'lata',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'papa',
-                    plural: 'papas'
-                },
-                quantity: 2,
-                unit: 'unidad',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'coliflor',
-                    plural: 'coliflores'
-                },
-                quantity: 1,
-                unit: 'unidad',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'cebolla',
-                    plural: 'cebollas'
-                },
-                quantity: 1,
-                unit: 'unidad',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'gengibre',
-                    plural: 'gengibres'
-                },
-                quantity: 10,
-                unit: 'cm',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'cilantro',
-                    plural: 'cilantros'
-                },
-                quantity: 1,
-                unit: 'manojo',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'lata de tomate',
-                    plural: 'lata de tomates'
-                },
-                quantity: 1,
-                unit: 'lata',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'leche de coco',
-                    plural: 'leches de coco'
-                },
-                quantity: 200,
-                unit: 'ml',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'almendra',
-                    plural: 'almendras'
-                },
-                quantity: 50,
-                unit: 'gr.',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'limón',
-                    plural: 'limones'
-                },
-                quantity: 1,
-                unit: 'unidad',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'chile',
-                    plural: 'chiles'
-                },
-                quantity: 1,
-                unit: 'unidad',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'ajo',
-                    plural: 'ajos'
-                },
-                quantity: 2,
-                unit: 'dientes',
-                category: ''
-            },
-
-            {
-                name: {
-                    singular: 'pimineta de cayena',
-                    plural: 'pimineta de cayena'
-                },
-                quantity: 1,
-                unit: 'cdita.',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'paprika',
-                    plural: 'paprika'
-                },
-                quantity: 1,
-                unit: 'cda.',
-                category: ''
-            },
-            {
-                name: {
-                    singular: 'garam masala',
-                    plural: 'garam masala'
-                },
-                quantity: 2,
-                unit: 'cdita.',
-                category: ''
-            }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
-        ],
-        primaryIngredient: 'vegetales',
-        secondaryIngredient: 'tomates',
-        portions: 4, // esta receta hay que testearla para ver las porciones, le dejo 4 por ahora
-        difficulty: 'Muy fácil',
-        prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
-        totalTime: 20,
-        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
-        imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
-        type: 'guiso',
-        cuisine: ['india'],
-        method: [
-            'Hacer la pasta de curry procesando el chile, el ajo, la mitad del jengibre, la pimienta de cayena, la paprika, el garam masala, un tercio del cilantro, la mitad de las almendras, 2 cucharadas del jugo de los tomates y 2 cucharadas de aceite de oliva. Reservar. Si no lo quieres picante, no le agregues el chile.', //quiero poner el tip de rallar el jengibre congelado, pero no sé dónde
-            'Picar los tallos de cilantro, la cebolla y rallar la otra mitad del jengibre (ver tip). Cortar las papas en trozos grandes y trocear el coliflor. En una sartén a fuego medio-alto, calentar aceite y luego agregar los tallos de cilantro, la cebolla y el jengibre y cocinar durante unos 10 minutos hasta que estén suaves y ligeramente dorados. Agregar las flores de coliflor, la lata de garbanzos escurrida y la papa. Luego agregar la pasta de tikka masala. Revolver bien para integrar y salpimentar. Agregar los tomates, rompiéndolos con las manos y la leche de coco. Cuando hierva, bajar el fuego a medio-bajo, tapar y cocinar lento durante 20 minutos, luego retirar la tapa y cocinar por otros 5 minutos más hasta que reduzca la salsa.',
-            'Servir y terminar con el resto de las almendras y las hojas de cilantro. Agregar un gajo de limón. Queda muy bien con unas cucharadas de yogur natural también.',
-        ],
-        tips: [''],
-        //dietary requirement tags
-        isVegan: true,
-        isDairyFree: true,
-        isVegetarian: true,
-        isGlutenFree: true,
-        isSpicy: true,
-
-        //time management tags
-        isQuickAndEasy: true,
-        isBudgetFriendly: true,
-        isBatchCooking: false,
-
-        //health tags
-        isLowCarb: false,
-        isHighProtein: false,
-        isLowCalorie: true,
-        isHeartHealthy: true,
-        isMainDish: true,
-        isDessert: false,
-        isSideDish: true,
-        isSpringDish: false,
-        isSummerDish: false,
-        isAutumnDish: false,
-        isWinterDish: false,
-        saves: 0,
-    },
+            { name: { 
+                singular: 'zucchini', 
+                plural: 'zucchini' 
+            }, 
+                quantity: 2, 
+                unit: 'unidad', 
+                category: 'Frutas y verduras', 
+                ingredientClarification: 'grande(s)', 
+            }, 
+            
+            { 
+                name: { 
+                singular: 'cebolla', 
+                plural: 'cebollas' 
+            }, 
+                quantity: 2, unit: 'unidad', category: 'Frutas y verduras', }, { name: { singular: 'romero', plural: 'romero' }, quantity: 1, unit: 'rama(s)', category: 'Frutas y verduras', }, { name: { singular: 'limón', plural: 'limones' }, quantity: 0.5, unit: 'unidad', category: 'Frutas y verduras', }, { name: { singular: 'huevo', plural: 'huevos' }, quantity: 3, unit: 'unidad', category: 'Huevos', }, { name: { singular: 'queso cremoso', plural: 'queso cremoso' }, quantity: 200, unit: 'gr.', category: 'Quesos', ingredientClarification: 'o mozzarella ', }, { name: { singular: 'queso para rallar', plural: 'queso para rallar' }, quantity: 50, unit: 'gr.', category: 'Quesos', },], extraRecipeName: 'Masa para tarta (para 2 tapas)', extraIngredients: [{ name: { singular: 'masa', plural: '' }, quantity: 0, unit: '', category: '', }, { name: { singular: '', plural: '' }, quantity: 0, unit: '', category: '', }, { name: { singular: '', plural: '' }, quantity: 0, unit: '', category: '', },], },
     {
         id: 1,
         name: 'tikka masala vegetariano',
@@ -1652,7 +1519,7 @@ let recipes: Recipe[] = [
     //     isLowCalorie: true,
     //     isHeartHealthy: true,
     // },
-    
+
     // {
     //     id: 9,
     //     name: 'Risotto de Setas',
@@ -1839,7 +1706,7 @@ let recipes: Recipe[] = [
     //     isLowCalorie: false,
     //     isHeartHealthy: false
     // },
-   
+
 ];
 
 export default recipes 

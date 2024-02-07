@@ -5,6 +5,6 @@ interface Ingredient {
     quantity: number;
     unit: string;
     category: string;
-    clarification?: string;
+    ingredientClarification?: string;
 }
 export default Ingredient

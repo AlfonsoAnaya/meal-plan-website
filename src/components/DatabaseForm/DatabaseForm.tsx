@@ -1200,7 +1200,7 @@ function DatabaseForm() {
             img: '{formData.img}{formData.id.toString().padStart(6, "0")}.jpg',<br />
             imgThumb: '{formData.img}{formData.id.toString().padStart(6, "0")}thumb.jpg',<br />
             type: '{formData.type}',<br />
-            method: {`['${formData.cuisine.join("','")}']`},<br />
+            cuisine: {`['${formData.cuisine.join("','")}']`},<br />
             method: {`['${formData.method.join("','")}']`},<br />
             {formData.tips.length > 0 ?
               `tips: ['${formData.tips?.join("','")}'],` :
