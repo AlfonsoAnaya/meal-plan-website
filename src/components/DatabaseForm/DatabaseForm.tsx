@@ -7,6 +7,7 @@ function DatabaseForm() {
   const [formData, setFormData] = useState({
     id: 0,
     name: '',
+    extraRecipeName: '',
     tagline: '',
     primaryIngredient: '',
     secondaryIngredient: '',
@@ -14,7 +15,7 @@ function DatabaseForm() {
     difficulty: '',
     prepTime: 0,
     totalTime: 0,
-    img: '',
+    img: 'img/recipes/',
     imgThumb: '',
     type: '',
     cuisine: [],
@@ -39,6 +40,7 @@ function DatabaseForm() {
     isSummerDish: false,
     isAutumnDish: false,
     isWinterDish: false,
+    saves: 0,
   });
 
   const [ingredients, setIngredients] = useState([
@@ -48,7 +50,18 @@ function DatabaseForm() {
       ingredientQuantity: 0,
       ingredientUnit: '',
       ingredientCategory: '',
-      clarification: '',
+      ingredientClarification: '',
+    },
+  ]);
+
+  const [extraIngredients, setExtraIngredients] = useState([
+    {
+      ingredientNameSingular: 'masa',
+      ingredientNamePlural: '',
+      ingredientQuantity: 0,
+      ingredientUnit: '',
+      ingredientCategory: '',
+      ingredientClarification: '',
     },
   ]);
 
@@ -61,7 +74,7 @@ function DatabaseForm() {
         ingredientQuantity: 0,
         ingredientUnit: '',
         ingredientCategory: '',
-        clarification: '',
+        ingredientClarification: '',
       }
     ])
   }
@@ -72,11 +85,45 @@ function DatabaseForm() {
     setIngredients(newState);
   }
 
+  const addExtraIngredient = () => {
+    setExtraIngredients((prevState) => [
+      ...prevState,
+      {
+        ingredientNameSingular: '',
+        ingredientNamePlural: '',
+        ingredientQuantity: 0,
+        ingredientUnit: '',
+        ingredientCategory: '',
+        ingredientClarification: '',
+      }
+    ])
+  }
 
+  const deleteExtraIngredient = (index: number) => {
+    let newState = [...ingredients];
+    newState.splice(index, 1);
+    setExtraIngredients(newState);
+  }
 
   const handleIngredientsChange = (index: number) => (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
     setIngredients((prevData) => {
+      return prevData.map((ingredient, i) => {
+        // Update the specified object at the given index
+        if (i === index) {
+          return {
+            ...ingredient,
+            [name]: value,
+          };
+        }
+        return ingredient;
+      });
+    });
+  };
+
+  const handleExtraIngredientsChange = (index: number) => (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setExtraIngredients((prevData) => {
       return prevData.map((ingredient, i) => {
         // Update the specified object at the given index
         if (i === index) {
@@ -308,7 +355,7 @@ function DatabaseForm() {
 
           {/* CUISINE */}
 
-          <div className="py-2 flex flex-col border-b-[1px] border-b-gray-500 
+          <div className="py-2 my-4 flex flex-col border-b-[1px] border-b-gray-500 
           gap-2 justify-center border-t-[1px] border-t-gray-500">
 
             <span className="w-[30%] min-w-[155px] block">Cuisine:</span>
@@ -879,7 +926,7 @@ function DatabaseForm() {
                     "ingredient-container p-6 w-[70%]" :
                     "ingredient-container p-6 w-[70%] bg-gray-200"
                   }>
-                  {/* ==== MAIN INGREDIENT ==== */}
+                  {/* ==== INGREDIENT ==== */}
 
                   <div className="ingredient">
 
@@ -960,17 +1007,14 @@ function DatabaseForm() {
 
                     {/* CLARIFICATION */}
                     <div className="py-2">
-                      <input type="text" name="clarification"
+                      <input type="text" name="ingredientClarification"
                         className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
                   border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         onChange={handleIngredientsChange(index)}
                         placeholder='Clarification OPTIONAL'
                       />
                     </div>
-
-
                   </div>
-
 
                   <button
                     className="text-white font-bold bg-red-400 py-[.6em] px-[1.75em] rounded-full my-4
@@ -983,12 +1027,147 @@ function DatabaseForm() {
               )
             })}
             <button
-              className="text-white font-bold bg-primary py-[.6em] px-[1.75em] rounded-full my-4
+              className="text-white font-bold bg-primary py-[.6em] px-[1.75em] rounded-full mt-2 mb-6
               hover:text-primary hover:bg-white border-[2px] border-primary"
               onClick={addIngredient}>
               Add Ingredient
             </button>
           </div>
+
+          {/* EXTRA RECIPE */}
+          <details>
+            <summary>Extra Recipe (OPTIONAL)</summary>
+
+            {/* EXTRA RECIPE NAME*/}
+            <div className="py-2">
+              <input type="text" name="extraRecipeName" required
+                className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                onChange={handleChange}
+                placeholder='Extra Recipe Name OPTIONAL'
+              />
+            </div>
+
+            {/* EXTRA RECIPE INGREDIENTS*/}
+            <div>
+
+              {extraIngredients.map((element, index) => {
+                return (
+                  <div
+                    key={`extraIngredient ${index}`}
+                    className={index % 2 === 0 ?
+                      "ingredient-container p-6 w-[70%]" :
+                      "ingredient-container p-6 w-[70%] bg-gray-200"
+                    }>
+                    {/* ==== INGREDIENT ==== */}
+
+                    <div className="ingredient">
+
+                      <h3>Ingredient {index + 1}:</h3>
+
+                      {/* NAME */}
+                      <div className="py-2">
+                        <input
+                          type="text" name="extraIngredientNameSingular" required
+                          className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                          //value={ingredient.name.singular}
+                          onChange={handleExtraIngredientsChange(index)}
+                          placeholder="Name - singular"
+                        />
+                      </div>
+
+                      <div className="py-2">
+                        <input type="text" name="extraIngredientNamePlural" required
+                          className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                          onChange={handleExtraIngredientsChange(index)}
+                          placeholder='Name - plural'
+                        />
+                      </div>
+
+                      {/* QUANTITY */}
+                      <div className="py-2 flex flex-row">
+                        <input type="number" name="extraIngredientQuantity" required
+                          className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                          onChange={handleExtraIngredientsChange(index)}
+                          placeholder='Quantity'
+                        />
+                      </div>
+
+                      {/* UNIT */}
+                      <div className="py-2">
+                        <select name="extraIngredientUnit" required
+                          defaultValue=''
+                          className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[90%] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                          onChange={handleExtraIngredientsChange(index)}
+                        >
+                          <option value="" disabled>
+                            Unit
+                          </option>
+                          {Units.map((element: string, index) => {
+                            return (
+                              <option key={element + index} value={element}>
+                                {element}
+                              </option>
+                            )
+                          })}
+                        </select>
+                      </div>
+
+                      {/* CATEGORY */}
+                      <div className="py-2">
+                        <select name="extraIngredientCategory" required
+                          defaultValue=''
+                          className="ml-2 p-[6px] pl-[12px] max-w-[500px] w-[90%] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                          onChange={handleIngredientsChange(index)}
+                        >
+                          <option value="" disabled>
+                            Ingredient Category
+                          </option>
+                          {IngredientCategory.map((element: string, index) => {
+                            return (
+                              <option key={element + index} value={element}>
+                                {element}
+                              </option>
+                            )
+                          })}
+                        </select>
+                      </div>
+
+                      {/* CLARIFICATION */}
+                      <div className="py-2">
+                        <input type="text" name="ingredientClarification"
+                          className="ml-2 p-[6px] pl-[12px] w-[90%] max-w-[500px] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+                          onChange={handleExtraIngredientsChange(index)}
+                          placeholder='Clarification OPTIONAL'
+                        />
+                      </div>
+                    </div>
+
+                    <button
+                      className="text-white font-bold bg-red-400 py-[.6em] px-[1.75em] rounded-full my-4
+                    hover:text-red-400 hover:bg-white border-[2px] border-red-400"
+                      onClick={() => deleteExtraIngredient(index)}>
+                      Delete Ingredient
+                    </button>
+                  </div>
+
+                )
+              })}
+              <button
+                className="text-white font-bold bg-primary py-[.6em] px-[1.75em] rounded-full mt-2 mb-6
+              hover:text-primary hover:bg-white border-[2px] border-primary"
+                onClick={addExtraIngredient}>
+                Add Ingredient
+              </button>
+            </div>
+          </details>
+
 
           {/* <button type="submit">Submit</button> */}
 
@@ -1003,88 +1182,120 @@ function DatabaseForm() {
           className="w-[200px] self-center text-white font-bold bg-secondary py-[.6em] px-[1.75em] rounded-full my-4
               hover:text-secondary hover:bg-white border-[2px] border-secondary"
           onClick={copyText}
-          >
+        >
           Copy Text
         </button>
         <div id="jsonText">
-        <p>
-          {"{"}<br />
-          id: {formData.id},<br />
-          name: '{formData.name}',<br />
-          tagline: '{formData.tagline}',<br />
-          primaryIngredient: '{formData.primaryIngredient}',<br />
-          secondaryIngredient: '{formData.secondaryIngredient}',<br />
-          portions: {formData.portions},<br />
-          difficulty: '{formData.difficulty}',<br />
-          prepTime: {formData.prepTime},<br />
-          totalTime: {formData.totalTime},<br />
-          img: '{formData.img}',<br />
-          imgThumb: '{formData.imgThumb}',<br />
-          type: '{formData.type}',<br />
-          method: {`['${formData.cuisine.join("','")}']`},<br />
-          method: {`['${formData.method.join("','")}']`},<br />
-          {formData.tips.length > 0 ?
-            `tips: ['${formData.tips?.join("','")}'],` :
+          <p>
+            {"{"}<br />
+            id: {formData.id},<br />
+            name: '{formData.name}',<br />
+            tagline: '{formData.tagline}',<br />
+            primaryIngredient: '{formData.primaryIngredient}',<br />
+            secondaryIngredient: '{formData.secondaryIngredient}',<br />
+            portions: {formData.portions},<br />
+            difficulty: '{formData.difficulty}',<br />
+            prepTime: {formData.prepTime},<br />
+            totalTime: {formData.totalTime},<br />
+            img: '{formData.img}{formData.id.toString().padStart(6, "0")}.jpg',<br />
+            imgThumb: '{formData.img}{formData.id.toString().padStart(6, "0")}thumb.jpg',<br />
+            type: '{formData.type}',<br />
+            method: {`['${formData.cuisine.join("','")}']`},<br />
+            method: {`['${formData.method.join("','")}']`},<br />
+            {formData.tips.length > 0 ?
+              `tips: ['${formData.tips?.join("','")}'],` :
+              ''}
+            {formData.tips.length > 0 && <br />}
+            isVegan: {formData.isVegan.toString()},<br />
+            isDairyFree: {formData.isDairyFree.toString()},<br />
+            isVegetarian: {formData.isVegetarian.toString()},<br />
+            isGlutenFree: {formData.isGlutenFree.toString()},<br />
+            isSpicy: {formData.isSpicy.toString()},<br />
+            isQuickAndEasy: {formData.isQuickAndEasy.toString()},<br />
+            isBudgetFriendly: {formData.isBudgetFriendly.toString()},<br />
+            isBatchCooking: {formData.isBatchCooking.toString()},<br />
+            isLowCarb: {formData.isLowCarb.toString()},<br />
+            isHighProtein: {formData.isHighProtein.toString()},<br />
+            isLowCalorie: {formData.isLowCalorie.toString()},<br />
+            isHeartHealthy: {formData.isHeartHealthy.toString()},<br />
+            isMainDish: {formData.isMainDish.toString()},<br />
+            isDessert: {formData.isDessert.toString()},<br />
+            isSideDish: {formData.isSideDish.toString()},<br />
+            isSpringDish: {formData.isSpringDish.toString()},<br />
+            isSummerDish: {formData.isSummerDish.toString()},<br />
+            isAutumnDish: {formData.isAutumnDish.toString()},<br />
+            isWinterDish: {formData.isWinterDish.toString()},<br />
+            saves: {formData.saves},<br />
+          </p>
+          <p>
+            ingredients:
+            {"["}
+            {ingredients.map((element, i) => {
+              return (
+                <span
+                  key={`list-ingredient${i}`}
+                >
+                  {"{"}
+                  name: {"{"}
+                  singular: '{ingredients[i].ingredientNameSingular}',
+                  plural: '{ingredients[i].ingredientNamePlural}'
+                  {"}"},
+                  quantity: {ingredients[i].ingredientQuantity},
+                  unit: '{ingredients[i].ingredientUnit}',
+                  category: '{ingredients[i].ingredientCategory}',
+                  {
+                    element.ingredientClarification.length > 0 ?
+                      `ingredientClarification: '${ingredients[i].ingredientClarification}',` :
+                      ''
+                  }
+                  {"}"},
+                </span>
+              )
+            })}
+            {"],"}
+          </p>
+          {formData.extraRecipeName.length > 0 ?
+            <p>extraRecipeName: '{formData.extraRecipeName}',</p> :
+            ''
+          }
+          {(extraIngredients[0].ingredientNameSingular.length > 0) ?
+            (<p>
+            extraIngredients:
+            {"["}
+            {extraIngredients.map((element, i) => {
+              return (
+                <span
+                  key={`list-ingredient${i}`}
+                >
+                  {"{"}
+                  name: {"{"}
+                  singular: '{extraIngredients[i].ingredientNameSingular}',
+                  plural: '{extraIngredients[i].ingredientNamePlural}'
+                  {"}"},
+                  quantity: {extraIngredients[i].ingredientQuantity},
+                  unit: '{extraIngredients[i].ingredientUnit}',
+                  category: '{extraIngredients[i].ingredientCategory}',
+                  {
+                    element.ingredientClarification.length > 0 ?
+                      `ingredientClarification: '${extraIngredients[i].ingredientClarification}',` :
+                      ''
+                  }
+                  {"}"},
+                </span>
+              )
+            })}
+            {"],"}
+          </p>)
+            :
             ''}
-          {formData.tips.length > 0 && <br />}
-          isVegan: {formData.isVegan.toString()},<br />
-          isDairyFree: {formData.isDairyFree.toString()},<br />
-          isVegetarian: {formData.isVegetarian.toString()},<br />
-          isGlutenFree: {formData.isGlutenFree.toString()},<br />
-          isSpicy: {formData.isSpicy.toString()},<br />
-          isQuickAndEasy: {formData.isQuickAndEasy.toString()},<br />
-          isBudgetFriendly: {formData.isBudgetFriendly.toString()},<br />
-          isBatchCooking: {formData.isBatchCooking.toString()},<br />
-          isLowCarb: {formData.isLowCarb.toString()},<br />
-          isHighProtein: {formData.isHighProtein.toString()},<br />
-          isLowCalorie: {formData.isLowCalorie.toString()},<br />
-          isHeartHealthy: {formData.isHeartHealthy.toString()},<br />
-          isMainDish: {formData.isMainDish.toString()},<br />
-          isDessert: {formData.isDessert.toString()},<br />
-          isSideDish: {formData.isSideDish.toString()},<br />
-          isSpringDish: {formData.isSpringDish.toString()},<br />
-          isSummerDish: {formData.isSummerDish.toString()},<br />
-          isAutumnDish: {formData.isAutumnDish.toString()},<br />
-          isWinterDish: {formData.isWinterDish.toString()},<br />
-        </p>
-        <p>
-          ingredients:
-          {"["}
-          {ingredients.map((element, i) => {
-            return (
-              <span
-                key={`list-ingredient${i}`}
-              >
-                {"{"}
-                name: {"{"}
-                singular: '{ingredients[i].ingredientNameSingular}',
-                plural: '{ingredients[i].ingredientNamePlural}'
-                {"}"},
-                quantity: {ingredients[i].ingredientQuantity},
-                unit: '{ingredients[i].ingredientUnit}',
-                category: '{ingredients[i].ingredientCategory}',
-                {
-                  element.clarification.length > 0 ?
-                    `clarification: '${ingredients[i].ingredientCategory}',` :
-                    ''
-                }
-                {"}"},
-              </span>
-            )
-          })}
-          {"]"}
-        </p>
 
-        {"}"}
+
+          {"},"}
         </div>
-        
+
       </div>
 
     </div>
-
-
-
-
   )
 }
 

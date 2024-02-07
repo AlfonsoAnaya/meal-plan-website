@@ -3,8 +3,10 @@ import Ingredient from "./ingredientd.d";
 interface Recipe {
     id: number; 
     name: string;
+    extraRecipeName?: string;
     tagline: string;
     ingredients: Ingredient[];
+    extraIngredients?: Ingredient[];
     primaryIngredient: string;
     secondaryIngredient: string;
     portions: number;
@@ -36,6 +38,7 @@ interface Recipe {
     isSummerDish: boolean;
     isAutumnDish: boolean;
     isWinterDish: boolean;
+    saves: number;
 }
 
 export default Recipe 

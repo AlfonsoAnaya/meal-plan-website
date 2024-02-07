@@ -6,7 +6,7 @@ function DaysRecipe() {
       <div className="flex flex-row max-w-[1100px] mx-[2rem] my-16 gap-[1.5rem] ">
         <div className="recipe-img max-w-[60%] max-h-[650px]">
           <img className="block object-cover w-[100%] h-[100%] object-center"
-            src="https://source.unsplash.com/49u4b6h2row"
+            src="img/recipes/000002.jpg"
             alt="a bowl of pasta with pesto on a white marble table"></img>
         </div>
         <div className="recipe-info flex flex-col justify-center items-left">

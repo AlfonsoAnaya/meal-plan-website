@@ -184,6 +184,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
     {
         id: 1,
@@ -367,6 +368,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
     {
         id: 1,
@@ -550,6 +552,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
     {
         id: 1,
@@ -733,6 +736,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
     {
         id: 1,
@@ -916,6 +920,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
     {
         id: 1,
@@ -1099,6 +1104,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
     {
         id: 1,
@@ -1282,6 +1288,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
     {
         id: 1,
@@ -1465,6 +1472,7 @@ let recipes: Recipe[] = [
         isSummerDish: false,
         isAutumnDish: false,
         isWinterDish: false,
+        saves: 0,
     },
 
 
