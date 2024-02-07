@@ -68,6 +68,7 @@ let RecipeCategories = {
         "cdita(s)",
         "puñado",
         "rama(s)",
+        "taza(s)"
     ]
 }
 
