@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import IndividualRecipe from "./components/IndividualRecipe/IndividualRecipePage";
 import WeeklyPlan from "./components/WeeklyPlan/WeeklyPlan";
 import DatabaseForm from "./components/DatabaseForm/DatabaseForm";
+import ShoppingList from "./components/ShoppingList/ShoppingList";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plan-semanal"  element={<WeeklyPlan />}/>
+        <Route path="/shopping-list"  element={<ShoppingList />}/>
         <Route path="/recipe/:recipeName" element={<IndividualRecipe />} />
         <Route path="/database-form"  element={<DatabaseForm />}/>
       </Routes>

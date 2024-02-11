@@ -71,7 +71,7 @@ function WeeklyPlan() {
 
     return (
         <section className="weekly-plan-section w-[100%] flex flex-col items-center 
-            mt-0 md:mt-16">
+            mt-0 md:mt-12">
 
             {/* Section Title */}
             <div className="max-w-[1150px] w-[100%] border-b-[1px] border-b-secondary
@@ -89,7 +89,7 @@ function WeeklyPlan() {
                         return (
                             <div key={`Day ${i}`} id={`Day ${i + 1}`}>
                                 <div
-                                    className={`border-b-[1px] border-b-gray-500 flex flex-col ${(weekDays[i] === currentDay) ? 'current-day' : ''}`}
+                                    className={`border-b-[1px] border-b-gray-500 flex flex-col ${(weekDays[i] === currentDay) ? 'current-day pb-[0px]' : 'pb-[1px]'}`}
                                 >
                                     {/* <div className="flex justify-center w-[100%] bg-beige">
                                     <h3 className="text-secondary pl-[.7rem] font-tertiary text-[1.25rem] font-[600] tracking-[.7rem]">

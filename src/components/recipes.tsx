@@ -150,7 +150,7 @@ let recipes: Recipe[] = [
         difficulty: 'Muy fácil',
         prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
         totalTime: 20,
-        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
+        img: 'img/recipes/000001.jpg', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
         cuisine: ['india'],
@@ -199,7 +199,7 @@ let recipes: Recipe[] = [
         imgThumb: 'img/recipes/000002thumb.jpg', 
         type: 'Tarta', 
         cuisine: ['Mediterránea', 'Internacional', 'Argentina'], 
-        method: ['Precalentar el horno a 180℃. Mientras tanto, cortar las cebollas en juliana y los zucchini a la mitad transversalmente y luego en láminas finas de ½ cm o menos. Picar las hojas de romero. ', 'En una sartén grande a fuego medio, calentar 2 cdas de aceite de oliva y agregar el romero, saltear por un minuto y luego agregar las cebollas. Saltear las cebollas unos 5 minutos hasta que comiencen a estar blandas (si es necesario, agregar un poco de agua hasta que se evapore, esto hará que las cebollas se ablanden más rápido). Luego agregar los zucchini, salpimentar y saltear a fuego medio unos 15 minutos, hasta que comiencen a estar traslúcidos. Apagar el fuego, agregar la ralladura de limón y dejar que se enfríen un poco.', 'Aparte, batir en bowl grande los huevos y agregar el queso cremoso picado. Luego agregar el salteado de zucchini y cebolla y mezclar bien. Volcar la mezcla en un molde con la masa de tarta (ver más abajo) y luego espolvorear por arriba con el queso rallado. Llevar a horno por 30 minutos hasta que la tarta esté doradita. Dejar enfriar unos minutos antes de servir con una ensaladita fresca.', 'Para hacer la masa, calentar la leche hasta que esté tibia (este paso es muy importante para luego trabajar la masa). En un bowl, colocar la harina, hacer un pequeño hueco en el medio y agregar la leche, el aceite y la cdita de sal. Mezclar con un tenedor hasta que se forme una masa homogénea y luego volcar en una superficie y amasar por 1 o 2 minutos. Luego partir en dos y estirar cada tapa de masa con un palo de amasar. ', ''], tips: ['Si quieres que la masa de tarta sea vegana, puedes sustituir la leche de vaca por leche vegetal. ', ''], 
+        method: ['Precalentar el horno a 180°C. Mientras tanto, cortar las cebollas en juliana y los zucchini a la mitad transversalmente y luego en láminas finas de ½ cm o menos. Picar las hojas de romero. ', 'En una sartén grande a fuego medio, calentar 2 cdas de aceite de oliva y agregar el romero, saltear por un minuto y luego agregar las cebollas. Saltear las cebollas unos 5 minutos hasta que comiencen a estar blandas (si es necesario, agregar un poco de agua hasta que se evapore, esto hará que las cebollas se ablanden más rápido). Luego agregar los zucchini, salpimentar y saltear a fuego medio unos 15 minutos, hasta que comiencen a estar traslúcidos. Apagar el fuego, agregar la ralladura de limón y dejar que se enfríen un poco.', 'Aparte, batir en bowl grande los huevos y agregar el queso cremoso picado. Luego agregar el salteado de zucchini y cebolla y mezclar bien. Volcar la mezcla en un molde con la masa de tarta (ver más abajo) y luego espolvorear por arriba con el queso rallado. Llevar a horno por 30 minutos hasta que la tarta esté doradita. Dejar enfriar unos minutos antes de servir con una ensaladita fresca.', 'Para hacer la masa, calentar la leche hasta que esté tibia (este paso es muy importante para luego trabajar la masa). En un bowl, colocar la harina, hacer un pequeño hueco en el medio y agregar la leche, el aceite y la cdita de sal. Mezclar con un tenedor hasta que se forme una masa homogénea y luego volcar en una superficie y amasar por 1 o 2 minutos. Luego partir en dos y estirar cada tapa de masa con un palo de amasar. ', ''], tips: ['Si quieres que la masa de tarta sea vegana, puedes sustituir la leche de vaca por leche vegetal. ', ''], 
         isVegan: false, 
         isDairyFree: false, 
         isVegetarian: true, 
@@ -242,7 +242,7 @@ let recipes: Recipe[] = [
     },
 
     {
-        id: 1,
+        id: 3,
         name: 'tikka masala vegetariano',
         tagline: 'curry estilo indio de papas y garbanzos',
         ingredients: [
@@ -389,7 +389,7 @@ let recipes: Recipe[] = [
         difficulty: 'Muy fácil',
         prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
         totalTime: 20,
-        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
+        img: 'img/recipes/000003.jpg', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
         cuisine: ['india'],
@@ -426,7 +426,7 @@ let recipes: Recipe[] = [
         saves: 0,
     },
     {
-        id: 1,
+        id: 4,
         name: 'tikka masala vegetariano',
         tagline: 'curry estilo indio de papas y garbanzos',
         ingredients: [
@@ -573,7 +573,7 @@ let recipes: Recipe[] = [
         difficulty: 'Muy fácil',
         prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
         totalTime: 20,
-        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
+        img: 'img/recipes/000004.jpg', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
         cuisine: ['india'],
@@ -610,7 +610,7 @@ let recipes: Recipe[] = [
         saves: 0,
     },
     {
-        id: 1,
+        id: 5,
         name: 'tikka masala vegetariano',
         tagline: 'curry estilo indio de papas y garbanzos',
         ingredients: [
@@ -757,7 +757,7 @@ let recipes: Recipe[] = [
         difficulty: 'Muy fácil',
         prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
         totalTime: 20,
-        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
+        img: 'img/recipes/000005.jpg', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
         cuisine: ['india'],
@@ -794,7 +794,7 @@ let recipes: Recipe[] = [
         saves: 0,
     },
     {
-        id: 1,
+        id: 6,
         name: 'tikka masala vegetariano',
         tagline: 'curry estilo indio de papas y garbanzos',
         ingredients: [
@@ -941,7 +941,7 @@ let recipes: Recipe[] = [
         difficulty: 'Muy fácil',
         prepTime: 20, //hacemos esta distinción? hay recetas que no prepara en 15 min y las deja en el horno o estufa por 1 hora... Sof: por mí sí, esto hay que testear en esta receta
         totalTime: 20,
-        img: 'https://source.unsplash.com/eEWlcfydzQ4', // esto no va, para esta está bien la foto de cocina a distancia
+        img: 'img/recipes/000006.jpg', // esto no va, para esta está bien la foto de cocina a distancia
         imgThumb: 'https://source.unsplash.com/eEWlcfydzQ4',
         type: 'guiso',
         cuisine: ['india'],

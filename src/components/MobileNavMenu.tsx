@@ -42,6 +42,14 @@ function MobileNavMenu(
                         Database Form
                     </li>
                 </Link>
+                <Link to={`/shopping-list`}>
+                    <li
+                        onClick={props.toggleMobileNav}
+                        className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
+                                hover:border-b-secondary hover:border-b-[3px] duration-300">
+                        Lista de Compras
+                    </li>
+                </Link>
             </ul>
         </div>
     )

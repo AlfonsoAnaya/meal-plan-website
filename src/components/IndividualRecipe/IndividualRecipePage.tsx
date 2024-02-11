@@ -33,7 +33,7 @@ function IndividualRecipe() {
         {/* Recipe Img */}
         <div className="recipe-img max-h-[450px]">
           <img className="block object-cover w-[100%] h-[100%] object-center"
-            src={recipe.img}
+            src={`/${recipe.img}`}
             alt="a bowl of pasta with pesto on a white marble table"></img>
         </div>
 

@@ -308,7 +308,7 @@ function DatabaseForm() {
           </div>
 
           {/* IMAGE */}
-          <div className="py-2">
+          {/* <div className="py-2">
 
             <input type="text" name="img"
               className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
@@ -317,10 +317,10 @@ function DatabaseForm() {
               placeholder='Image URL'
             />
 
-          </div>
+          </div> */}
 
           {/* IMAGE Thumb */}
-          <div className="py-2">
+          {/* <div className="py-2">
 
             <input type="text" name="imgThumb"
               className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
@@ -329,7 +329,7 @@ function DatabaseForm() {
               placeholder='Image Thumb URL'
             />
 
-          </div>
+          </div> */}
 
           {/* TYPE */}
           <div className="py-2">
