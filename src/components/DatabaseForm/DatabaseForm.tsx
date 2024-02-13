@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import RecipeCategories from '../../utils/RecipeCategories'
-const { Cuisine, Difficulty, IngredientCategory, DishType, Units } = RecipeCategories;
+const { Cuisine, Difficulty, IngredientCategories , DishType, Units } = RecipeCategories;
 
 function DatabaseForm() {
 
@@ -995,7 +995,7 @@ function DatabaseForm() {
                         <option value="" disabled>
                           Ingredient Category
                         </option>
-                        {IngredientCategory.map((element: string, index) => {
+                        {IngredientCategories.map((element: string, index) => {
                           return (
                             <option key={element + index} value={element}>
                               {element}
@@ -1128,7 +1128,7 @@ function DatabaseForm() {
                           <option value="" disabled>
                             Ingredient Category
                           </option>
-                          {IngredientCategory.map((element: string, index) => {
+                          {IngredientCategories.map((element: string, index) => {
                             return (
                               <option key={element + index} value={element}>
                                 {element}

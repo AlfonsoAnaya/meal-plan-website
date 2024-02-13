@@ -14,7 +14,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Enlatados'
             },
             {
                 name: {
@@ -23,7 +23,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
-                category: ''
+                category: 'Frutas y verduras'
             },
             {
                 name: {
@@ -32,7 +32,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Frutas y verduras'
             },
             {
                 name: {
@@ -41,7 +41,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Frutas y verduras'
             },
             {
                 name: {
@@ -50,7 +50,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 10,
                 unit: 'cm',
-                category: ''
+                category: 'Frutas y verduras'
             },
             {
                 name: {
@@ -59,7 +59,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'manojo',
-                category: ''
+                category: 'Frutas y verduras'
             },
             {
                 name: {
@@ -68,7 +68,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Enlatados'
             },
             {
                 name: {
@@ -77,7 +77,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 200,
                 unit: 'ml',
-                category: ''
+                category: 'Enlatados'
             },
             {
                 name: {
@@ -86,7 +86,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 50,
                 unit: 'gr.',
-                category: ''
+                category: 'Harinas'
             },
             {
                 name: {
@@ -95,7 +95,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Frutas y verduras'
             },
             {
                 name: {
@@ -104,7 +104,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Frutas y verduras'
             },
             {
                 name: {
@@ -113,7 +113,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'dientes',
-                category: ''
+                category: 'Frutas y verduras'
             },
 
             {
@@ -123,7 +123,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cdita.',
-                category: ''
+                category: 'Aceites y condimentos'
             },
             {
                 name: {
@@ -132,7 +132,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cda.',
-                category: ''
+                category: 'Aceites y condimentos'
             },
             {
                 name: {
@@ -141,7 +141,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'cdita.',
-                category: ''
+                category: 'Aceites y condimentos'
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -253,7 +253,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -262,7 +262,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -271,7 +271,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -280,7 +280,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -289,7 +289,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 10,
                 unit: 'cm',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -298,7 +298,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'manojo',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -307,7 +307,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -316,7 +316,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 200,
                 unit: 'ml',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -325,7 +325,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 50,
                 unit: 'gr.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -334,7 +334,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -343,7 +343,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -352,7 +352,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'dientes',
-                category: ''
+                category: 'Quesos'
             },
 
             {
@@ -362,7 +362,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -371,7 +371,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cda.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -380,7 +380,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -437,7 +437,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -446,7 +446,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -455,7 +455,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -464,7 +464,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -473,7 +473,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 10,
                 unit: 'cm',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -482,7 +482,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'manojo',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -491,7 +491,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -500,7 +500,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 200,
                 unit: 'ml',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -509,7 +509,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 50,
                 unit: 'gr.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -518,7 +518,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -527,7 +527,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -536,7 +536,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'dientes',
-                category: ''
+                category: 'Quesos'
             },
 
             {
@@ -546,7 +546,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -555,7 +555,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cda.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -564,7 +564,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -621,7 +621,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -630,7 +630,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -639,7 +639,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -648,7 +648,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -657,7 +657,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 10,
                 unit: 'cm',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -666,7 +666,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'manojo',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -675,7 +675,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -684,7 +684,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 200,
                 unit: 'ml',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -693,7 +693,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 50,
                 unit: 'gr.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -702,7 +702,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -711,7 +711,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -720,7 +720,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'dientes',
-                category: ''
+                category: 'Quesos'
             },
 
             {
@@ -730,7 +730,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -739,7 +739,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cda.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -748,7 +748,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -805,7 +805,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -814,7 +814,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -823,7 +823,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -832,7 +832,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -841,7 +841,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 10,
                 unit: 'cm',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -850,7 +850,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'manojo',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -859,7 +859,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -868,7 +868,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 200,
                 unit: 'ml',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -877,7 +877,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 50,
                 unit: 'gr.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -886,7 +886,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -895,7 +895,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -904,7 +904,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'dientes',
-                category: ''
+                category: 'Quesos'
             },
 
             {
@@ -914,7 +914,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -923,7 +923,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cda.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -932,7 +932,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -989,7 +989,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -998,7 +998,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1007,7 +1007,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1016,7 +1016,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1025,7 +1025,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 10,
                 unit: 'cm',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1034,7 +1034,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'manojo',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1043,7 +1043,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1052,7 +1052,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 200,
                 unit: 'ml',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1061,7 +1061,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 50,
                 unit: 'gr.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1070,7 +1070,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1079,7 +1079,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1088,7 +1088,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'dientes',
-                category: ''
+                category: 'Quesos'
             },
 
             {
@@ -1098,7 +1098,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1107,7 +1107,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cda.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1116,7 +1116,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',
@@ -1173,7 +1173,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1182,7 +1182,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1191,7 +1191,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1200,7 +1200,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1209,7 +1209,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 10,
                 unit: 'cm',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1218,7 +1218,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'manojo',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1227,7 +1227,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'lata',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1236,7 +1236,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 200,
                 unit: 'ml',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1245,7 +1245,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 50,
                 unit: 'gr.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1254,7 +1254,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1263,7 +1263,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'unidad',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1272,7 +1272,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'dientes',
-                category: ''
+                category: 'Quesos'
             },
 
             {
@@ -1282,7 +1282,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1291,7 +1291,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 1,
                 unit: 'cda.',
-                category: ''
+                category: 'Quesos'
             },
             {
                 name: {
@@ -1300,7 +1300,7 @@ let recipes: Recipe[] = [
                 },
                 quantity: 2,
                 unit: 'cdita.',
-                category: ''
+                category: 'Quesos'
             }, //en la receta original estaban separados los ingredientes de la pasta de tikka masala, yo los uní. Me parece que es mejor para luego hacer la lista de compras
         ],
         primaryIngredient: 'vegetales',

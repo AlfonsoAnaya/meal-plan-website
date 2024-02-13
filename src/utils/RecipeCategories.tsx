@@ -23,7 +23,7 @@ let RecipeCategories = {
         "No Tan Fácil",
         "Difícil"
     ],
-    IngredientCategory: [
+    IngredientCategories: [
         "Frutas y verduras",
         "Lácteos",
         "Quesos",

@@ -1,0 +1,50 @@
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    width: .8rem;
+    height: .8rem;
+    border: solid 1px var(--color-dark);
+    border-radius: 3px;
+    /* transform: scale(0); */
+
+}
+
+@media(min-width: 768px) {
+    .checkbox {
+        width: .9rem;
+        height: .9rem;
+    }
+}
+
+.checkmark {
+    display:block;
+}
+
+.selected-ingredient .checkbox {
+    border-color: gray;
+    transform-origin: bottom left;
+    background-color: gray;
+}
+
+.selected-ingredient .checkmark {
+    width: 75%;
+    height: 75%;
+    background-color: var(--color-white);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.selected-day .week-day {
+    opacity: 1;
+    color: var(--color-secondary)
+}
+
+.selected-day .recipe-title {
+    opacity: 1;
+}
+
+.selected-day .small-info {
+    opacity: 1;
+}
