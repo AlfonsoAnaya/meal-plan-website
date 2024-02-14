@@ -25,8 +25,7 @@ let RecipeCategories = {
     ],
     IngredientCategories: [
         "Frutas y verduras",
-        "Lácteos",
-        "Quesos",
+        "Lácteos y quesos",
         "Carnes, aves y pescados",
         "Huevos",
         "Fiambres",
@@ -36,9 +35,10 @@ let RecipeCategories = {
         "Aceites y condimentos",
         "Arroz y legumbres",
         "Pastas secas",
-        "Dulces y conservas",
+        "Dulces, conservas y frutos secos",
         "Panadería",
         "Harinas",
+        "Bebidas",
     ],
     DishType: [
         "Guiso",

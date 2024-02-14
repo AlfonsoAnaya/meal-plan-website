@@ -17,6 +17,7 @@ function DatabaseForm() {
     totalTime: 0,
     img: 'img/recipes/',
     imgThumb: '',
+    imgAlt: '',
     type: '',
     cuisine: [],
     method: [],
@@ -308,28 +309,40 @@ function DatabaseForm() {
           </div>
 
           {/* IMAGE */}
-          {/* <div className="py-2">
+          <div className="py-2">
 
-            <input type="text" name="img"
+            <input type="text" name="img" disabled
               className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
-  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+              border-[1px] border-gray-300 focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
-              placeholder='Image URL'
+              placeholder='Image URL (AUTOMATIC)'
             />
 
-          </div> */}
+          </div>
 
           {/* IMAGE Thumb */}
-          {/* <div className="py-2">
+          <div className="py-2">
 
-            <input type="text" name="imgThumb"
+            <input type="text" name="imgThumb" disabled
               className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
-              border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+              border-[1px] border-gray-300 focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
               onChange={handleChange}
-              placeholder='Image Thumb URL'
+              placeholder='Image Thumb URL (AUTOMATIC)'
             />
 
-          </div> */}
+          </div>
+
+          {/* IMAGE ALT */}
+          <div className="py-2">
+
+            <input type="text" name="imgAlt"
+              className="ml-2 p-[6px] pl-[12px] w-[70%] max-w-[500px] rounded-xl 
+                  border-[1px] border-black focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
+              onChange={handleChange}
+              placeholder='Image Description (OPTIONAL)'
+            />
+
+          </div>
 
           {/* TYPE */}
           <div className="py-2">
@@ -1197,8 +1210,9 @@ function DatabaseForm() {
             difficulty: '{formData.difficulty}',<br />
             prepTime: {formData.prepTime},<br />
             totalTime: {formData.totalTime},<br />
-            img: '{formData.img}{formData.id.toString().padStart(6, "0")}.jpg',<br />
-            imgThumb: '{formData.img}{formData.id.toString().padStart(6, "0")}thumb.jpg',<br />
+            img: '{formData.img}{formData.id.toString().padStart(5, "0")}.jpg',<br />
+            imgThumb: '{formData.img}{formData.id.toString().padStart(5, "0")}thumb.jpg',<br />
+            imgAlt: '{formData.imgAlt}',<br />
             type: '{formData.type}',<br />
             cuisine: {`['${formData.cuisine.join("','")}']`},<br />
             method: {`['${formData.method.join("','")}']`},<br />

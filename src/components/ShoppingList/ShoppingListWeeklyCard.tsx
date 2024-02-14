@@ -5,19 +5,11 @@ function ShoppingListCard(
 ) {
     return (
         <div
-            className="recipe-card-weekly flex flex-row h-[75px]">
+            className="recipe-card-weekly flex flex-row justify-center items-center h-[75px]">
 
-            {/* RECIPE IMAGE */}
-            {/* <div className="recipe-img w-[20%]">
-                <img className="block w-[100%] h-[100%] object-cover object-center"
-                    src={recipe.img}
-                    alt="a bowl of pasta with pesto on a white marble table"></img>
-            </div> */}
-
-            {/* DAY */}
-            <div className="w-[10%] flex justify-center items-center
-                pl-0 md:pl-[.5em]">
-                <span className="week-day text-[2rem] text-dark opacity-70 font-tertiary font-[700] leading-4">{weekDay}</span>
+            {/* Checkbox */}
+            <div className="day-checkbox w-[10%] flex justify-center items-center">
+                <span className="day-checkmark"></span>
             </div>
 
             {/* RECIPE INFO */}
@@ -27,11 +19,6 @@ function ShoppingListCard(
                 leading-[22px]">
                     {recipe.name}
                 </h3>
-                <div className="small-info flex flex-row gap-3 text-dark opacity-50 font-secondary text-[.85rem] font-[500]">
-                    <span className="leading-4">
-                        {recipe.difficulty} 
-                    </span>
-                </div>
             </div>
         </div>
     );

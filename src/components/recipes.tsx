@@ -236,9 +236,9 @@ let recipes: Recipe[] = [
                 singular: 'cebolla', 
                 plural: 'cebollas' 
             }, 
-                quantity: 2, unit: 'unidad', category: 'Frutas y verduras', }, { name: { singular: 'romero', plural: 'romero' }, quantity: 1, unit: 'rama(s)', category: 'Frutas y verduras', }, { name: { singular: 'limón', plural: 'limones' }, quantity: 0.5, unit: 'unidad', category: 'Frutas y verduras', }, { name: { singular: 'huevo', plural: 'huevos' }, quantity: 3, unit: 'unidad', category: 'Huevos', }, { name: { singular: 'queso cremoso', plural: 'queso cremoso' }, quantity: 200, unit: 'gr.', category: 'Quesos', ingredientClarification: 'o mozzarella ', }, { name: { singular: 'queso para rallar', plural: 'queso para rallar' }, quantity: 50, unit: 'gr.', category: 'Quesos', },], 
+                quantity: 2, unit: 'unidad', category: 'Frutas y verduras', }, { name: { singular: 'romero', plural: 'romero' }, quantity: 1, unit: 'rama(s)', category: 'Frutas y verduras', }, { name: { singular: 'limón', plural: 'limones' }, quantity: 0.5, unit: 'unidad', category: 'Frutas y verduras', }, { name: { singular: 'huevo', plural: 'huevos' }, quantity: 3, unit: 'unidad', category: 'Huevos', }, { name: { singular: 'queso cremoso', plural: 'queso cremoso' }, quantity: 200, unit: 'gr.', category: 'Lácteos y quesos', ingredientClarification: 'o mozzarella ', }, { name: { singular: 'queso para rallar', plural: 'queso para rallar' }, quantity: 50, unit: 'gr.', category: 'Lácteos y quesos', },], 
         extraRecipeName: 'Masa para tarta (para 2 tapas)', 
-        extraIngredients:[{name: {singular: 'harina de trigo', plural: 'harina de trigo'}, quantity: 3, unit: 'taza(s)', category: 'Harinas',},{name: {singular: 'leche', plural: 'leche'}, quantity: 1, unit: 'taza(s)', category: 'Lácteos',},{name: {singular: 'aceite neutro', plural: 'aceite neutro'}, quantity: 0.3, unit: 'taza(s)', category: 'Aceites y condimentos',},],
+        extraIngredients:[{name: {singular: 'harina de trigo', plural: 'harina de trigo'}, quantity: 3, unit: 'taza(s)', category: 'Harinas',},{name: {singular: 'leche', plural: 'leche'}, quantity: 1, unit: 'taza(s)', category: 'Lácteos y quesos',},{name: {singular: 'aceite neutro', plural: 'aceite neutro'}, quantity: 0.3, unit: 'taza(s)', category: 'Aceites y condimentos',},],
     },
 
     {

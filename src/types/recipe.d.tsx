@@ -15,6 +15,7 @@ interface Recipe {
     totalTime: number;
     img: string;
     imgThumb: string;
+    imgAlt?: string;
     type: string;
     cuisine: string[];
     method: string[];

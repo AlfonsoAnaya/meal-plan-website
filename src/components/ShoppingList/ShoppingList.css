@@ -1,4 +1,4 @@
-.checkbox {
+.checkbox, .day-checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,12 @@
     border: solid 1px var(--color-dark);
     border-radius: 3px;
     /* transform: scale(0); */
+}
 
+.day-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 5px;
 }
 
 @media(min-width: 768px) {
@@ -18,7 +23,7 @@
     }
 }
 
-.checkmark {
+.checkmark, .day-checkmark {
     display:block;
 }
 
@@ -28,23 +33,30 @@
     background-color: gray;
 }
 
-.selected-ingredient .checkmark {
+.selected-day .day-checkbox {
+    border-color: var(--color-primary);
+    background-color: var(--color-white)
+}
+
+.selected-ingredient .checkmark,
+.selected-day .day-checkmark {
     width: 75%;
     height: 75%;
     background-color: var(--color-white);
-    transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.selected-day .day-checkmark {
+    background-color: var(--color-primary);
 }
 
 .selected-day .week-day {
     opacity: 1;
-    color: var(--color-secondary)
+    color: var(--color-primary)
 }
+
 
 .selected-day .recipe-title {
     opacity: 1;
-}
-
-.selected-day .small-info {
-    opacity: 1;
+    color: var(--color-primary)
 }

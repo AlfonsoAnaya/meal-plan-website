@@ -76,7 +76,7 @@ function ShoppingList() {
             setSelectedRecipes((prevState) => [...prevState, dayNum]);
         } else {
             let newState = [...selectedRecipes];
-            newState.splice(newState.indexOf(dayNum));
+            newState.splice(newState.indexOf(dayNum), 1);
             setSelectedRecipes(newState);
         }
 
