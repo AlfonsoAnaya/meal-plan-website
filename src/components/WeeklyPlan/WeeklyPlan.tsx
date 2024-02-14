@@ -91,12 +91,6 @@ function WeeklyPlan() {
                                 <div
                                     className={`border-b-[1px] border-b-gray-500 flex flex-col ${(weekDays[i] === currentDay) ? 'current-day pb-[0px]' : 'pb-[1px]'}`}
                                 >
-                                    {/* <div className="flex justify-center w-[100%] bg-beige">
-                                    <h3 className="text-secondary pl-[.7rem] font-tertiary text-[1.25rem] font-[600] tracking-[.7rem]">
-                                        {weekDays[i]}
-                                    </h3>
-
-                                </div> */}
                                     <div
                                         className="hover:cursor-pointer"
                                         onClick={() => handleNavClick(recipe, weekDays[i])}
