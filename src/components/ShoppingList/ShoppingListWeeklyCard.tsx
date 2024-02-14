@@ -5,7 +5,7 @@ function ShoppingListCard(
 ) {
     return (
         <div
-            className="recipe-card-weekly flex flex-row justify-center items-center h-[75px]">
+            className="recipe-card-weekly flex flex-row justify-center items-center h-[55px]">
 
             {/* Checkbox */}
             <div className="day-checkbox w-[10%] flex justify-center items-center">
