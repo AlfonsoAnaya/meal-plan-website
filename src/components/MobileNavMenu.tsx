@@ -13,7 +13,7 @@ function MobileNavMenu(
         >
             <ul className="flex gap-[2rem] font-[600] uppercase
                         pt-20 md:pt-0
-                        text-white md:text-primary
+                        text-white 
                         flex-col md:flex-row
                         items-center md:items-start
                         text-[1.75em] md:text-[1.05em]"
