@@ -4,7 +4,7 @@ function MobileNavMenu(
     props: { toggleMobileNav: () => void }
 ) {
     return (
-        <div className="nav-toggle flex
+        <div className="nav-toggle flex self-center
                     fixed top-[48px] left-0 right-0 bottom-0 md:static
                     w-[100%] h-[100vh] md:w-auto md:h-auto 
                     translate-x-full md:translate-x-0
@@ -34,14 +34,7 @@ function MobileNavMenu(
                         Plan Semanal
                     </li>
                 </Link>
-                <Link to={`/database-form`}>
-                    <li
-                        onClick={props.toggleMobileNav}
-                        className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
-                                hover:border-b-secondary hover:border-b-[3px] duration-300">
-                        Database Form
-                    </li>
-                </Link>
+
                 <Link to={`/shopping-list`}>
                     <li
                         onClick={props.toggleMobileNav}

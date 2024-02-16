@@ -120,8 +120,7 @@ function ShoppingList() {
     }
 
     return (
-        <section className="shopping-list-section w-[100%] flex flex-col items-center p-4
-        mt-0 md:mt-12">
+        <section className="shopping-list-section w-[100%] flex flex-col items-center p-4 mt-0 md:mt-12">
             <div className="max-w-[1100px] w-[100%] flex gap-8"
             >
                 <div className="w-[100%] md:w-[30%] flex flex-col items-center gap-2">
@@ -153,9 +152,7 @@ function ShoppingList() {
                         })}
                     </div>
                     {isViewportMobile ?
-                        <button
-                            className="text-white font-bold bg-primary py-[.6em] px-[1.75em] rounded-full mt-6 
-                      hover:text-primary hover:bg-white border-[2px] border-primary"
+                        <button className="text-white font-bold bg-primary py-[.6em] px-[1.75em] rounded-full mt-6 hover:text-primary hover:bg-white border-[2px] border-primary"
                             onClick={openShoppingListSidenav}>
                             Lista de compras
                         </button>
@@ -203,7 +200,7 @@ function ShoppingList() {
                                                                 <li key={ingredient.name.singular + i}
                                                                     className="shopping-list-item mb-[.5em] flex gap-2 items-center"
                                                                     onClick={toggleStrikethrough}>
-                                                                    <span className="checkbox flex">
+                                                                    <span className="checkbox flex justify-center items-center">
                                                                         <span className="checkmark"></span>
                                                                     </span>
                                                                     {ingredient.unit === "unidad" ?
@@ -251,7 +248,7 @@ function ShoppingList() {
                                                         <li key={ingredient.name.singular + i}
                                                             className="shopping-list-item mb-[.5em] flex gap-2 items-center"
                                                             onClick={toggleStrikethrough}>
-                                                            <span className="checkbox">
+                                                            <span className="checkbox flex justify-center items-center">
                                                                 <span className="checkmark"></span>
                                                             </span>
                                                             {ingredient.unit === "unidad" ?

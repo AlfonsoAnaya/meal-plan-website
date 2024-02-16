@@ -4,7 +4,7 @@ function RecipeCard( {recipe} : {recipe: Recipe}) {
     return (
         <div
             className="recipe-card w-[200px] h-[310px]  rounded-lg border-[1px] border-gray-300
-             flex flex-col hover:shadow-[4px_2px_10px_#ddd]">
+             flex flex-col hover:shadow-[4px_2px_10px_#ddd] bg-white">
 
             {/* RECIPE IMAGE */}
             <div className="recipe-img w-[100%] h-[65%]">

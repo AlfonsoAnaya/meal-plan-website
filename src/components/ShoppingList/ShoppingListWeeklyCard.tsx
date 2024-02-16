@@ -8,7 +8,7 @@ function ShoppingListCard(
             className="recipe-card-weekly flex flex-row justify-center items-center h-[55px] gap-2">
 
             {/* Checkbox */}
-            <div className="day-checkbox flex w-[10%] flex justify-center items-center">
+            <div className="day-checkbox w-[10%] flex justify-center items-center">
                 <span className="day-checkmark"></span>
             </div>
 

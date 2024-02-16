@@ -1,5 +1,3 @@
-// shadow-[12px_18px_#4385be]
-
 function DaysRecipe() {
   return (
     <section className="todays-recipe-section flex flex-col items-center">

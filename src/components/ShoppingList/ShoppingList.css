@@ -1,6 +1,4 @@
 .checkbox, .day-checkbox {
-    justify-content: center;
-    align-items: center;
     width: .8rem;
     height: .8rem;
     border: solid 1px var(--color-dark);

@@ -41,5 +41,5 @@ function SearchBar({ onSearch }: SearchBarProps): JSX.Element {
     );
 }
 
-export default SearchBar;
+export default {}
 
