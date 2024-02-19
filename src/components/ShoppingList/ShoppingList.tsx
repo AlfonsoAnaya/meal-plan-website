@@ -198,7 +198,7 @@ function ShoppingList() {
                                                         {ingredientsState[key].map((ingredient: Ingredient, i: number) => {
                                                             return (
                                                                 <li key={ingredient.name.singular + i}
-                                                                    className="shopping-list-item mb-[.5em] flex gap-2 items-center"
+                                                                    className="shopping-list-item mb-[.5em] flex gap-2 items-center hover:cursor-pointer"
                                                                     onClick={toggleStrikethrough}>
                                                                     <span className="checkbox flex justify-center items-center">
                                                                         <span className="checkmark"></span>
@@ -246,7 +246,7 @@ function ShoppingList() {
                                                 {ingredientsState[key].map((ingredient: Ingredient, i: number) => {
                                                     return (
                                                         <li key={ingredient.name.singular + i}
-                                                            className="shopping-list-item mb-[.5em] flex gap-2 items-center"
+                                                            className="shopping-list-item mb-[.5em] flex gap-2 items-center hover:cursor-pointer"
                                                             onClick={toggleStrikethrough}>
                                                             <span className="checkbox flex justify-center items-center">
                                                                 <span className="checkmark"></span>

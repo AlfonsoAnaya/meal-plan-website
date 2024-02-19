@@ -1,5 +1,5 @@
 .current-day {
-    border-bottom: 2px solid #879a39;
+    border-bottom: 2px solid var(--color-secondary);
 }
 
 .sidenav-open .recipe-sidenav {
