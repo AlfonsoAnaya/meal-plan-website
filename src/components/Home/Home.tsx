@@ -10,7 +10,6 @@ function Home() {
             <RecipeCarousel />
             <DaysRecipe />
             <RecipeCollection />
-            
         </>
     );
 }

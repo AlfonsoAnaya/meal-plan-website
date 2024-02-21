@@ -1,32 +1,37 @@
 import Recipe from "../../types/recipe.d";
 
-function RecipeCard( {recipe} : {recipe: Recipe}) {
+function RecipeCard({ recipe }: { recipe: Recipe }) {
     return (
-        <div
-            className="recipe-card w-[200px] h-[310px]  rounded-lg border-[1px] border-gray-300
-             flex flex-col hover:shadow-[4px_2px_10px_#ddd] bg-white">
+        <div className="flex justify-center align-center">
+            <div
+                className="recipe-card w-[90%] max-w-[300px] h-[410px]
+             flex flex-col">
 
-            {/* RECIPE IMAGE */}
-            <div className="recipe-img w-[100%] h-[65%]">
-                <img className="block object-cover w-[100%] h-[100%] object-center rounded-t-lg"
-                    src={recipe.img}
-                    alt="a bowl of pasta with pesto on a white marble table"></img>
-            </div>
+                {/* RECIPE IMAGE */}
+                <div className="relative recipe-img w-[100%] h-[350px] rounded-lg">
+                    <img className="block object-cover w-[100%] h-[100%] object-center rounded-lg"
+                        src={recipe.img}
+                        alt="a bowl of pasta with pesto on a white marble table">
+                    </img>
+                    <span className="absolute top-[10px] left-[10px] bg-tertiary py-[.3em] px-[1em] rounded-full font-sans text-darker text-[.9rem] font-[600]">
+                        Lunes
+                    </span>
 
-            {/* RECIPE INFO */}
-            <div className="recipe-info h-[35%] flex flex-col justify-between p-2">
-                <h4 className="recipe-title capitalize text-[.95rem] text-secondary font-secondary font-[500]">
-                    {recipe.name}
-                </h4>
-                <div className="small-info flex flex-row gap-4 text-primary text-[.75rem] font-[500]">
-                    <span className="bg-[#4385be46] py-[.4em] px-[1.1em] rounded-full">
-                        {recipe.prepTime} min
-                    </span>
-                    <span className="bg-[#4385be46] py-[.4em] px-[1.1em] rounded-full">
-                        {recipe.difficulty}
-                    </span>
+                </div>
+
+                {/* RECIPE INFO */}
+                <div className="recipe-info h-[35%] flex flex-col justify-between p-2 bg-transparent">
+                    <h4 className="recipe-title capitalize text-[.95rem] text-primary font-secondary font-[500]">
+                        {recipe.name}
+                    </h4>
+                    <div className="small-info flex flex-row gap-4 text-secondary text-[.85rem] font-[500]">
+                        <span >
+                            {recipe.difficulty}
+                        </span>
+                    </div>
                 </div>
             </div>
+
 
         </div>
     );
