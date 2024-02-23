@@ -6,6 +6,7 @@ import Recipe from "../../types/recipe.d";
 
 import WeeklyPlanCard from "./WeeklyPlanCard";
 import FullRecipe from "./FullRecipe";
+import WeeklyPlanB from "./WeeklyPlanB";
 
 function WeeklyPlan() {
 
@@ -147,6 +148,7 @@ function WeeklyPlan() {
 
             </div>
 
+                <WeeklyPlanB />
 
 
         </section>

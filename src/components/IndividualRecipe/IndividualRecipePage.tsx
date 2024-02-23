@@ -1,10 +1,15 @@
 import { useLocation } from 'react-router-dom';
 import Ingredient from '../../types/ingredientd.d';
+import Recipe from '../../types/recipe.d';
 import "./IndividualRecipe.css"
 
-function IndividualRecipe() {
+interface IndividualRecipeProps {
+  propsRecipe?: Recipe;
+}
+
+function IndividualRecipe( { propsRecipe }: IndividualRecipeProps) {
   const { state } = useLocation();
-  const recipe = state?.recipeData || null;
+  const recipe = state?.recipeData || propsRecipe;
 
   return (
     <section className="individual-recipe-section flex flex-col items-center">

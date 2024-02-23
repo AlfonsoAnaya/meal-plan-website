@@ -14,10 +14,10 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
 
         {/* Recipe Title */}
         <div className="recipe-title flex flex-col justify-center items-left">
-          <h2 className="capitalize text-primary font-[600]
+          {/* <h2 className="capitalize text-primary font-[600]
             text-[1.75em] md:text-[2.5em]">
             {recipe.name}
-          </h2>
+          </h2> */}
           {/* <div className="small-info flex flex-row gap-4 text-primary text-[.75rem] font-[500] my-4">
             <span className="bg-[#4385be46] py-[.4em] px-[1.1em] rounded-full">
               {recipe.portions} porciones
