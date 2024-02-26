@@ -1,7 +1,7 @@
 function LandingComponent() {
     return (
         <div className="todays-recipe-section flex flex-col justify-center items-center bg-gray-200 md:bg-white">
-            <div className="md:h-[500px] flex flex-col md:flex-row justify-start md:justify-center items-center md:items-stretch w-[100%] md:w-[95%] max-w-[1200px] md:mt-[50px] mb-[70px]">
+            <div className="md:h-[500px] flex flex-col md:flex-row justify-start md:justify-center items-center md:items-stretch w-[100%] md:w-[95%] max-w-[1200px] md:mt-[50px]">
                 <div className="w-[100%] md:w-[60%] h-[400px] md:h-auto flex flex-wrap gap-4 justify-center items-center">
                     <img className="block object-cover w-[100%] h-[100%] object-center md:rounded-[10px]"
                         src="./img/recipes/00004.jpg"

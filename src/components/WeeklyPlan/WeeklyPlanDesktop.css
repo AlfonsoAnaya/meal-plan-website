@@ -1,0 +1,15 @@
+.current {
+    text-underline-offset: 15px;
+    color: var(--color-secondary);
+    border-bottom: solid 3px var(--color-secondary);
+}
+
+.carousel {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -40,7 +40,7 @@ function Header() {
     }
 
     return (
-        <header className="sticky header-nav top-0 z-10  w-100% flex justify-center align-center px-2 nav: border-b-primary border-b-[1px]
+        <header className="sticky header-nav top-0 z-20  w-100% flex justify-center align-center px-2 nav: border-b-primary border-b-[1px]
             bg-primary ">
             <div className="flex flex-col justify-center align-center w-[100%] max-w-[1100px]">
                 <div className="flex flex-1 flex-row  items-center justify-between md:justify-center relative">

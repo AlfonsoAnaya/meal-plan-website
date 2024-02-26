@@ -8,18 +8,25 @@ interface MyComponentProps {
     currentDay: string;
     handleNavClick: any;
     isViewportMobile: boolean;
-    closeRecipeSidenav: any;
-    weekDays: string[],
+    Weekdays: string[],
 }
 
-function WeeklyPlanMobile (
-    {weeksRecipes, 
-    currentRecipe, 
-    currentDay, 
-    handleNavClick, 
-    closeRecipeSidenav, 
-    isViewportMobile, 
-    weekDays}: MyComponentProps) {
+function WeeklyPlanMobile(
+    { weeksRecipes,
+        currentRecipe,
+        currentDay,
+        handleNavClick,
+        isViewportMobile,
+        Weekdays }: MyComponentProps) {
+
+    const closeRecipeSidenav = (e: any) => {
+        if (e.target === e.currentTarget) {
+            const WeeklySection = document.querySelector('.weekly-plan-section');
+            WeeklySection?.classList.remove("sidenav-open");
+        }
+    };
+    
+
     return (
         <>
             <div className="max-w-[1150px] w-[100%] border-b-[1px] border-b-secondary
@@ -37,15 +44,15 @@ function WeeklyPlanMobile (
                         return (
                             <div key={`Day ${i}`} id={`Day ${i + 1}`}>
                                 <div
-                                    className={`border-b-[1px] border-b-gray-500 flex flex-col ${(weekDays[i] === currentDay) ? 'current-day pb-[0px]' : 'pb-[1px]'}`}
+                                    className={`border-b-[1px] border-b-gray-500 flex flex-col ${(Weekdays[i] === currentDay) ? 'current-day pb-[0px]' : 'pb-[1px]'}`}
                                 >
                                     <div
                                         className="hover:cursor-pointer"
-                                        onClick={() => handleNavClick(recipe, weekDays[i])}
+                                        onClick={() => handleNavClick(recipe, Weekdays[i])}
                                     >
                                         <WeeklyPlanCard
                                             recipe={recipe}
-                                            weekDay={weekDays[i]}
+                                            weekDay={Weekdays[i]}
                                         />
                                     </div>
                                 </div>
@@ -60,7 +67,7 @@ function WeeklyPlanMobile (
                     fixed top-[49px] left-0 right-0 bottom-0 
                     translate-x-[calc(100%)] 
                     backdrop-blur-[2px] bg-[#31313138] "
-                    onClick={(e) => closeRecipeSidenav(e)}>
+                        onClick={(e) => closeRecipeSidenav(e)}>
                         <article className="h-auto p-[10px] md:pl-2 w-[calc(100%-40px)]  
                             fixed top-[0] left-[40px] right-0 bottom-0 bg-white overflow-y-scroll "
                         >
@@ -78,9 +85,9 @@ function WeeklyPlanMobile (
                             <FullRecipe
                                 recipe={currentRecipe}
                             />
-                        </article> 
+                        </article>
                     </div>
-                    
+
                     :
                     <article className="h-auto recipe-sidenav pl-2 w-[70%] static
                         translate-x-0 bg-transparent overflow-y-scroll md:overflow-auto"

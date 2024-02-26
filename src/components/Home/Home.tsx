@@ -1,7 +1,7 @@
 import DaysRecipe from "./DaysRecipe";
 import RecipeCollection from "../Shared/RecipeCollection";
 import RecipeCarousel from "../Shared/RecipeCarousel";
-import WelcomeScreen from "./WelcomeScreen";
+import WelcomeScreen from "./WelcomeScreen/WelcomeScreen";
 
 function Home() {
     return (

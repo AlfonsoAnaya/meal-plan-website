@@ -23,10 +23,3 @@
     transform: translateY(0);
     transition: height 200ms ease;
 }
-
-.collapsing {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    transition: height 200ms ease;
-}
