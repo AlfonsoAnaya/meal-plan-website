@@ -14,7 +14,7 @@ function MailingList() {
                         <input
                             type="email"
                             placeholder="tucorreo@..."
-                            className="ml-2 p-[6px] pl-[12px] w-[300px] rounded-full 
+                            className="p-[6px] pl-[12px] w-[300px] rounded-full 
                             border-[1px] border-gray-500 focus:border-[#4385be] focus:outline-none focus:bg-gray-100"
                         />
                     </div>

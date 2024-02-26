@@ -7,7 +7,7 @@ import Recipe from "../../types/recipe.d";
 import Weekdays from "../../utils/Weekdays";
 import IndividualRecipe from "../IndividualRecipe/IndividualRecipePage";
 
-function WeeklyPlanB() {
+function WeeklyPlanDesktop() {
 
     const weeksRecipes = recipes.slice(0, 7);
 
@@ -70,14 +70,7 @@ function WeeklyPlanB() {
 
 
     return (
-        <section className="weekly-plan-section w-[100%] flex flex-col items-center 
-            mt-0 md:mt-12">
-
-            {/* Section Title */}
-
-
-            {/* Week and Recipe Flex Container */}
-            <div className="flex flex-col items-center w-[95%] gap-[2em] max-w-[1150px]">
+            <div className="flex flex-col items-center w-[95%] max-w-[1150px]">
                 <nav className="w-[100%] flex flex-row justify-center gap-[1.5em]">
                     {Weekdays.map((day, i) => {
                         return (
@@ -110,10 +103,7 @@ function WeeklyPlanB() {
 
             </div>
 
-
-
-        </section>
     )
 };
 
-export default WeeklyPlanB
+export default WeeklyPlanDesktop

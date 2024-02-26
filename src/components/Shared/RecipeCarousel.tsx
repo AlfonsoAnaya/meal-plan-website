@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RecipeCard from "./RecipeCard";
 import recipes from "../recipes";
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import Weekdays from "../../utils/Weekdays";
+import '../../styles/carousel.css'
 
 function RecipeCarousel() {
 
@@ -31,8 +32,8 @@ function RecipeCarousel() {
 
   return (
 
-    <div className="relative bg-white md:bg-gray-100">
-      <h3 className=" flex justify-center text-[2rem] text-dark font-[600] py-8 bg-dark-10">
+    <div className="recipe-carousel relative bg-white md:bg-gray-100">
+      <h3 className="flex justify-center text-[2rem] text-dark font-[600] py-8 bg-dark-10">
         El plan de esta semana
       </h3>
       <CarouselProvider
@@ -57,16 +58,19 @@ function RecipeCarousel() {
           })}
         </Slider>
 
-        <ButtonBack className="hidden md:flex absolute justify-center items-center left-[10px] top-[50%]  w-[50px] h-[50px] rounded-full bg-dark">
+        <ButtonBack className="flex hidden-content absolute justify-center items-center left-[10px] top-[50%]  w-[50px] h-[50px] rounded-full bg-dark">
           <svg width="26" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="fill-white" d="M15.4894 2.56853L13.2179 0.29703L0.51288 13.002L13.2179 25.707L15.4894 23.4355L5.05588 13.002L15.4894 2.56853H15.4894Z" />
           </svg>
         </ButtonBack>
-        <ButtonNext className="hidden md:flex absolute justify-center items-center top-[50%] right-[10px]  w-[50px] h-[50px] rounded-full bg-dark">
+        <ButtonNext className="flex hidden-content absolute justify-center items-center top-[50%] right-[10px]  w-[50px] h-[50px] rounded-full bg-dark">
           <svg width="26" height="26" viewBox="0 0 11 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="fill-white" d="M0.510651 23.4315L2.78215 25.703L15.4872 12.998L2.78215 0.292969L0.510651 2.56447L10.9442 12.998L0.510651 23.4315H0.510651Z" fill="black" />
           </svg>
         </ButtonNext>
+        <DotGroup 
+          className="flex justify-center gap-[1px] pb-4 [&>*]:w-[55px] [&>*]:h-[5px] [&>*]:bg-dark [&>*]:rounded-sm"
+        />
       </CarouselProvider>
 
     </div>
