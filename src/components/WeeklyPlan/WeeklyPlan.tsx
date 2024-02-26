@@ -54,16 +54,15 @@ function WeeklyPlan() {
     useEffect(() => {
         // Function to check if the viewport width is smaller than 768px
         const handleResize = () => {
-            setIsViewportMobile(window.innerWidth < 768);
-            console.log(window.innerWidth, isViewportMobile)
+            setIsViewportMobile(() => window.innerWidth < 768 ? true : false);
         };
-
+    
         // Initial check on component mount
         handleResize();
-
+    
         // Event listener for window resize
         window.addEventListener('resize', handleResize);
-
+    
         // Cleanup the event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
