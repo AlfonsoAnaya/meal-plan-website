@@ -1,5 +1,4 @@
 import Ingredient from '../../types/ingredientd.d';
-import "./FullRecipe.css"
 import Recipe from '../../types/recipe.d';
 
 function FullRecipe({ recipe }: { recipe: Recipe }) {

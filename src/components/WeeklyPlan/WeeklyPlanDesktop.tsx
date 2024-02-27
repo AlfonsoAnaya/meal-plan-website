@@ -30,7 +30,7 @@ function WeeklyPlanDesktop(
                         <div key={`Day ${Weekdays[i]}`}>
                             <span  id={`Day ${Weekdays[i]}`}
                                 onClick={() => handleNavClick(weeksRecipes[i], Weekdays[i])}
-                                className={day===currentDay ? "py-[10px] current hover:cursor-pointer hover:text-secondary px-2" : "py-[10px] hover:cursor-pointer hover:text-secondary px-2"}>
+                                className={day===currentDay ? "py-[10px] weekday current hover:cursor-pointer hover:text-secondary px-2" : "py-[10px] weekday hover:cursor-pointer hover:text-secondary px-2"}>
                                 {day.toUpperCase()}
                             </span>
                             <span className={day === "Domingo" ? 'hidden' : 'ml-[1.5em]'}>|</span>

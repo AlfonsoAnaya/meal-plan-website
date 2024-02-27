@@ -44,6 +44,9 @@ function IndividualRecipe( { propsRecipe }: IndividualRecipeProps) {
 
         {/* Ingredients */}
         <div className="recipe-ingredients flex flex-col justify-start items-left">
+        <h3 className="font-[600] mb-[.5rem] underline
+            text-[1.1rem] md:text-[1.5rem] 
+            mt-2 md:mt-0">Ingredientes</h3>
           {recipe.ingredients.map((ingredient: Ingredient) => {
             return (
               <ul className="method-text font-[400] mb-[1rem]">
@@ -59,6 +62,9 @@ function IndividualRecipe( { propsRecipe }: IndividualRecipeProps) {
 
         {/* Method */}
         <div className="recipe-method flex flex-col justify-start items-left text-[18px]">
+        <h3 className="font-[600] mb-[.5rem] underline
+            text-[1.1rem] md:text-[1.5rem] 
+            mt-2 md:mt-0">Instrucciones</h3>
           {recipe.method.map((text: string) => {
             return (
               <p className="method-text font-[300] mb-[1rem]">

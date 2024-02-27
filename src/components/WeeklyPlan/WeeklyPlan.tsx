@@ -57,7 +57,6 @@ function WeeklyPlan() {
                     currentRecipe={currentRecipe}
                     currentDay={currentDay}
                     handleNavClick={handleNavClick}
-                    isViewportMobile={isViewportMobile}
                     Weekdays={Weekdays}
                 />
             ) : (
