@@ -15,6 +15,7 @@ module.exports = {
         dark: "rgb(54, 54, 51)",
         darker: "rgb(16, 15, 15)",
         beige: "rgb(240, 239, 235)",
+        grayLight: "rgb(243, 244, 246)",
       },
       fontFamily: {
         primary: "'Josefin Sans', sans-serif",

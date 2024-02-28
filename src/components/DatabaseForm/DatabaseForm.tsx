@@ -937,7 +937,7 @@ function DatabaseForm() {
                   key={`ingredient ${index}`}
                   className={index % 2 === 0 ?
                     "ingredient-container p-6 w-[70%]" :
-                    "ingredient-container p-6 w-[70%] bg-gray-200"
+                    "ingredient-container p-6 w-[70%] bg-grayLight"
                   }>
                   {/* ==== INGREDIENT ==== */}
 
@@ -1070,7 +1070,7 @@ function DatabaseForm() {
                     key={`extraIngredient ${index}`}
                     className={index % 2 === 0 ?
                       "ingredient-container p-6 w-[70%]" :
-                      "ingredient-container p-6 w-[70%] bg-gray-200"
+                      "ingredient-container p-6 w-[70%] bg-grayLight"
                     }>
                     {/* ==== INGREDIENT ==== */}
 

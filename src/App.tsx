@@ -6,6 +6,7 @@ import IndividualRecipe from "./components/IndividualRecipe/IndividualRecipePage
 import WeeklyPlan from "./components/WeeklyPlan/WeeklyPlan";
 import DatabaseForm from "./components/DatabaseForm/DatabaseForm";
 import ShoppingList from "./components/ShoppingList/ShoppingList";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/recipe/:recipeName" element={<IndividualRecipe />} />
         <Route path="/database-form"  element={<DatabaseForm />}/>
       </Routes>
+      <Footer />
     </div>
   );
 }

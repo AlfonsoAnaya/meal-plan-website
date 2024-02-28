@@ -24,7 +24,7 @@ function WeeklyPlanDesktop(
 
     return (
         <div className="flex flex-col items-center w-[95%] max-w-[1150px]">
-            <nav className="sticky top-[97px] z-10 border-box bg-white py-[9px] w-[100%] flex flex-row justify-center gap-[1em]">
+            <nav className="sticky top-[97px] z-10 border-box bg-white py-[8px] w-[100%] flex flex-row justify-center gap-[1em]">
                 {Weekdays.map((day, i) => {
                     return (
                         <div key={`Day ${Weekdays[i]}`}>
@@ -41,8 +41,7 @@ function WeeklyPlanDesktop(
 
             </nav>
 
-            <article className="recipe-sidenav pl-2  static
-                        translate-x-0 bg-transparent overflow-y-scroll md:overflow-auto"
+            <article className="recipe-sidenav pl-2  static translate-x-0 bg-transparent overflow-y-scroll md:overflow-auto"
             >
                 <IndividualRecipe
                     propsRecipe={currentRecipe}

@@ -34,7 +34,7 @@ function RecipeCarousel() {
 
     <div className="carousel-container relative bg-white md:bg-gray-100">
       <Link to={`/plan-semanal`}>
-        <h3 className="flex justify-center text-[2rem] text-dark font-[600] py-8 bg-dark-10 underline decoration-secondary">
+        <h3 className="flex justify-center text-[2rem]  text-dark hover:text-secondary font-[600] py-8 bg-dark-10 underline decoration-secondary">
           El plan de esta semana
         </h3>
       </Link>
@@ -73,7 +73,7 @@ function RecipeCarousel() {
           </svg>
         </ButtonNext>
         <DotGroup 
-          className="flex justify-center gap-[1px] pb-4 [&>*]:w-[55px] [&>*]:h-[5px] [&>*]:bg-dark [&>*]:rounded-sm"
+          className="flex justify-center gap-[2px] pb-4 [&>*]:w-[45px] [&>*]:h-[19px] [&>*]:border-y-[8px] [&>*]:border-y-white md:[&>*]:border-y-grayLight [&>*]:bg-dark [&>*]:rounded-sm"
         />
       </CarouselProvider>
 

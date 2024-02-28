@@ -1,6 +1,6 @@
 function DaysRecipe() {
   return (
-    <section className="todays-recipe-section flex flex-col items-center bg-gray-200">
+    <section className="todays-recipe-section flex flex-col items-center bg-grayLight">
       <div className="flex flex-row max-w-[1100px] mx-[2rem] my-16 gap-[1.5rem] ">
         <div className="recipe-img max-w-[60%] max-h-[650px]">
           <img className="block object-cover w-[100%] h-[100%] object-center"

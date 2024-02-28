@@ -14,7 +14,7 @@ function WelcomeScreen() {
                 totalSlides={3}
                 infinite={true}>
 
-                <Slider className="w-[100%] h-[85vh] md:h-[630px] bg-gray-200 md:bg-white">
+                <Slider className="w-[100%] h-[80vh] md:h-[610px] bg-grayLight md:bg-white">
                     <Slide index={0}>
                         <LandingComponent />
                     </Slide>
@@ -37,7 +37,7 @@ function WelcomeScreen() {
                     </svg>
                 </ButtonNext>
                 <DotGroup 
-                    className="w-[100%] flex justify-center gap-6 pb-4 bg-gray-200 md:bg-white [&>*]:w-[15px] [&>*]:h-[15px] [&>*]:bg-dark [&>*]:rounded-full"
+                    className="w-[100%] flex justify-center gap-6 pb-10 bg-grayLight md:bg-white [&>*]:w-[28px] [&>*]:h-[28px] [&>*]:border-[6px] [&>*]:border-grayLight md:[&>*]:border-white [&>*]:bg-dark [&>*]:rounded-full"
                 />
             </CarouselProvider>
         </div>
