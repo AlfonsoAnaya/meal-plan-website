@@ -41,6 +41,9 @@ function ShoppingList() {
     };
 
     // UPDATE THE LIST OF INGREDIENTS EACH TIME THE SELECTED RECIPES CHANGE
+    // for each of the ingredients,
+        //first check if there is an ingredient with the same name, if so just change the amount
+        //if no ingredient with the same name, add new ingredient
     useEffect(() => {
         setListIngredients([]);
         selectedRecipes.forEach((num) => {

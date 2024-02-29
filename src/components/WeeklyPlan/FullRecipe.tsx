@@ -57,7 +57,7 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
 
         {/* Ingredients */}
         <div className="recipe-ingredients flex flex-col justify-start items-left
-        pr-0 md:pr-[1rem]">
+          pr-0 md:pr-[1rem]">
           <h3 className="font-[600] mb-[.5rem] underline
             text-[1.1rem] md:text-[1.5rem] 
             mt-2 md:mt-0">Ingredientes</h3>
