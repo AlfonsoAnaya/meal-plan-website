@@ -42,19 +42,34 @@ function ShoppingList() {
 
     // UPDATE THE LIST OF INGREDIENTS EACH TIME THE SELECTED RECIPES CHANGE
     // for each of the ingredients,
-        //first check if there is an ingredient with the same name, if so just change the amount
-        //if no ingredient with the same name, add new ingredient
+    //first check if there is an ingredient with the same name, if so just change the amount
+    //if no ingredient with the same name, add new ingredient
     useEffect(() => {
         setListIngredients([]);
-        selectedRecipes.forEach((num) => {
-            weeklyRecipes[num].ingredients.forEach((ingredient) => {
-                setListIngredients((prevState) => [...prevState, ingredient])
+        setListIngredients(prevListIngredients => {
+            let updatedIngredients = [...prevListIngredients]; // Create a copy of prevListIngredients
+            selectedRecipes.forEach(num => {
+                weeklyRecipes[num].ingredients.forEach(ingredient => {
+                    const existingIngredientIndex = updatedIngredients.findIndex(
+                        listIng => listIng.name.singular === ingredient.name.singular
+                    );
+                    if (existingIngredientIndex !== -1) {
+                        // Ingredient exists, update quantity
+                        updatedIngredients[existingIngredientIndex].quantity += ingredient.quantity;
+                    } else {
+                        // Ingredient does not exist, add it
+                        updatedIngredients.push(ingredient);
+                    }
+                });
+                //For extra ingredients...... new function
+                // weeklyRecipes[num].extraIngredients?.forEach(extraIngredient => {
+                //     updatedIngredients.push(extraIngredient); // Add extra ingredients
+                // });
             });
-            weeklyRecipes[num].extraIngredients?.forEach((ingredient) => {
-                setListIngredients((prevState) => [...prevState, ingredient])
-            })
+            return updatedIngredients; // Return the updated array
         });
     }, [selectedRecipes, weeklyRecipes]);
+    
 
     // UPDATE THE STATE HOLDING THE INGREDIENTS BY CATEGORY EACH TIME THE LIST OF INGREDIENTS CHANGE
     useEffect(() => {
