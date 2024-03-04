@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import RecipeCard from "./RecipeCard";
-import recipes from "../recipes";
+import recipes from "../../utils/recipes";
 
 
 function RecipeCollection() {
@@ -24,4 +24,4 @@ function RecipeCollection() {
   );
 }
 
-export default RecipeCollection;
+export default {};

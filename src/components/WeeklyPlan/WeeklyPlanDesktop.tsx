@@ -21,10 +21,9 @@ function WeeklyPlanDesktop(
         currentDay
      }: MyComponentProps) {
 
-
     return (
         <div className="flex flex-col items-center w-[95%] max-w-[1150px]">
-            <nav className="sticky top-[97px] z-10 border-box bg-white py-[8px] w-[100%] flex flex-row justify-center gap-[1em]">
+            <nav className="sticky top-[97px] z-10 border-box bg-white py-[8px] w-[100%] flex flex-row justify-center gap-[.75em]">
                 {Weekdays.map((day, i) => {
                     return (
                         <div key={`Day ${Weekdays[i]}`}>
@@ -33,7 +32,7 @@ function WeeklyPlanDesktop(
                                 className={day===currentDay ? "py-[10px] weekday current hover:cursor-pointer hover:text-secondary px-2" : "py-[10px] weekday hover:cursor-pointer hover:text-secondary px-2"}>
                                 {day.toUpperCase()}
                             </span>
-                            <span className={day === "Domingo" ? 'hidden' : 'ml-[1.5em]'}>|</span>
+                            <span className={day === "Domingo" ? 'hidden' : 'ml-[.75em]'}>|</span>
                         </div>
 
                     )

@@ -1,6 +1,6 @@
 import "./MonthlyPlan.css";
 import MonthlyPlanCard from "./MonthlyPlanCard";
-import recipes from "../recipes";
+import recipes from "../../utils/recipes";
 import { Link } from "react-router-dom";
 
 function MonthlyPlan() {

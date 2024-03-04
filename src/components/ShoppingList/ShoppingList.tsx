@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import recipes from "../recipes";
 import Ingredient from "../../types/ingredientd.d";
-//import Recipe from "../../types/recipe.d";
+import currentWeekRecipes from "../../utils/CurrentWeekRecipes";
 import RecipeCategories from "../../utils/RecipeCategories";
 import "./ShoppingList.css";
 import ShoppingListCard from "./ShoppingListWeeklyCard";
@@ -15,9 +14,9 @@ const initialIngredientsState = Object.fromEntries(
 
 function ShoppingList() {
     const [ingredientsState, setIngredientsState] = useState<{ [key: string]: Ingredient[] }>(initialIngredientsState);
-    const [weeklyRecipes] = useState(recipes.slice(0, 7));
     const [selectedRecipes, setSelectedRecipes] = useState<number[]>([])
     const [listIngredients, setListIngredients] = useState<Ingredient[]>([]);
+    const weeklyRecipes = currentWeekRecipes;
 
 
     const weekDays = [
@@ -41,15 +40,14 @@ function ShoppingList() {
     };
 
     // UPDATE THE LIST OF INGREDIENTS EACH TIME THE SELECTED RECIPES CHANGE
-    // for each of the ingredients,
-    //first check if there is an ingredient with the same name, if so just change the amount
-    //if no ingredient with the same name, add new ingredient
     useEffect(() => {
         setListIngredients([]);
         setListIngredients(prevListIngredients => {
             let updatedIngredients = [...prevListIngredients]; // Create a copy of prevListIngredients
-            selectedRecipes.forEach(num => {
-                weeklyRecipes[num].ingredients.forEach(ingredient => {
+            let updatedWeeklyRecipes = JSON.parse(JSON.stringify(weeklyRecipes)); // Create a deep copy of weeklyRecipes
+
+            selectedRecipes.forEach(i => {
+                updatedWeeklyRecipes[i].ingredients.forEach((ingredient: Ingredient) => {
                     const existingIngredientIndex = updatedIngredients.findIndex(
                         listIng => listIng.name.singular === ingredient.name.singular
                     );
@@ -61,10 +59,19 @@ function ShoppingList() {
                         updatedIngredients.push(ingredient);
                     }
                 });
-                //For extra ingredients...... new function
-                // weeklyRecipes[num].extraIngredients?.forEach(extraIngredient => {
-                //     updatedIngredients.push(extraIngredient); // Add extra ingredients
-                // });
+                //when recipe has extra Ingredients...
+                updatedWeeklyRecipes[i].extraIngredients?.forEach((ingredient: Ingredient) => {
+                    const existingIngredientIndex = updatedIngredients.findIndex(
+                        listIng => listIng.name.singular === ingredient.name.singular
+                    );
+                    if (existingIngredientIndex !== -1) {
+                        // Ingredient exists, update quantity
+                        updatedIngredients[existingIngredientIndex].quantity += ingredient.quantity;
+                    } else {
+                        // Ingredient does not exist, add it
+                        updatedIngredients.push(ingredient);
+                    }
+                });
             });
             return updatedIngredients; // Return the updated array
         });

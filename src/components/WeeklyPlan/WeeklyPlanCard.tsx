@@ -23,7 +23,7 @@ function WeeklyPlanCard(
             {/* RECIPE INFO */}
             <div className="flex flex-col w-[90%] justify-center items-center gap-[.25rem] font-primary font-[400] py-2">
                 <h3
-                    className="text-center recipe-title capitalize text-[1.1rem] text-primary font-secondary font-[400]
+                    className="text-center recipe-title text-[1.1rem] text-primary font-secondary font-[400]
                 leading-[22px]">
                     {recipe.name}
                 </h3>

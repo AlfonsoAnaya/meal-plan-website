@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-
 import "./WeeklyPlan.css";
-import recipes from "../recipes";
+import currentWeekRecipes from "../../utils/CurrentWeekRecipes";
 import Recipe from "../../types/recipe.d";
 import WeeklyPlanDesktop from "./WeeklyPlanDesktop";
 import WeeklyPlanMobile from "./WeeklyPlanMobile";
@@ -9,7 +8,7 @@ import Weekdays from "../../utils/Weekdays";
 
 function WeeklyPlan() {
 
-    const weeksRecipes = recipes.slice(0, 7);
+    const weeksRecipes = currentWeekRecipes;
 
     const [currentRecipe, setCurrentRecipe] = useState(weeksRecipes[0]);
     const [currentDay, setCurrentDay] = useState(Weekdays[0]);
@@ -50,7 +49,7 @@ function WeeklyPlan() {
 
     return (
         <section className="weekly-plan-section w-[100%] flex flex-col items-center 
-            mt-0 md:mt-8">
+            mt-0 md:mt-4">
             {isViewportMobile ? (
                 <WeeklyPlanMobile
                     weeksRecipes={weeksRecipes}

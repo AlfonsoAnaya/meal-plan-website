@@ -27,14 +27,14 @@ function RecipeCard({ recipe, extraInfo }: RecipeCardProps) {
 
                 {/* RECIPE INFO */}
                 <div className="recipe-info h-[15%] flex flex-col gap-2 justify-start px-2 bg-transparent">
-                    <h4 className="recipe-title capitalize text-[.95rem] text-primary font-secondary font-[500]">
+                    <h4 className="recipe-title text-[.95rem] text-primary font-secondary font-[500]">
                         {recipe.name}
                     </h4>
-                    <div className="small-info flex flex-row gap-4 text-secondary text-[.85rem] font-[500]">
+                    {/* <div className="small-info flex flex-row gap-4 text-secondary text-[.85rem] font-[500]">
                         <span >
                             {recipe.difficulty}
                         </span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

@@ -18,14 +18,14 @@ function MobileNavMenu(
                         items-center md:items-start
                         text-[1.75em] md:text-[1.05em]"
             >
-                <Link to={`/`}>
+                {/* <Link to={`/`}>
                     <li
                         onClick={props.toggleMobileNav}
                         className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
                                 hover:border-b-secondary hover:border-b-[3px] transition-fill duration-300">
                         Recetas
                     </li>
-                </Link>
+                </Link> */}
                 <Link to={`/plan-semanal`}>
                     <li
                         onClick={props.toggleMobileNav}

@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RecipeCard from "./RecipeCard";
-import recipes from "../recipes";
+import Recipe from "../../types/recipe.d";
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import Weekdays from "../../utils/Weekdays";
 import '../../styles/carousel.css';
 
-function RecipeCarousel() {
+interface CarouselProps {
+  recipes: Recipe[];
+}
+
+function RecipeCarousel( { recipes }: CarouselProps) {
 
   const [visibleSlides, setVisibleSlides] = useState(4); // Default to 3 visible slides
 

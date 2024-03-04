@@ -6,7 +6,7 @@ function MonthlyPlanCard( {recipe} : {recipe: Recipe;}) {
             className="recipe-card w-[100%] h-[100%]   border-[1px] border-gray-300
              flex flex-col hover:shadow-[4px_2px_10px_#ddd]">
 
-            <h3 className="recipe-title capitalize text-[.85rem] text-primary font-primary font-[400]">{recipe.name}</h3>
+            <h3 className="recipe-title text-[.85rem] text-primary font-primary font-[400]">{recipe.name}</h3>
             {/* <div className="recipe-img w-[100%] h-[65%]">
                 <img className="block object-cover w-[100%] h-[100%] object-center "
                     src={recipe.img}

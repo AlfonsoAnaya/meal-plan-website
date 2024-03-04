@@ -1,15 +1,17 @@
 import DaysRecipe from "./DaysRecipe";
-import RecipeCollection from "../Shared/RecipeCollection";
 import RecipeCarousel from "../Shared/RecipeCarousel";
 import WelcomeScreen from "./WelcomeScreen/WelcomeScreen";
+import currentWeekRecipes from "../../utils/CurrentWeekRecipes";
 
 function Home() {
     return (
         <>
             <WelcomeScreen />
-            <RecipeCarousel />
-            <DaysRecipe />
-            <RecipeCollection />
+            <RecipeCarousel
+                recipes={currentWeekRecipes}
+            />
+            <DaysRecipe 
+                recipes={currentWeekRecipes}/>
         </>
     );
 }
