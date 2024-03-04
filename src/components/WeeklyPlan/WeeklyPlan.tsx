@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import "./WeeklyPlan.css";
 import currentWeekRecipes from "../../utils/CurrentWeekRecipes";
 import Recipe from "../../types/recipe.d";
@@ -7,12 +8,15 @@ import WeeklyPlanMobile from "./WeeklyPlanMobile";
 import Weekdays from "../../utils/Weekdays";
 
 function WeeklyPlan() {
+    const { state } = useLocation();
+    const day = state ? state.day : 0;
 
     const weeksRecipes = currentWeekRecipes;
 
-    const [currentRecipe, setCurrentRecipe] = useState(weeksRecipes[0]);
-    const [currentDay, setCurrentDay] = useState(Weekdays[0]);
+    const [currentDay, setCurrentDay] = useState(Weekdays[day]);
+    const [currentRecipe, setCurrentRecipe] = useState(weeksRecipes[day]);
     const [isViewportMobile, setIsViewportMobile] = useState(window.innerWidth < 768);
+    
 
 
     function handleNavClick(recipe: Recipe, day: string) {

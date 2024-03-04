@@ -54,8 +54,8 @@ function RecipeCarousel( { recipes }: CarouselProps) {
             return (
               <Slide index={i} key={recipe.name + i}>
                 <Link
-                  to={`/recipe/${recipe.name}`}
-                  state={{ recipeData: recipe }}>
+                  to={`/plan-semanal`}
+                  state={{ day: i }}>
                   <RecipeCard
                     recipe={recipe}
                     extraInfo={Weekdays[i]}
