@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTopOnMount from "./utils/scrollToTop";
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home/Home';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="font-primary w-[100%]">
       <Header />
+      <ScrollToTopOnMount />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plan-semanal"  element={<WeeklyPlan />}/>

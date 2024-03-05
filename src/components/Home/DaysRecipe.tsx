@@ -14,34 +14,34 @@ function DaysRecipe({ recipes }: DaysRecipeProps) {
   let recipe: Recipe = recipes[todayInt];
 
   return (
-    <section className="todays-recipe-section flex flex-col items-center bg-grayLight">
-      <div className="flex flex-row max-w-[1100px] mx-[2rem] my-16 gap-[1.5rem] ">
+    <section className="todays-recipe-section flex flex-col items-center bg-grayLight md:bg-white">
+      <div className="flex flex-col justify-center items-center md:flex-row max-w-[1100px] md:mx-[20px] my-8 md:my-16 gap-[1.5rem] ">
 
-        <div className=" relative recipe-img max-w-[50%] max-h-[650px]">
+        <div className="relative recipe-img w-[95%] md:max-w-[50%] max-h-[650px] order-2 md:order-1">
           <Link
             to={`/plan-semanal`}
-            state={{ day: todayInt }}>
+            state={{ day: todayInt, openSidenav: true }}>
             <img className="block object-cover w-[100%] h-[100%] object-center]"
               src={recipe.img}
               alt={recipe.imgAlt}></img>
           </Link>
-          <span className="absolute top-[25px] left-[25px] bg-tertiary py-[.4rem] px-[1.5rem] rounded-full font-sans text-darker text-[1.15rem] font-[600]">
+          <span className="absolute top-[calc(100%-75px)] md:top-[25px] left-[50%] md:left-[25px] -translate-x-[50%] md:translate-x-0  bg-tertiary py-[.4rem] px-[1.5rem] rounded-full font-primary text-darker text-[1.15rem] font-[600]">
             {todayString}
           </span>
         </div>
 
-        <div className="recipe-info flex flex-col justify-center max-w-[50%] items-left gap-8">
-          <h2 className="text-[1.35rem] md:text-[2.5rem] text-primary font-[600]">
+        <div className="recipe-info flex flex-col justify-center text-center md:text-left max-w-[95%] md:max-w-[50%] items-left gap-4 md:gap-8 order-1 md:order-2">
+          <h2 className="text-[1.75rem] md:text-[2.5rem] text-dark font-[600]">
             La receta del día
           </h2>
           <Link
             to={`/plan-semanal`}
-            state={{ day: todayInt }}>
-            <h3 className="recipe-title underline text-[1rem] md:text-[1.75rem] text-secondary font-secondary font-[600]">
+            state={{ day: todayInt, openSidenav: true }}>
+            <h3 className="recipe-title underline text-[1.5rem] md:text-[1.75rem] text-primary font-secondary font-[600]">
               {recipe.name}
             </h3>
           </Link>
-          <div className="small-info font-sans flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
+          <div className="small-info font-primary flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
             [&>*]:bg-gray-200 [&>*]:py-[.2em] [&>*]:px-[.8em] [&>*]:rounded-sm">
             <span className="">
               Tiempo total: {recipe.totalTime} min.

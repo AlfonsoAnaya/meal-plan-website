@@ -49,8 +49,9 @@ function Header() {
                     <Link to={`/`}>
                         <h1 id="header-title"
                             className="large-text text-left  
-                            text-white 
-                            text-[2em] md:text-[2.75em]"
+                            font-siteTitle
+                            text-white uppercase
+                            text-[2em] md:text-[3.25em]"
                             onClick={closeMobileNav}>
                             Foder
                         </h1>

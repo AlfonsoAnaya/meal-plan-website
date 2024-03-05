@@ -36,7 +36,7 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
             text-[1-15rem] md:text-[1.75rem]">
             {recipe.tagline}
           </h3>
-          <div className="small-info font-sans flex flex-wrap flex-row gap-2 text-darker text-[.80rem] font-[500] my-1
+          <div className="small-info font-primary flex flex-wrap flex-row gap-2 text-darker text-[.80rem] font-[500] my-1
             [&>*]:bg-gray-200 [&>*]:py-[.2em] [&>*]:px-[.8em] [&>*]:rounded-sm">
             <span className="">
               Tiempo total: {recipe.totalTime} min.
@@ -124,7 +124,7 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
         </div>
 
         {/* Method */}
-        <div className="font-sans leading-7 recipe-method flex flex-col justify-start items-left text-[19px]">
+        <div className="font-primary leading-7 recipe-method flex flex-col justify-start items-left text-[19px]">
           <h3 className="font-[600] mb-[.5rem] underline
             text-[1.1rem] md:text-[1.5rem] 
             mt-2 md:mt-0">Instrucciones</h3>

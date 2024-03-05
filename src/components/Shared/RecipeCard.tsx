@@ -13,20 +13,20 @@ function RecipeCard({ recipe, extraInfo }: RecipeCardProps) {
              flex flex-col gap-4">
 
                 {/* RECIPE IMAGE */}
-                <div className="relative recipe-img w-[100%] h-[80%] rounded-lg">
+                <div className="relative recipe-img w-[100%] h-[90%] md:h-[85%] rounded-lg">
                     <img className="block object-cover w-[100%] h-[100%] object-right-center rounded-lg"
                         src={recipe.img}
                         alt="a bowl of pasta with pesto on a white marble table">
                     </img>
                     {extraInfo 
-                    ? <span className="absolute top-[10px] left-[10px] bg-tertiary py-[.4em] px-[1.4em] rounded-full font-sans text-darker text-[1rem] font-[600]">
+                    ? <span className="absolute top-[10px] left-[10px] bg-tertiary py-[.4em] px-[1.4em] rounded-full font-primary text-darker text-[1rem] font-[600]">
                     {extraInfo}
                         </span>
                     : ''}
                 </div>
 
                 {/* RECIPE INFO */}
-                <div className="recipe-info h-[15%] flex flex-col gap-2 justify-start px-2 bg-transparent">
+                <div className="recipe-info h-[10%] md:h-[15%] flex flex-col gap-2 justify-start px-2 bg-transparent">
                     <h4 className="recipe-title text-[.95rem] text-primary font-secondary font-[500]">
                         {recipe.name}
                     </h4>
