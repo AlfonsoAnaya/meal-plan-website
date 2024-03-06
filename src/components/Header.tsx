@@ -51,7 +51,7 @@ function Header() {
                             className="large-text text-left  
                             font-siteTitle
                             text-white uppercase
-                            text-[2.5em] md:text-[3.5em] leading-[1.15em]"
+                            text-[2.5em] md:text-[3.5em] leading-[1em] py-[8px]"
                             onClick={closeMobileNav}>
                             Foder
                         </h1>
