@@ -25,7 +25,7 @@ function IndividualRecipe({ propsRecipe }: IndividualRecipeProps) {
           <h3 className="recipe-title  text-[1rem] md:text-[1.75rem] text-secondary font-secondary font-[600]">
             {recipe.tagline}
           </h3>
-          <div className="small-info font-sans flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
+          <div className="small-info font-primary flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
             [&>*]:bg-gray-200 [&>*]:py-[.2em] [&>*]:px-[.8em] [&>*]:rounded-sm">
             <span className="">
               Tiempo total: {recipe.totalTime} min.
@@ -67,9 +67,9 @@ function IndividualRecipe({ propsRecipe }: IndividualRecipeProps) {
             </summary>
           </details>
           <div className="ingredients-content max-h-0 box-border overflow-hidden ">
-          {recipe.ingredients.map((ingredient: Ingredient) => {
+          {recipe.ingredients.map((ingredient: Ingredient, i:number) => {
             return (
-              <ul className="method-text font-[400] mb-[1rem]">
+              <ul key={ingredient.name.singular + i} className="method-text font-[400] mb-[1rem]">
                 <li>
                   <span>{ingredient.quantity} </span>
                   <span>{ingredient.unit} de </span>
@@ -116,7 +116,7 @@ function IndividualRecipe({ propsRecipe }: IndividualRecipeProps) {
         </div>
 
         {/* Method */}
-        <div className="font-sans leading-8 recipe-method flex flex-col justify-start items-left text-[18px]">
+        <div className="font-primary leading-8 recipe-method flex flex-col justify-start items-left text-[18px]">
           <h3 className="font-[600] mb-[.5rem] underline
             text-[1.1rem] md:text-[1.5rem] 
             mt-2 md:mt-0">Instrucciones</h3>

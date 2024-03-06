@@ -10,6 +10,7 @@ import Weekdays from "../../utils/Weekdays";
 function WeeklyPlan() {
     const { state } = useLocation();
     const day = state ? state.day : 0;
+    const openSidenav = state ? state.openSidenav : false;
 
     const weeksRecipes = currentWeekRecipes;
 
@@ -44,11 +45,12 @@ function WeeklyPlan() {
         // Event listener for window resize
         window.addEventListener('resize', handleResize);
     
+        if (openSidenav) openRecipeSidenav();
         // Cleanup the event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    });
 
 
     return (

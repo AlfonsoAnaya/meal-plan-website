@@ -6,29 +6,6 @@ import "./Header.css"
 
 function Header() {
 
-    // function handleScroll() {
-    //     const headerTitle: HTMLElement | null = document.getElementById("header-title");
-    //     const navUtilities: HTMLElement | null = document.getElementById("nav-utilities");
-    //     console.log(window.scrollY)
-    //     if (window.scrollY > 1) {
-    //         headerTitle?.classList.add("small-text");
-    //         navUtilities?.classList.add("align-self-bottom");
-    //     }
-    //     if (window.scrollY < 1) {
-    //         headerTitle?.classList.remove("small-text");
-    //         navUtilities?.classList.remove("align-self-bottom");
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     window.addEventListener("scroll", handleScroll)
-    // }, []);
-
-    // const handleSearch = (searchTerm: string) => {
-    //     // Perform the search or update state based on the search term
-    //     console.log('Search term:', searchTerm);
-    // }
-
     const toggleMobileNav = () => {
         const navToggle = document.querySelector('.header-nav');
         navToggle?.classList.toggle("nav-open");
@@ -49,8 +26,9 @@ function Header() {
                     <Link to={`/`}>
                         <h1 id="header-title"
                             className="large-text text-left  
-                            text-white 
-                            text-[2em] md:text-[2.75em]"
+                            font-siteTitle
+                            text-white uppercase
+                            text-[2em] md:text-[3.25em]"
                             onClick={closeMobileNav}>
                             Foder
                         </h1>

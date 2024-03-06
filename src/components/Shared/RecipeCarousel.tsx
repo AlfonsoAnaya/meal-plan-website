@@ -38,7 +38,7 @@ function RecipeCarousel( { recipes }: CarouselProps) {
 
     <div className="carousel-container relative bg-white md:bg-gray-100">
       <Link to={`/plan-semanal`}>
-        <h3 className="flex justify-center text-[2rem]  text-dark hover:text-secondary font-[600] py-8 bg-dark-10 underline decoration-secondary">
+        <h3 className="flex justify-center text-[2rem]  text-dark hover:text-secondary font-[600] pt-4 pb-8 md:py-8 bg-dark-10 underline decoration-secondary">
           El plan de esta semana
         </h3>
       </Link>
@@ -49,13 +49,13 @@ function RecipeCarousel( { recipes }: CarouselProps) {
         totalSlides={recipes.length}
         visibleSlides={visibleSlides}
         infinite={true}>
-        <Slider className="h-[550px] md:h-[450px] w-[100%] md:w-[95%] max-w-[1300px]">
+        <Slider className="h-[550px] md:h-[430px] w-[100%] md:w-[95%] max-w-[1300px]">
           {recipes.map((recipe, i) => {
             return (
               <Slide index={i} key={recipe.name + i}>
                 <Link
                   to={`/plan-semanal`}
-                  state={{ day: i }}>
+                  state={{ day: i, openSidenav: true }}>
                   <RecipeCard
                     recipe={recipe}
                     extraInfo={Weekdays[i]}
@@ -66,18 +66,18 @@ function RecipeCarousel( { recipes }: CarouselProps) {
           })}
         </Slider>
 
-        <ButtonBack className="flex hidden-content absolute justify-center items-center left-[10px] top-[50%] w-[50px] h-[50px] rounded-full bg-dark">
+        <ButtonBack className="hidden md:flex hidden-content absolute justify-center items-center left-[10px] top-[50%] w-[50px] h-[50px] rounded-full bg-dark">
           <svg width="26" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="fill-white" d="M15.4894 2.56853L13.2179 0.29703L0.51288 13.002L13.2179 25.707L15.4894 23.4355L5.05588 13.002L15.4894 2.56853H15.4894Z" />
           </svg>
         </ButtonBack>
-        <ButtonNext className="flex hidden-content absolute justify-center items-center top-[50%] right-[10px] w-[50px] h-[50px] rounded-full bg-dark">
+        <ButtonNext className="hidden md:flex hidden-content absolute justify-center items-center top-[50%] right-[10px] w-[50px] h-[50px] rounded-full bg-dark">
           <svg width="26" height="26" viewBox="0 0 11 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="fill-white" d="M0.510651 23.4315L2.78215 25.703L15.4872 12.998L2.78215 0.292969L0.510651 2.56447L10.9442 12.998L0.510651 23.4315H0.510651Z" fill="black" />
           </svg>
         </ButtonNext>
         <DotGroup 
-          className="flex justify-center gap-[2px] pb-4 [&>*]:w-[45px] [&>*]:h-[19px] [&>*]:border-y-[8px] [&>*]:border-y-white md:[&>*]:border-y-grayLight [&>*]:bg-dark [&>*]:rounded-sm"
+          className="flex justify-center gap-[2px] pb-10 [&>*]:w-[45px] [&>*]:h-[19px] [&>*]:border-y-[8px] [&>*]:border-y-white md:[&>*]:border-y-grayLight [&>*]:bg-dark [&>*]:rounded-sm"
         />
       </CarouselProvider>
 
