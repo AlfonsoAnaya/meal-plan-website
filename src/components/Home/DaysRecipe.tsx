@@ -25,7 +25,7 @@ function DaysRecipe({ recipes }: DaysRecipeProps) {
               src={recipe.img}
               alt={recipe.imgAlt}></img>
           </Link>
-          <span className="absolute top-[calc(100%-75px)] md:top-[25px] left-[50%] md:left-[25px] -translate-x-[50%] md:translate-x-0  bg-tertiary py-[.4rem] px-[1.5rem] rounded-full font-primary text-darker text-[1.15rem] font-[600]">
+          <span className="absolute top-[calc(100%-75px)] md:top-[25px] left-[50%] md:left-[25px] -translate-x-[50%] md:translate-x-0  bg-tertiary py-[.4rem] px-[1.5rem] rounded-full font-sans text-darker text-[1.15rem] font-[600]">
             {todayString}
           </span>
         </div>
@@ -37,11 +37,11 @@ function DaysRecipe({ recipes }: DaysRecipeProps) {
           <Link
             to={`/plan-semanal`}
             state={{ day: todayInt, openSidenav: true }}>
-            <h3 className="recipe-title underline text-[1.5rem] md:text-[1.75rem] text-primary font-secondary font-[600]">
+            <h3 className="recipe-title underline text-[1.5rem] md:text-[1.75rem] text-primary font-serif font-[600]">
               {recipe.name}
             </h3>
           </Link>
-          <div className="small-info font-primary flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
+          <div className="small-info font-sans flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
             [&>*]:bg-gray-200 [&>*]:py-[.2em] [&>*]:px-[.8em] [&>*]:rounded-sm">
             <span className="">
               Tiempo total: {recipe.totalTime} min.

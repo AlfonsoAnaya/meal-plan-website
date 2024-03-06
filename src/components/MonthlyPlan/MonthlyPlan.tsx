@@ -7,7 +7,7 @@ function MonthlyPlan() {
     return (
         <section className="monthly-plan-section flex flex-col items-center border-2">
             <div>
-                <h2 className="text-secondary font-secondary text-[3.5rem] py-[2rem]">Plan mensual</h2>
+                <h2 className="text-secondary font-serif text-[3.5rem] py-[2rem]">Plan mensual</h2>
             </div>
             {/* FLEX CALENDAR */}
             <div className="calendar-container flex flex-col w-[90%] max-w-[1000px] border-2 border-gray-400">

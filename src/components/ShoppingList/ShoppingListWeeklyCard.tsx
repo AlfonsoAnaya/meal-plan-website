@@ -13,9 +13,9 @@ function ShoppingListCard(
             </div>
 
             {/* RECIPE INFO */}
-            <div className="text-center flex flex-col w-[90%] justify-center items-center gap-[.25rem] font-primary font-[400] py-2">
+            <div className="text-center flex flex-col w-[90%] justify-center items-center gap-[.25rem] font-sans font-[400] py-2">
                 <h3
-                    className="recipe-title text-[.95rem] text-dark opacity-70 font-secondary font-[400]
+                    className="recipe-title text-[.95rem] text-dark opacity-70 font-serif font-[400]
                 leading-[22px]">
                     {recipe.name}
                 </h3>

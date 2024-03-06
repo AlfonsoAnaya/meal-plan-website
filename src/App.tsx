@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="font-primary w-[100%]">
+    <div className="font-sans w-[100%]">
       <Header />
       <ScrollToTopOnMount />
       <Routes>

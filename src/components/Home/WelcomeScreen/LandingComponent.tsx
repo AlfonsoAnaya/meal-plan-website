@@ -11,7 +11,7 @@ function LandingComponent() {
                     <h2 className="text-[1.25rem] md:text-[2.25rem] text-primary font-[600]">
                         Deja de pensar en qué vas a comer hoy
                     </h2>
-                    <h3 className="recipe-title text-[1rem] md:text-[1.5rem] text-dark font-secondary font-[600]">
+                    <h3 className="recipe-title text-[1rem] md:text-[1.5rem] text-dark font-serif font-[600]">
                         Nuestros planes de comida semanales solucionan este problema por ti
                     </h3>
                     <p className="welcome-text text-dark text-[.9rem] md:text-[1.15rem]">

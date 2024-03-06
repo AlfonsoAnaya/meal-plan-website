@@ -5,8 +5,8 @@ function MobileNavMenu(
 ) {
     return (
         <div className="nav-toggle flex self-center
-                    fixed top-[48px] left-0 right-0 bottom-0 md:static
-                    w-[100%] h-[calc(100vh-48px)] md:w-auto md:h-auto 
+                    fixed top-[37px] left-0 right-0 bottom-0 md:static
+                    w-[100%] h-[calc(100vh-37px)] md:w-auto md:h-auto 
                     translate-x-full md:translate-x-0
                     bg-primary md:bg-transparent
                     justify-center md:justify-start"
@@ -29,8 +29,7 @@ function MobileNavMenu(
                 <Link to={`/plan-semanal`}>
                     <li
                         onClick={props.toggleMobileNav}
-                        className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
-                                hover:border-b-secondary hover:border-b-[3px] transition-fill duration-300">
+                        className="hover:text-secondary hover:cursor-pointer hover:underline hover:underline-offset-8 decoration-[3px]">
                         Plan Semanal
                     </li>
                 </Link>
@@ -38,8 +37,7 @@ function MobileNavMenu(
                 <Link to={`/shopping-list`}>
                     <li
                         onClick={props.toggleMobileNav}
-                        className="pb-[2px] hover:text-secondary cursor-pointer border-b-[transparent] border-b-[3px] 
-                                hover:border-b-secondary hover:border-b-[3px] duration-300">
+                        className="hover:text-secondary hover:cursor-pointer hover:underline hover:underline-offset-8 decoration-[3px]">
                         Lista de Compras
                     </li>
                 </Link>
