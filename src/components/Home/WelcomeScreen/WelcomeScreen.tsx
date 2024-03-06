@@ -12,7 +12,10 @@ function WelcomeScreen() {
                 naturalSlideWidth={100}
                 naturalSlideHeight={125}
                 totalSlides={3}
-                infinite={true}>
+                infinite={true}
+                isPlaying={true}
+                interval={8000}
+                playDirection='forward'>
 
                 <Slider className="w-[100%] h-[78vh] md:h-[610px] bg-grayLight md:bg-white">
                     <Slide index={0}>
