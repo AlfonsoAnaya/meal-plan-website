@@ -18,12 +18,12 @@ module.exports = {
         grayLight: "rgb(243, 244, 246)",
       },
       fontFamily: {
-        siteTitle: "'PT Sans Caption', sans-serif",
+        siteTitle: "'Tilt Neon', sans-serif",
         // primary: "'Josefin Sans', sans-serif",
-        primary: "'Raleway', sans-serif",
+        sans: "'Raleway', sans-serif",
         // primary: "'Jost', sans-serif",
-        secondary: "'Young Serif', serif",
-        tertiary: "'Dosis', sans-serif"
+        serif: "'Lora', serif",
+        tertiary: "sans-serif"
       }
     },
   },

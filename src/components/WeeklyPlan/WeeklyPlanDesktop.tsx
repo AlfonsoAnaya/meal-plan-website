@@ -23,7 +23,7 @@ function WeeklyPlanDesktop(
 
     return (
         <div className="flex flex-col items-center w-[95%] max-w-[1150px]">
-            <nav className="sticky top-[109px] z-10 border-box bg-white py-[8px] w-[100%] flex flex-row justify-center gap-[.75em]">
+            <nav className="sticky top-[65px] z-10 border-box bg-white py-[8px] w-[100%] flex flex-row justify-center gap-[.75em]">
                 {Weekdays.map((day, i) => {
                     return (
                         <div key={`Day ${Weekdays[i]}`}>

@@ -213,7 +213,7 @@ function ShoppingList() {
 
                                             // RENDER A CATEGORY TITLE ONLY WHEN IT CONTAINS AT LEAST ONE ELEMENT
                                             ingredientsState[key].length > 0 ?
-                                                <div key={key} className="font-primary">
+                                                <div key={key} className="font-sans">
                                                     <h3 className="text-[1.1rem] md:text-[1.25rem] font-[600]">{key}</h3>
                                                     <ul className="mb-[1em]
                                             text-[1rem] md:text-[1.1rem]
@@ -263,7 +263,7 @@ function ShoppingList() {
 
                                     // RENDER A CATEGORY TITLE ONLY WHEN IT CONTAINS AT LEAST ONE ELEMENT
                                     ingredientsState[key].length > 0 ?
-                                        <div key={key} className="font-primary">
+                                        <div key={key} className="font-sans">
                                             <h3 className="text-[1.25rem] font-[600]">{key}</h3>
                                             <ul className="mb-[1em] text-[1.1rem] font-[400]">
 

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ScrollToTopOnMount from "./utils/scrollToTop";
 import './App.css';
 import Header from './components/Header';
@@ -11,7 +11,8 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="font-primary w-[100%]">
+    <div className="font-sans w-[100%]">
+      <BrowserRouter>
       <Header />
       <ScrollToTopOnMount />
       <Routes>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/database-form"  element={<DatabaseForm />}/>
       </Routes>
       <Footer />
+      </BrowserRouter>
     </div>
   );
 }

@@ -22,10 +22,10 @@ function IndividualRecipe({ propsRecipe }: IndividualRecipeProps) {
           <h2 className="text-[1.35rem] md:text-[2.5rem] text-primary font-[600]">
             {recipe.name}
           </h2>
-          <h3 className="recipe-title  text-[1rem] md:text-[1.75rem] text-secondary font-secondary font-[600]">
+          <h3 className="recipe-title  text-[1rem] md:text-[1.75rem] text-secondary font-serif font-[600]">
             {recipe.tagline}
           </h3>
-          <div className="small-info font-primary flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
+          <div className="small-info font-sans flex flex-wrap flex-row gap-4 text-darker text-[.80rem] font-[500] my-1
             [&>*]:bg-gray-200 [&>*]:py-[.2em] [&>*]:px-[.8em] [&>*]:rounded-sm">
             <span className="">
               Tiempo total: {recipe.totalTime} min.
@@ -116,7 +116,7 @@ function IndividualRecipe({ propsRecipe }: IndividualRecipeProps) {
         </div>
 
         {/* Method */}
-        <div className="font-primary leading-8 recipe-method flex flex-col justify-start items-left text-[18px]">
+        <div className="font-sans leading-8 recipe-method flex flex-col justify-start items-left text-[18px]">
           <h3 className="font-[600] mb-[.5rem] underline
             text-[1.1rem] md:text-[1.5rem] 
             mt-2 md:mt-0">Instrucciones</h3>

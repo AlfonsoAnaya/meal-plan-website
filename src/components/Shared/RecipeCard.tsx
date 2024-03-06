@@ -19,7 +19,7 @@ function RecipeCard({ recipe, extraInfo }: RecipeCardProps) {
                         alt="a bowl of pasta with pesto on a white marble table">
                     </img>
                     {extraInfo 
-                    ? <span className="absolute top-[10px] left-[10px] bg-tertiary py-[.4em] px-[1.4em] rounded-full font-primary text-darker text-[1rem] font-[600]">
+                    ? <span className="absolute top-[10px] left-[10px] bg-tertiary py-[.4em] px-[1.4em] rounded-full font-sans text-darker text-[1rem] font-[600]">
                     {extraInfo}
                         </span>
                     : ''}
@@ -27,7 +27,7 @@ function RecipeCard({ recipe, extraInfo }: RecipeCardProps) {
 
                 {/* RECIPE INFO */}
                 <div className="recipe-info h-[10%] md:h-[15%] flex flex-col gap-2 justify-start px-2 bg-transparent">
-                    <h4 className="recipe-title text-[.95rem] text-primary font-secondary font-[500]">
+                    <h4 className="recipe-title text-[.95rem] text-primary font-serif font-[500]">
                         {recipe.name}
                     </h4>
                     {/* <div className="small-info flex flex-row gap-4 text-secondary text-[.85rem] font-[500]">

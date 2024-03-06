@@ -17,9 +17,9 @@ export default function RootLayout({
                 <meta name="theme-color" content="#000000" /> */}
                 {/* <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
                 <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
-                {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-                <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Dosis:wght@400;500;600;700;800&family=Josefin+Sans:wght@300;400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet" /> */}
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
+                <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap" rel="stylesheet"></link>
             </head>
             <body>
                 <div id="root">{children}</div>
