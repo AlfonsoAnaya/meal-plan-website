@@ -5,8 +5,8 @@ function MobileNavMenu(
 ) {
     return (
         <div className="nav-toggle flex self-center
-                    fixed top-[37px] left-0 right-0 bottom-0 md:static
-                    w-[100%] h-[calc(100vh-37px)] md:w-auto md:h-auto 
+                    fixed top-[46px] left-0 right-0 md:static
+                    w-[100%] h-[calc(100vh)] md:w-auto md:h-auto 
                     translate-x-full md:translate-x-0
                     bg-primary md:bg-transparent
                     justify-center md:justify-start"
