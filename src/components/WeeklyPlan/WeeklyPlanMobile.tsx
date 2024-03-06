@@ -1,6 +1,7 @@
 import FullRecipe from "./FullRecipe";
 import WeeklyPlanCard from "./WeeklyPlanCard";
 import Recipe from "../../types/recipe.d";
+import { useRef } from "react";
 
 interface MyComponentProps {
     weeksRecipes: Recipe[];
@@ -23,6 +24,8 @@ function WeeklyPlanMobile(
             WeeklySection?.classList.remove("sidenav-open");
         }
     };
+
+    const sidenavContentRef = useRef(null);
 
 
     return (
@@ -66,7 +69,7 @@ function WeeklyPlanMobile(
                     translate-x-[calc(100%)] 
                     backdrop-blur-[2px] bg-[#31313138] "
                     onClick={(e) => closeRecipeSidenav(e)}>
-                    <article className="h-auto p-[10px] md:pl-2 w-[calc(100%-40px)]  
+                    <article ref={sidenavContentRef} className="h-auto p-[10px] md:pl-2 w-[calc(100%-40px)]  
                             fixed top-[0] left-[40px] right-0 bottom-0 bg-white overflow-y-scroll "
                     >
                         <div className="hover:cursor-pointer mb-2

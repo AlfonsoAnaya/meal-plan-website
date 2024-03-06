@@ -6,9 +6,15 @@ function ShoppingListDemo() {
                         Crea listas de compras interactivas en unos cuantos clicks
                     </h2>
                 <div className="w-[100%] md:w-[40%] md:h-auto flex flex-wrap gap-4 justify-center items-center">
-                    <video controls preload="metadata" autoPlay muted loop playsInline className="rounded-[10px] border-[1px] border-grayLight w-[260px] md:w-[320px]">
-                        <source src="/img/videos/shopping-list-demo.webm" type="video/webm" />
-
+                    <video autoPlay muted loop playsInline className="rounded-[10px] border-[1px] border-grayLight w-[260px] md:w-[320px]">
+                        <source 
+                            src="/img/videos/shopping-list-demo.webm" 
+                            type='video/webm;codecs="vp8, vorbis"'
+                        />
+                        <source 
+                            src="/img/videos/shopping-list-demo.mp4" 
+                            type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+                        />
                     </video>
                 </div>
                 <div className="w-[90%] md:w-[50%] md:pl-16 flex flex-col justify-center items-left gap-2 md:gap-6">

@@ -21,11 +21,12 @@ function WeeklyPlan() {
 
 
     function handleNavClick(recipe: Recipe, day: string) {
+        window.scrollTo(0, 0);
         setCurrentDay(day);
         setCurrentRecipe(recipe);
         if (isViewportMobile) {
             openRecipeSidenav();
-        };
+        } 
     };
 
     const openRecipeSidenav = () => {
