@@ -9,10 +9,10 @@ function LandingComponent() {
                 </div>
                 <div className="w-[90%] md:w-[40%] h-[30%] md:h-auto mt-2 md:mt-0 md:pl-16 flex flex-col justify-center items-left gap-2 md:gap-6">
                     <h2 className="text-[1.25rem] md:text-[2.25rem] text-primary font-[600]">
-                        Deja de pensar en qué vas a comer hoy
+                        ¿Qué vas a comer hoy? 
                     </h2>
                     <h3 className="recipe-title text-[1rem] md:text-[1.5rem] text-dark font-serif font-[600]">
-                        Nuestros planes de comida semanales solucionan este problema por ti
+                    Nuestros planes semanales tienen la respuesta
                     </h3>
                     <p className="welcome-text text-dark text-[.9rem] md:text-[1.15rem]">
                         Cada semana 7 recetas nuevas

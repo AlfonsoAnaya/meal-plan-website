@@ -5,11 +5,10 @@ function MailingList() {
     
                 <div className="w-[90%] md:w-[40%] mt-4 md:mt-0 text-center flex flex-col justify-center items-center gap-2 md:gap-6">
                     <h2 className="text-[1.5rem]  md:text-[2.25rem] text-primary font-[600]">
-                        No te pierdas ninguno de nuestros planes
+                        No te pierdas ninguno de nuestros planes.
                     </h2>
                     <h3 className="recipe-title text-[1rem] md:text-[1.5rem] text-dark font-serif font-[600]">
-                        Déjanos tu correo y recibe el plan y la lista de compras directo en tu correo
-                    </h3>
+                        Dejanos tu mail y recibirás el plan y la lista de compras directo en tu correo                    </h3>
                     <div>
                         <input
                             type="email"
