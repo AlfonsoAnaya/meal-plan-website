@@ -47,16 +47,16 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
             <span className="">
               {recipe.portions} porciones
             </span>
-            { recipe.isVegetarian ? 
-            <span className="">
-              Vegetariano
-            </span> 
-            : ''}
-            { recipe.isVegan ? 
-            <span className="">
-              Vegano
-            </span> 
-            : ''}
+            {recipe.isVegetarian ?
+              <span className="">
+                Vegetariano
+              </span>
+              : ''}
+            {recipe.isVegan ?
+              <span className="">
+                Vegano
+              </span>
+              : ''}
           </div>
         </div>
 
@@ -78,48 +78,50 @@ function FullRecipe({ recipe }: { recipe: Recipe }) {
             </summary>
           </details>
           <div className="ingredients-content max-h-0 box-border overflow-hidden ">
-          {recipe.ingredients.map((ingredient: Ingredient) => {
-            return (
-              <ul className="method-text font-[400] mb-[1rem]">
-                <li>
-                  <span>{ingredient.quantity} </span>
-                  <span>{ingredient.unit} de </span>
-                  <span>{ingredient.name.singular} </span>
-                </li>
-              </ul>
-            )
-          })}
-          {
-            recipe.extraRecipeName ?
-              <>
-                <h4
-                  className="font-[300] mb-[.5rem] underline
+            {recipe.ingredients.map((ingredient: Ingredient) => {
+              return (
+                <ul className="method-text font-[400] mb-[1rem]">
+                  {ingredient.unit === "unidad" ?
+                    (ingredient.quantity > 1 ?
+                      <span>{`${ingredient.quantity} ${ingredient.name.plural} `}</span>
+                      : <span>{`${ingredient.quantity} ${ingredient.name.singular} `}</span>
+                    )
+                    : <span>{`${ingredient.quantity} ${ingredient.unit} de ${ingredient.name.singular} `}</span>
+                  }
+                </ul>
+              )
+            })}
+            {
+              recipe.extraRecipeName ?
+                <>
+                  <h4
+                    className="font-[300] mb-[.5rem] underline
                   text-[1rem] md:text-[1.25rem] 
                   mt-2 md:mt-0">
-                  {recipe.extraRecipeName}
-                </h4>
-                <ul
-                  className="mb-[1em]
+                    {recipe.extraRecipeName}
+                  </h4>
+                  <ul
+                    className="mb-[1em]
                   text-[16px] md:text-[1.1rem]
                   font-[300] md:font-[400]">
-                  {recipe.extraIngredients?.map((ingredient: Ingredient, i: number) => {
-                    return (
-                      <li key={ingredient.name.singular + i}
-                        className="mb-[.5em] text-[16px]">
-                        {ingredient.unit === "unidad" ?
-                          (ingredient.quantity > 1 ?
-                            <span>{`${ingredient.quantity} ${ingredient.name.plural}`}</span>
-                            : <span>{`${ingredient.quantity} ${ingredient.name.singular}`}</span>
-                          )
-                          : <span>{`${ingredient.quantity} ${ingredient.unit} de ${ingredient.name.singular}`}</span>
-                        }
-                      </li>
-                    )
-                  })}
-                </ul>
-              </>
-              : ''
-          }
+                    {recipe.extraIngredients?.map((ingredient: Ingredient, i: number) => {
+                      return (
+                        <li key={ingredient.name.singular + i}
+                          className="mb-[.5em] text-[16px]">
+                          {ingredient.unit === "unidad" ?
+                            (ingredient.quantity > 1 ?
+                              <span>{`${ingredient.quantity} ${ingredient.name.plural}`}</span>
+                              : <span>{`${ingredient.quantity} ${ingredient.name.singular}`}</span>
+                            )
+                            : <span>{`${ingredient.quantity} ${ingredient.unit} de ${ingredient.name.singular}`}</span>
+                          }
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </>
+                : ''
+            }
           </div>
         </div>
 
